@@ -1,0 +1,719 @@
+2025-07-05 06:43:15.189 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-05 06:43:36.765 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-05 06:43:40.661 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.AmaDeLlavesId1' was created in shadow state because a conflicting property with the simple name 'AmaDeLlavesId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-05 06:43:40.674 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.HabitacionId1' was created in shadow state because a conflicting property with the simple name 'HabitacionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-05 06:43:40.833 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-05 06:43:48.345 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 11609.1225 ms
+2025-07-05 06:43:49.051 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 260.5955 ms
+2025-07-05 06:43:49.831 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 723.9708 ms
+2025-07-05 06:47:38.784 -04:00 [INF] HTTP GET /api/AmasDeLlaves/1 responded 200 in 232.1023 ms
+2025-07-05 06:47:56.277 -04:00 [INF] HTTP OPTIONS /api/AmasDeLlaves/1 responded 204 in 5.6047 ms
+2025-07-05 06:47:57.339 -04:00 [INF] Traza registrada: Modificación en AmasDeLlaves (ID: 1)
+2025-07-05 06:47:57.343 -04:00 [INF] HTTP PUT /api/AmasDeLlaves/1 responded 200 in 1056.1048 ms
+2025-07-05 06:47:57.387 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 12.6506 ms
+2025-07-05 06:48:03.775 -04:00 [INF] HTTP GET /api/AmasDeLlaves/2 responded 200 in 17.3673 ms
+2025-07-05 06:48:13.519 -04:00 [INF] HTTP OPTIONS /api/AmasDeLlaves/2 responded 204 in 0.5647 ms
+2025-07-05 06:48:13.574 -04:00 [INF] Traza registrada: Modificación en AmasDeLlaves (ID: 2)
+2025-07-05 06:48:13.583 -04:00 [INF] HTTP PUT /api/AmasDeLlaves/2 responded 200 in 54.0318 ms
+2025-07-05 06:48:13.633 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 12.5478 ms
+2025-07-05 06:48:22.145 -04:00 [INF] HTTP GET /api/AmasDeLlaves/2 responded 200 in 8.9342 ms
+2025-07-05 06:48:35.460 -04:00 [INF] HTTP OPTIONS /api/AmasDeLlaves/2 responded 204 in 0.2203 ms
+2025-07-05 06:48:35.510 -04:00 [INF] Traza registrada: Modificación en AmasDeLlaves (ID: 2)
+2025-07-05 06:48:35.520 -04:00 [INF] HTTP PUT /api/AmasDeLlaves/2 responded 200 in 47.6831 ms
+2025-07-05 06:48:35.577 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 10.3636 ms
+2025-07-05 06:48:45.794 -04:00 [INF] HTTP GET /api/AmasDeLlaves/2 responded 200 in 13.6927 ms
+2025-07-05 06:49:05.293 -04:00 [INF] HTTP OPTIONS /api/AmasDeLlaves/2 responded 204 in 0.3477 ms
+2025-07-05 06:49:05.346 -04:00 [INF] Traza registrada: Modificación en AmasDeLlaves (ID: 2)
+2025-07-05 06:49:05.347 -04:00 [INF] HTTP PUT /api/AmasDeLlaves/2 responded 200 in 43.8028 ms
+2025-07-05 06:49:05.417 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 11.6781 ms
+2025-07-05 06:49:11.862 -04:00 [INF] HTTP GET /api/AmasDeLlaves/2 responded 200 in 12.7235 ms
+2025-07-05 06:49:19.352 -04:00 [INF] HTTP OPTIONS /api/AmasDeLlaves/2 responded 204 in 0.2528 ms
+2025-07-05 06:49:19.404 -04:00 [INF] Traza registrada: Modificación en AmasDeLlaves (ID: 2)
+2025-07-05 06:49:19.406 -04:00 [INF] HTTP PUT /api/AmasDeLlaves/2 responded 200 in 46.4912 ms
+2025-07-05 06:49:19.470 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 21.2990 ms
+2025-07-05 06:49:24.411 -04:00 [INF] HTTP GET /api/AmasDeLlaves/2 responded 200 in 13.8490 ms
+2025-07-05 06:49:30.627 -04:00 [INF] HTTP OPTIONS /api/AmasDeLlaves/2 responded 204 in 2.0992 ms
+2025-07-05 06:49:30.674 -04:00 [INF] Traza registrada: Modificación en AmasDeLlaves (ID: 2)
+2025-07-05 06:49:30.687 -04:00 [INF] HTTP PUT /api/AmasDeLlaves/2 responded 200 in 47.6454 ms
+2025-07-05 06:49:30.739 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 13.9593 ms
+2025-07-05 06:50:16.920 -04:00 [INF] HTTP GET /api/AmasDeLlaves/2 responded 200 in 16.6662 ms
+2025-07-05 06:50:35.551 -04:00 [INF] HTTP OPTIONS /api/AmasDeLlaves/2 responded 204 in 0.2213 ms
+2025-07-05 06:50:35.600 -04:00 [INF] Traza registrada: Modificación en AmasDeLlaves (ID: 2)
+2025-07-05 06:50:35.601 -04:00 [INF] HTTP PUT /api/AmasDeLlaves/2 responded 200 in 38.9340 ms
+2025-07-05 06:50:35.674 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 13.7193 ms
+2025-07-05 07:05:45.560 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/1 responded 200 in 1918.6574 ms
+2025-07-05 07:08:37.450 -04:00 [INF] Traza registrada: Desasignación en HabitacionesAmasDeLlaves (ID: 1-1)
+2025-07-05 07:08:37.452 -04:00 [INF] HTTP POST /api/AmasDeLlaves/desasignar-habitacion responded 200 in 264.8135 ms
+2025-07-05 07:08:52.297 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/1 responded 200 in 29.9143 ms
+2025-07-05 07:13:56.669 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 1797.3645 ms
+2025-07-05 07:13:57.013 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 15.7643 ms
+2025-07-05 07:13:57.071 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 25.0897 ms
+2025-07-05 07:16:43.999 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 15.6044 ms
+2025-07-05 07:16:44.488 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 11.8837 ms
+2025-07-05 07:16:44.558 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 18.7947 ms
+2025-07-05 07:17:03.601 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 12.4137 ms
+2025-07-05 07:17:03.797 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 6.6688 ms
+2025-07-05 07:17:03.846 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 7.5851 ms
+2025-07-05 07:17:43.667 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 19.5414 ms
+2025-07-05 07:17:43.741 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 16.5530 ms
+2025-07-05 07:18:29.206 -04:00 [INF] HTTP OPTIONS /api/Reservas/asignar-habitacion-ama responded 204 in 1.1939 ms
+2025-07-05 07:18:29.435 -04:00 [INF] HTTP POST /api/Reservas/asignar-habitacion-ama responded 400 in 208.5789 ms
+2025-07-05 07:18:36.185 -04:00 [INF] HTTP OPTIONS /api/AmasDeLlaves/desasignar-habitacion responded 204 in 0.4917 ms
+2025-07-05 07:18:36.213 -04:00 [INF] HTTP POST /api/AmasDeLlaves/desasignar-habitacion responded 400 in 2.7863 ms
+2025-07-05 07:18:39.347 -04:00 [INF] HTTP OPTIONS /api/Reservas/asignar-habitacion-ama responded 204 in 0.1285 ms
+2025-07-05 07:18:39.370 -04:00 [INF] HTTP POST /api/Reservas/asignar-habitacion-ama responded 400 in 2.4154 ms
+2025-07-05 07:18:42.339 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/[object Object] responded 400 in 3.5637 ms
+2025-07-05 07:18:45.601 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/[object Object] responded 400 in 1.5803 ms
+2025-07-05 07:18:48.857 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/[object Object] responded 400 in 2.5521 ms
+2025-07-05 07:18:50.371 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/[object Object] responded 400 in 2.6129 ms
+2025-07-05 07:19:46.326 -04:00 [INF] HTTP OPTIONS /api/Reservas/asignar-habitacion-ama responded 204 in 0.1342 ms
+2025-07-05 07:19:46.351 -04:00 [INF] HTTP POST /api/Reservas/asignar-habitacion-ama responded 400 in 3.0293 ms
+2025-07-05 07:19:48.458 -04:00 [INF] HTTP OPTIONS /api/AmasDeLlaves/desasignar-habitacion responded 204 in 0.1545 ms
+2025-07-05 07:19:48.484 -04:00 [INF] HTTP POST /api/AmasDeLlaves/desasignar-habitacion responded 400 in 2.2759 ms
+2025-07-05 07:19:54.966 -04:00 [INF] HTTP OPTIONS /api/AmasDeLlaves/desasignar-habitacion responded 204 in 0.1235 ms
+2025-07-05 07:19:54.979 -04:00 [INF] HTTP POST /api/AmasDeLlaves/desasignar-habitacion responded 400 in 2.7978 ms
+2025-07-05 07:20:08.781 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 15.6878 ms
+2025-07-05 07:20:30.401 -04:00 [INF] HTTP GET /api/Habitaciones/6 responded 200 in 63.0395 ms
+2025-07-05 07:21:10.272 -04:00 [INF] HTTP OPTIONS /api/Reservas responded 204 in 0.1774 ms
+2025-07-05 07:21:10.361 -04:00 [INF] HTTP POST /api/Reservas responded 400 in 76.4517 ms
+2025-07-05 07:21:14.852 -04:00 [INF] HTTP POST /api/Reservas responded 400 in 7.9489 ms
+2025-07-05 07:21:41.429 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 07:21:41.491 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 07:21:41.561 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 594.9154 ms
+2025-07-05 07:40:15.781 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 6115.6365 ms
+2025-07-05 07:46:20.759 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-05 07:46:54.691 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-05 07:46:57.615 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.AmaDeLlavesId1' was created in shadow state because a conflicting property with the simple name 'AmaDeLlavesId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-05 07:46:57.625 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.HabitacionId1' was created in shadow state because a conflicting property with the simple name 'HabitacionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-05 07:46:57.794 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-05 07:47:02.886 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 8241.2897 ms
+2025-07-05 07:47:15.900 -04:00 [INF] HTTP GET /api/AmasDeLlaves/1 responded 200 in 531.5278 ms
+2025-07-05 07:48:36.548 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 514.2109 ms
+2025-07-05 07:49:12.079 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 30.5876 ms
+2025-07-05 07:49:37.960 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 59.1757 ms
+2025-07-05 07:49:53.508 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 15.7201 ms
+2025-07-05 07:50:12.067 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 16.2923 ms
+2025-07-05 07:50:41.579 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 209.0235 ms
+2025-07-05 07:50:41.736 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 12.9533 ms
+2025-07-05 07:50:41.795 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 15.7505 ms
+2025-07-05 07:51:05.058 -04:00 [INF] HTTP OPTIONS /api/Reservas/asignar-habitacion-ama responded 204 in 5.2444 ms
+2025-07-05 07:51:05.082 -04:00 [INF] HTTP POST /api/Reservas/asignar-habitacion-ama responded 405 in 2.4018 ms
+2025-07-05 07:51:15.439 -04:00 [INF] HTTP OPTIONS /api/AmasDeLlaves/desasignar-habitacion responded 204 in 0.3832 ms
+2025-07-05 07:51:15.694 -04:00 [INF] HTTP POST /api/AmasDeLlaves/desasignar-habitacion responded 400 in 245.9838 ms
+2025-07-05 07:51:25.751 -04:00 [INF] HTTP OPTIONS /api/Reservas/asignar-habitacion-ama responded 204 in 0.1831 ms
+2025-07-05 07:51:25.764 -04:00 [INF] HTTP POST /api/Reservas/asignar-habitacion-ama responded 405 in 0.3939 ms
+2025-07-05 07:51:40.988 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/[object Object] responded 404 in 0.3502 ms
+2025-07-05 07:51:49.568 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/[object Object] responded 404 in 0.1764 ms
+2025-07-05 07:52:36.340 -04:00 [INF] HTTP GET /api/Habitaciones/1 responded 200 in 65.2123 ms
+2025-07-05 07:54:15.059 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-disponibles responded 200 in 396.2312 ms
+2025-07-05 07:55:49.330 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 07:55:49.354 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 07:55:49.401 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 672.8000 ms
+2025-07-05 07:56:19.477 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 07:56:19.483 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 07:56:19.485 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 38.3317 ms
+2025-07-03 08:01:13.206 -04:00 [INF] HTTP POST /api/Habitaciones/1/fuera-de-servicio responded 400 in 1529.8439 ms
+2025-07-05 08:07:06.616 -04:00 [INF] HTTP POST /api/Habitaciones/1/fuera-de-servicio responded 400 in 39.5301 ms
+2025-07-05 08:09:38.144 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 111.2731 ms
+2025-07-05 08:12:19.903 -04:00 [INF] HTTP GET /api/AmasDeLlaves/habitaciones-por-ama-de-llaves/1 responded 200 in 234.0954 ms
+2025-07-05 08:13:27.777 -04:00 [INF] Asignando habitación 011 a ama de llaves 1 en turno Mañana
+2025-07-05 08:13:28.758 -04:00 [INF] Traza registrada: Asignación en HabitacionesAmasDeLlaves (ID: 1-1-Mañana)
+2025-07-05 08:13:28.773 -04:00 [INF] HTTP POST /api/AmasDeLlaves/asignar-habitacion-ama responded 204 in 1083.1715 ms
+2025-07-05 08:13:38.405 -04:00 [INF] HTTP GET /api/AmasDeLlaves/habitaciones-por-ama-de-llaves/1 responded 200 in 12.6516 ms
+2025-07-05 08:14:11.981 -04:00 [INF] Traza registrada: Desasignación en HabitacionesAmasDeLlaves (ID: 2-1)
+2025-07-05 08:14:11.984 -04:00 [INF] HTTP POST /api/AmasDeLlaves/desasignar-habitacion responded 200 in 213.6780 ms
+2025-07-05 08:14:19.156 -04:00 [INF] HTTP GET /api/AmasDeLlaves/habitaciones-por-ama-de-llaves/1 responded 200 in 10.3443 ms
+2025-07-05 08:15:37.496 -04:00 [INF] Asignando habitación 012 a ama de llaves 1 en turno Mañana
+2025-07-05 08:15:37.566 -04:00 [INF] Traza registrada: Asignación en HabitacionesAmasDeLlaves (ID: 2-1-Mañana)
+2025-07-05 08:15:37.577 -04:00 [INF] HTTP POST /api/AmasDeLlaves/asignar-habitacion-ama responded 204 in 83.2316 ms
+2025-07-05 08:15:48.424 -04:00 [INF] HTTP GET /api/AmasDeLlaves/habitaciones-por-ama-de-llaves/1 responded 200 in 9.4485 ms
+2025-07-05 08:22:56.092 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-05 08:23:25.426 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-05 08:23:28.494 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.AmaDeLlavesId1' was created in shadow state because a conflicting property with the simple name 'AmaDeLlavesId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-05 08:23:28.506 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.HabitacionId1' was created in shadow state because a conflicting property with the simple name 'HabitacionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-05 08:23:28.699 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-05 08:23:33.995 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 08:23:34.037 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 08:23:34.341 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 8965.5643 ms
+2025-07-05 08:26:46.492 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 254.3882 ms
+2025-07-05 08:27:22.156 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 08:27:22.166 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 08:27:22.174 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 478.8099 ms
+2025-07-05 08:27:28.765 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 08:27:28.774 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 08:27:28.777 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 27.7100 ms
+2025-07-05 08:27:40.274 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 08:27:40.279 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 08:27:40.281 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 19.4044 ms
+2025-07-05 08:29:26.117 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 08:29:26.126 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 08:29:26.129 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 27.3104 ms
+2025-07-05 08:34:14.810 -04:00 [INF] HTTP POST /api/Reservas/3/registrar-llegada responded 400 in 1648.4430 ms
+2025-07-05 08:34:19.279 -04:00 [INF] HTTP OPTIONS /api/Reservas/3/cambiar-habitacion responded 204 in 10.5622 ms
+2025-07-05 08:34:19.680 -04:00 [INF] HTTP POST /api/Reservas/3/cambiar-habitacion responded 400 in 382.2058 ms
+2025-07-05 08:34:29.414 -04:00 [INF] HTTP OPTIONS /api/Reservas/3/cambiar-habitacion responded 204 in 0.3818 ms
+2025-07-05 08:34:29.433 -04:00 [INF] HTTP POST /api/Reservas/3/cambiar-habitacion responded 400 in 8.2622 ms
+2025-07-05 08:36:48.207 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/[object Object] responded 404 in 0.6394 ms
+2025-07-05 08:36:50.217 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/[object Object] responded 404 in 0.1422 ms
+2025-07-05 08:36:52.385 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/[object Object] responded 404 in 0.1346 ms
+2025-07-05 08:36:53.316 -04:00 [INF] HTTP OPTIONS /api/Reservas/asignar-habitacion-ama responded 204 in 0.2085 ms
+2025-07-05 08:36:53.327 -04:00 [INF] HTTP POST /api/Reservas/asignar-habitacion-ama responded 405 in 0.3682 ms
+2025-07-05 08:36:57.133 -04:00 [INF] HTTP OPTIONS /api/AmasDeLlaves/desasignar-habitacion responded 204 in 0.1683 ms
+2025-07-05 08:36:57.396 -04:00 [INF] HTTP POST /api/AmasDeLlaves/desasignar-habitacion responded 400 in 248.2742 ms
+2025-07-05 08:36:59.241 -04:00 [INF] HTTP OPTIONS /api/Reservas/asignar-habitacion-ama responded 204 in 0.1879 ms
+2025-07-05 08:36:59.250 -04:00 [INF] HTTP POST /api/Reservas/asignar-habitacion-ama responded 405 in 0.3706 ms
+2025-07-05 08:38:53.817 -04:00 [INF] HTTP GET /api/AmasDeLlaves/1 responded 200 in 342.7167 ms
+2025-07-05 08:58:25.227 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-05 09:08:28.382 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-05 09:08:54.745 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-05 09:08:57.841 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.AmaDeLlavesId1' was created in shadow state because a conflicting property with the simple name 'AmaDeLlavesId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-05 09:08:57.855 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.HabitacionId1' was created in shadow state because a conflicting property with the simple name 'HabitacionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-05 09:08:58.066 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-05 09:09:03.857 -04:00 [INF] HTTP GET /api/AmasDeLlaves/habitaciones-por-ama-de-llaves/2 responded 200 in 9168.0843 ms
+2025-07-05 09:10:20.051 -04:00 [INF] HTTP POST /api/Habitaciones/1/fuera-de-servicio responded 400 in 408.5219 ms
+2025-07-05 09:10:33.344 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 674.4861 ms
+2025-07-05 09:10:52.922 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 09:10:52.985 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 09:10:53.051 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 343.8756 ms
+2025-07-03 09:15:22.502 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-03 09:15:22.524 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-03 09:15:22.576 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 1709.8753 ms
+2025-07-04 09:16:00.866 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 09:16:00.873 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 09:16:00.876 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 129.6022 ms
+2025-07-04 09:17:42.214 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 09:17:42.222 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 09:17:42.224 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 24.1760 ms
+2025-07-05 10:24:20.539 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:24:20.558 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:24:20.562 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 164.6724 ms
+2025-07-05 10:24:27.116 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:24:27.127 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:24:27.150 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 44.1082 ms
+2025-07-05 10:24:45.668 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 139.5364 ms
+2025-07-05 10:24:58.986 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 187.1201 ms
+2025-07-05 10:24:59.382 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 246.8284 ms
+2025-07-05 10:24:59.642 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 242.2810 ms
+2025-07-05 10:25:02.308 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:02.323 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:02.330 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 31.4572 ms
+2025-07-05 10:25:03.898 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:03.909 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:03.922 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 33.8667 ms
+2025-07-05 10:25:05.010 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:05.023 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:05.025 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 35.6064 ms
+2025-07-05 10:25:05.866 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:05.879 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:05.882 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 25.6264 ms
+2025-07-05 10:25:09.066 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:09.078 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:09.085 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 30.7404 ms
+2025-07-05 10:25:10.179 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:10.191 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:10.193 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 24.0832 ms
+2025-07-05 10:25:11.211 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:11.219 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:11.225 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 34.2051 ms
+2025-07-05 10:25:13.781 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:13.789 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:13.793 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 21.2966 ms
+2025-07-05 10:25:14.848 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:14.859 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:14.862 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 31.2609 ms
+2025-07-05 10:25:23.166 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:23.178 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:23.180 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 24.1528 ms
+2025-07-05 10:25:23.901 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:23.910 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:23.912 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 17.9313 ms
+2025-07-05 10:25:24.428 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:24.434 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:24.451 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 30.4792 ms
+2025-07-05 10:25:24.745 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:25:47.652 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 71.8152 ms
+2025-07-05 10:25:59.832 -04:00 [ERR] Failed executing DbCommand (35,039ms) [Parameters=[@__fechaActual_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ClienteId], [r].[EstaCancelada], [r].[EstaElClienteEnHostal], [r].[FechaCancelacion], [r].[FechaEntrada], [r].[FechaReservacion], [r].[FechaSalida], [r].[HabitacionId], [r].[HabitacionNumero], [r].[Importe], [r].[MotivoCancelacion], [c].[Id], [c].[CI], [c].[EsVip], [c].[NombreApellidos], [c].[NumeroTelefonico], [h].[Id], [h].[EstaFueraDeServicio], [h].[Numero]
+FROM [Reservas] AS [r]
+INNER JOIN [Clientes] AS [c] ON [r].[ClienteId] = [c].[Id]
+INNER JOIN [Habitaciones] AS [h] ON [r].[HabitacionId] = [h].[Id]
+WHERE [r].[EstaCancelada] = CAST(0 AS bit) AND [r].[EstaElClienteEnHostal] = CAST(1 AS bit) AND [r].[FechaSalida] > @__fechaActual_0
+2025-07-05 10:26:00.030 -04:00 [ERR] Failed executing DbCommand (35,007ms) [Parameters=[@__fechaActual_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ClienteId], [r].[EstaCancelada], [r].[EstaElClienteEnHostal], [r].[FechaCancelacion], [r].[FechaEntrada], [r].[FechaReservacion], [r].[FechaSalida], [r].[HabitacionId], [r].[HabitacionNumero], [r].[Importe], [r].[MotivoCancelacion], [c].[Id], [c].[CI], [c].[EsVip], [c].[NombreApellidos], [c].[NumeroTelefonico], [h].[Id], [h].[EstaFueraDeServicio], [h].[Numero]
+FROM [Reservas] AS [r]
+INNER JOIN [Clientes] AS [c] ON [r].[ClienteId] = [c].[Id]
+INNER JOIN [Habitaciones] AS [h] ON [r].[HabitacionId] = [h].[Id]
+WHERE [r].[EstaCancelada] = CAST(0 AS bit) AND [r].[EstaElClienteEnHostal] = CAST(1 AS bit) AND [r].[FechaSalida] > @__fechaActual_0
+2025-07-05 10:26:11.383 -04:00 [ERR] Failed executing DbCommand (35,007ms) [Parameters=[@__fechaActual_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ClienteId], [r].[EstaCancelada], [r].[EstaElClienteEnHostal], [r].[FechaCancelacion], [r].[FechaEntrada], [r].[FechaReservacion], [r].[FechaSalida], [r].[HabitacionId], [r].[HabitacionNumero], [r].[Importe], [r].[MotivoCancelacion], [c].[Id], [c].[CI], [c].[EsVip], [c].[NombreApellidos], [c].[NumeroTelefonico], [h].[Id], [h].[EstaFueraDeServicio], [h].[Numero]
+FROM [Reservas] AS [r]
+INNER JOIN [Clientes] AS [c] ON [r].[ClienteId] = [c].[Id]
+INNER JOIN [Habitaciones] AS [h] ON [r].[HabitacionId] = [h].[Id]
+WHERE [r].[EstaCancelada] = CAST(0 AS bit) AND [r].[EstaElClienteEnHostal] = CAST(1 AS bit) AND [r].[FechaSalida] > @__fechaActual_0
+2025-07-05 10:26:17.967 -04:00 [ERR] An exception occurred while iterating over the results of a query for context type 'HostalIslaAzul.Infrastructure.HostalDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Unknown error 258
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:785a5966-cdd6-4ac9-9da8-0f5d4ea6bb74
+Error Number:-2,State:0,Class:11
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Unknown error 258
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:785a5966-cdd6-4ac9-9da8-0f5d4ea6bb74
+Error Number:-2,State:0,Class:11
+2025-07-05 10:26:17.968 -04:00 [ERR] An exception occurred while iterating over the results of a query for context type 'HostalIslaAzul.Infrastructure.HostalDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Unknown error 258
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:31a0bdab-6584-4fee-a250-12085c309ebe
+Error Number:-2,State:0,Class:11
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Unknown error 258
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:31a0bdab-6584-4fee-a250-12085c309ebe
+Error Number:-2,State:0,Class:11
+2025-07-05 10:26:17.967 -04:00 [ERR] An exception occurred while iterating over the results of a query for context type 'HostalIslaAzul.Infrastructure.HostalDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Unknown error 258
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:1ad1504e-f1ea-4c68-a039-9a348498474e
+Error Number:-2,State:0,Class:11
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Unknown error 258
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:1ad1504e-f1ea-4c68-a039-9a348498474e
+Error Number:-2,State:0,Class:11
+2025-07-05 10:26:18.003 -04:00 [ERR] HTTP GET /api/Reservas/activas responded 500 in 53264.0525 ms
+2025-07-05 10:26:18.010 -04:00 [ERR] HTTP GET /api/Reservas/activas responded 500 in 41693.6407 ms
+2025-07-05 10:26:18.015 -04:00 [ERR] HTTP GET /api/Reservas/activas responded 500 in 53067.7223 ms
+2025-07-05 10:26:27.997 -04:00 [ERR] An error occurred using the connection to database 'HostalIslaAzulDb' on server 'localhost'.
+2025-07-05 10:26:28.002 -04:00 [ERR] An error occurred using the connection to database 'HostalIslaAzulDb' on server 'localhost'.
+2025-07-05 10:26:28.008 -04:00 [ERR] An exception occurred while iterating over the results of a query for context type 'HostalIslaAzul.Infrastructure.HostalDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=0; handshake=15047; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error 258
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:ae5141cc-b750-4e46-bd21-456923f03bc9
+Error Number:-2,State:0,Class:11
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=0; handshake=15047; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error 258
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:ae5141cc-b750-4e46-bd21-456923f03bc9
+Error Number:-2,State:0,Class:11
+2025-07-05 10:26:28.028 -04:00 [ERR] HTTP GET /api/Reservas/activas responded 500 in 10786.8459 ms
+2025-07-05 10:26:28.023 -04:00 [ERR] An exception occurred while iterating over the results of a query for context type 'HostalIslaAzul.Infrastructure.HostalDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=0; handshake=15047; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error 258
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(SqlConnectionEncryptOption encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean& marsCapable, Boolean& fedAuthRequired, Boolean tlsFirst, String serverCert)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:ae5141cc-b750-4e46-bd21-456923f03bc9
+Error Number:-2,State:0,Class:11
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=0; handshake=15047; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error 258
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(SqlConnectionEncryptOption encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean& marsCapable, Boolean& fedAuthRequired, Boolean tlsFirst, String serverCert)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:ae5141cc-b750-4e46-bd21-456923f03bc9
+Error Number:-2,State:0,Class:11
+2025-07-05 10:26:28.052 -04:00 [ERR] HTTP GET /api/AmasDeLlaves responded 500 in 15138.2117 ms
+2025-07-05 10:26:28.176 -04:00 [ERR] An error occurred using the connection to database 'HostalIslaAzulDb' on server 'localhost'.
+2025-07-05 10:26:28.213 -04:00 [ERR] An exception occurred while iterating over the results of a query for context type 'HostalIslaAzul.Infrastructure.HostalDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=0; handshake=15047; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error 258
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:ae5141cc-b750-4e46-bd21-456923f03bc9
+Error Number:-2,State:0,Class:11
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=0; handshake=15047; 
+ ---> System.ComponentModel.Win32Exception (258): Unknown error 258
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:ae5141cc-b750-4e46-bd21-456923f03bc9
+Error Number:-2,State:0,Class:11
+2025-07-05 10:26:28.312 -04:00 [INF] HTTP GET /api/Habitaciones responded 400 in 158.5937 ms
+2025-07-05 10:26:39.223 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:26:46.744 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:26:46.752 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 33853.2312 ms
+2025-07-05 10:27:14.998 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:15.004 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:15.006 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 23.4216 ms
+2025-07-05 10:27:17.397 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:17.407 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:17.408 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 20.2756 ms
+2025-07-05 10:27:18.607 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:18.613 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:18.615 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 16.5098 ms
+2025-07-05 10:27:25.877 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:27:25.882 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:27:25.884 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 15.6721 ms
+2025-07-05 10:27:30.442 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:27:30.447 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:27:30.448 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 15.2137 ms
+2025-07-05 10:27:39.779 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:39.791 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:39.799 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 27.2416 ms
+2025-07-05 10:27:41.133 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:41.137 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:41.156 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 30.5090 ms
+2025-07-05 10:27:42.086 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:42.099 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:42.110 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 35.0913 ms
+2025-07-05 10:27:42.731 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:42.745 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:42.747 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 27.1915 ms
+2025-07-05 10:27:42.929 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:42.952 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:42.959 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 37.5010 ms
+2025-07-05 10:27:43.156 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:43.182 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:43.191 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 47.6164 ms
+2025-07-05 10:27:43.396 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:43.407 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:43.409 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 22.4677 ms
+2025-07-05 10:27:43.554 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:43.559 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:43.561 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 13.8892 ms
+2025-07-05 10:27:43.712 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:43.721 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:43.724 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 19.7808 ms
+2025-07-05 10:27:43.940 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:43.943 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:43.945 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 11.9365 ms
+2025-07-05 10:27:44.118 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:44.123 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:44.125 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 12.9253 ms
+2025-07-05 10:27:44.340 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:44.346 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:44.348 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 21.4433 ms
+2025-07-05 10:27:46.110 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:46.119 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:46.124 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 24.7688 ms
+2025-07-05 10:27:47.144 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:47.151 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:47.152 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 14.5960 ms
+2025-07-05 10:27:47.759 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:47.766 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:47.769 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 24.1401 ms
+2025-07-05 10:27:47.954 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:47.958 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:47.960 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 17.4779 ms
+2025-07-05 10:27:48.233 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:48.240 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:48.243 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 29.1236 ms
+2025-07-05 10:27:48.412 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:48.417 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:48.424 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 24.9915 ms
+2025-07-05 10:27:48.539 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:48.544 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:48.548 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 17.4280 ms
+2025-07-05 10:27:48.762 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:48.782 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:48.791 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 45.3514 ms
+2025-07-05 10:27:48.917 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:48.926 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:48.929 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 20.3732 ms
+2025-07-05 10:27:49.075 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:49.085 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:27:49.088 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 20.0983 ms
+2025-07-05 10:30:21.303 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-05 10:31:00.429 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-05 10:31:03.627 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.AmaDeLlavesId1' was created in shadow state because a conflicting property with the simple name 'AmaDeLlavesId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-05 10:31:03.636 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.HabitacionId1' was created in shadow state because a conflicting property with the simple name 'HabitacionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-05 10:31:03.797 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-05 10:31:09.570 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 9203.7864 ms
+2025-07-05 10:31:30.044 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:31:30.063 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:31:30.070 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 377.1065 ms
+2025-07-05 10:31:41.976 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 609.2298 ms
+2025-07-05 10:31:42.242 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 137.4492 ms
+2025-07-05 10:31:42.343 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 86.5306 ms
+2025-07-05 10:31:45.167 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:31:45.182 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:31:45.186 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 42.9826 ms
+2025-07-05 10:31:47.216 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:31:47.234 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:31:47.236 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 32.0740 ms
+2025-07-05 10:32:06.862 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 19.6557 ms
+2025-07-05 10:32:07.008 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 10.5907 ms
+2025-07-05 10:32:07.083 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 18.0359 ms
+2025-07-05 10:32:11.464 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:32:11.477 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:32:11.494 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 37.4238 ms
+2025-07-05 10:32:13.385 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:32:13.391 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:32:13.395 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 22.1836 ms
+2025-07-05 10:32:17.252 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:32:17.261 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:32:17.270 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 62.0855 ms
+2025-07-05 10:32:21.275 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:32:21.286 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:32:21.292 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 30.3659 ms
+2025-07-05 10:32:25.877 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:32:25.887 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:32:25.888 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 23.6534 ms
+2025-07-05 10:32:27.727 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:32:27.738 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:32:27.739 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 25.8472 ms
+2025-07-05 10:32:39.669 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:32:39.679 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:32:39.683 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 24.0747 ms
+2025-07-05 10:32:41.515 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:32:41.528 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:32:41.531 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 32.6787 ms
+2025-07-05 10:32:48.122 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:32:48.131 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:32:48.132 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 24.0392 ms
+2025-07-05 10:32:49.701 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:32:49.707 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:32:49.709 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 26.0631 ms
+2025-07-05 10:32:53.784 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:32:53.807 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:32:53.818 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 44.0106 ms
+2025-07-05 10:38:04.177 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-05 10:39:19.939 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-05 10:39:23.284 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.AmaDeLlavesId1' was created in shadow state because a conflicting property with the simple name 'AmaDeLlavesId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-05 10:39:23.296 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.HabitacionId1' was created in shadow state because a conflicting property with the simple name 'HabitacionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-05 10:39:23.472 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-05 10:39:28.900 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:39:28.945 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:39:29.259 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 9361.3326 ms
+2025-07-05 10:39:45.929 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 410.1717 ms
+2025-07-05 10:39:47.159 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 1031.7974 ms
+2025-07-05 10:39:47.853 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 293.5664 ms
+2025-07-05 10:39:50.051 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:39:50.068 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:39:50.069 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 50.7753 ms
+2025-07-05 10:39:55.944 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:39:55.952 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:39:55.962 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 41.2182 ms
+2025-07-05 10:39:57.199 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:39:57.209 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:39:57.212 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 29.1480 ms
+2025-07-05 10:39:57.476 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:39:57.483 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:39:57.488 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 21.2586 ms
+2025-07-05 10:40:00.861 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:40:00.870 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:40:00.873 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 147.4939 ms
+2025-07-05 10:40:02.559 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:40:02.564 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-05 10:40:02.568 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 22.6143 ms
+2025-07-05 10:40:07.172 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:40:07.178 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:40:07.182 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 22.4715 ms
+2025-07-05 10:40:53.069 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 118.4241 ms
+2025-07-05 10:50:34.739 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-05 10:54:08.024 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-05 10:54:11.268 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.AmaDeLlavesId1' was created in shadow state because a conflicting property with the simple name 'AmaDeLlavesId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-05 10:54:11.278 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.HabitacionId1' was created in shadow state because a conflicting property with the simple name 'HabitacionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-05 10:54:11.439 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-05 10:54:16.768 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:54:16.819 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:54:17.096 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 9128.8857 ms
+2025-07-05 10:54:33.026 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 226.5106 ms
+2025-07-05 10:56:24.885 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-05 10:58:23.167 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-05 10:58:26.313 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.AmaDeLlavesId1' was created in shadow state because a conflicting property with the simple name 'AmaDeLlavesId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-05 10:58:26.323 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.HabitacionId1' was created in shadow state because a conflicting property with the simple name 'HabitacionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-05 10:58:26.453 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-05 10:58:31.589 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:58:31.631 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-05 10:58:31.853 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 8791.4604 ms

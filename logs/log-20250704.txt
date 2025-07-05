@@ -1,0 +1,491 @@
+2025-07-04 04:14:05.447 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 2836.0879 ms
+2025-07-04 04:14:34.520 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-disponibles responded 200 in 566.0347 ms
+2025-07-04 04:14:42.073 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-disponibles responded 200 in 25.7932 ms
+2025-07-04 04:14:44.114 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-disponibles responded 200 in 13.8404 ms
+2025-07-04 04:14:49.439 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-disponibles responded 200 in 15.5674 ms
+2025-07-04 04:47:18.437 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 1942.7233 ms
+2025-07-04 04:47:18.443 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 1965.2427 ms
+2025-07-04 04:47:18.452 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 1938.1893 ms
+2025-07-04 04:47:44.476 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 24.8170 ms
+2025-07-04 04:47:44.478 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 21.5271 ms
+2025-07-04 04:47:44.537 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 84.0100 ms
+2025-07-04 04:47:58.200 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 17.4953 ms
+2025-07-04 04:47:58.210 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 23.1170 ms
+2025-07-04 04:47:58.213 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 22.6767 ms
+2025-07-04 04:48:08.354 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 9.2128 ms
+2025-07-04 04:48:10.688 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 13.8465 ms
+2025-07-04 04:48:18.276 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 13.7748 ms
+2025-07-04 04:48:30.405 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 11.7421 ms
+2025-07-04 04:48:32.046 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 13.1550 ms
+2025-07-04 04:48:53.114 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 78.4930 ms
+2025-07-04 04:51:03.968 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 16.3515 ms
+2025-07-04 04:51:08.900 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 10.7957 ms
+2025-07-04 04:51:10.484 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 11.1184 ms
+2025-07-04 04:51:17.187 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 10.6164 ms
+2025-07-04 04:51:18.710 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 16.5055 ms
+2025-07-04 04:51:19.489 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 6.1962 ms
+2025-07-04 04:51:19.737 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 8.2451 ms
+2025-07-04 04:51:20.462 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 8.1765 ms
+2025-07-04 04:51:25.675 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 15.2324 ms
+2025-07-04 04:51:29.687 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 8.6888 ms
+2025-07-04 04:51:33.968 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 11.0743 ms
+2025-07-04 04:51:35.426 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 10.1150 ms
+2025-07-04 04:51:36.344 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 7.6659 ms
+2025-07-04 04:51:36.542 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 7.7130 ms
+2025-07-04 04:51:36.738 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 9.2388 ms
+2025-07-04 04:51:37.157 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 8.7040 ms
+2025-07-04 04:51:37.372 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 8.2095 ms
+2025-07-04 04:51:37.741 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 7.5588 ms
+2025-07-04 04:51:37.959 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 11.7636 ms
+2025-07-04 04:51:38.143 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 8.7139 ms
+2025-07-04 04:51:38.354 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 8.9332 ms
+2025-07-04 04:52:47.588 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 9.1168 ms
+2025-07-04 04:52:53.938 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 11.0039 ms
+2025-07-04 04:53:05.295 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 25.2448 ms
+2025-07-04 04:53:15.998 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 9.9868 ms
+2025-07-04 04:54:56.621 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 12.9589 ms
+2025-07-04 04:55:18.487 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 21.9041 ms
+2025-07-04 04:55:18.992 -04:00 [INF] HTTP GET /favicon.ico responded 404 in 0.0319 ms
+2025-07-04 04:55:24.138 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 8.3918 ms
+2025-07-04 04:55:31.458 -04:00 [INF] HTTP GET /api/Reservas/ responded 405 in 0.0501 ms
+2025-07-04 04:55:36.473 -04:00 [INF] HTTP GET /api/Reservas responded 405 in 0.0699 ms
+2025-07-04 05:00:09.954 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 1436.5120 ms
+2025-07-04 05:07:55.733 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 1444.1111 ms
+2025-07-04 05:07:55.764 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 1470.0601 ms
+2025-07-04 05:07:55.786 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 1484.8750 ms
+2025-07-04 05:16:14.987 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-04 05:25:18.838 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-04 05:25:28.099 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-04 05:25:31.969 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.AmaDeLlavesId1' was created in shadow state because a conflicting property with the simple name 'AmaDeLlavesId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-04 05:25:31.977 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.HabitacionId1' was created in shadow state because a conflicting property with the simple name 'HabitacionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-04 05:25:32.134 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-04 05:25:38.758 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 10728.6455 ms
+2025-07-04 05:25:38.759 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 10728.7040 ms
+2025-07-04 05:25:38.759 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 10729.3165 ms
+2025-07-04 05:25:41.307 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 1186.3653 ms
+2025-07-04 05:25:51.839 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 32.9255 ms
+2025-07-04 05:25:51.844 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 31.7934 ms
+2025-07-04 05:25:51.859 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 62.4531 ms
+2025-07-04 05:26:02.496 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 132.6495 ms
+2025-07-04 05:26:10.839 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 14.9847 ms
+2025-07-04 05:26:31.377 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 30.6197 ms
+2025-07-04 05:27:27.728 -04:00 [INF] HTTP GET /api/Reservas/1 responded 400 in 168.6273 ms
+2025-07-04 05:27:35.061 -04:00 [INF] HTTP GET /api/Reservas/2 responded 400 in 15.3323 ms
+2025-07-04 05:27:40.883 -04:00 [INF] HTTP GET /api/Reservas/3 responded 200 in 219.2476 ms
+2025-07-04 05:27:53.429 -04:00 [INF] HTTP GET /api/Reservas/4 responded 200 in 22.5892 ms
+2025-07-04 05:28:10.984 -04:00 [INF] HTTP GET /api/Reservas/5 responded 200 in 12.0811 ms
+2025-07-04 05:28:33.577 -04:00 [INF] HTTP GET /api/Reservas/6 responded 200 in 14.9362 ms
+2025-07-04 05:28:41.509 -04:00 [INF] HTTP GET /api/Reservas/7 responded 400 in 12.7833 ms
+2025-07-04 05:29:03.981 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 11.1747 ms
+2025-07-04 05:35:16.090 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 1412.0920 ms
+2025-07-04 05:35:16.146 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 1458.0972 ms
+2025-07-04 05:35:16.174 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 1486.1653 ms
+2025-07-04 05:39:10.478 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-04 05:41:58.980 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-04 05:42:02.899 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.AmaDeLlavesId1' was created in shadow state because a conflicting property with the simple name 'AmaDeLlavesId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-04 05:42:02.909 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.HabitacionId1' was created in shadow state because a conflicting property with the simple name 'HabitacionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-04 05:42:03.033 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-04 05:42:08.748 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 9812.6293 ms
+2025-07-04 05:42:08.748 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 9810.5056 ms
+2025-07-04 05:42:08.748 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 9784.8749 ms
+2025-07-04 05:42:23.759 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 1125.8854 ms
+2025-07-04 05:42:40.768 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 41.8557 ms
+2025-07-04 05:44:06.854 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 22.0266 ms
+2025-07-04 05:57:48.432 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-04 06:16:59.340 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-04 06:17:08.151 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-04 06:17:13.390 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.AmaDeLlavesId1' was created in shadow state because a conflicting property with the simple name 'AmaDeLlavesId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-04 06:17:13.444 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.HabitacionId1' was created in shadow state because a conflicting property with the simple name 'HabitacionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-04 06:17:13.792 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-04 06:17:26.452 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 18376.2352 ms
+2025-07-04 06:17:26.452 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 18376.9076 ms
+2025-07-04 06:17:26.452 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 18375.6328 ms
+2025-07-04 06:17:26.452 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 12307.0698 ms
+2025-07-04 06:18:18.438 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 357.5413 ms
+2025-07-04 06:24:47.085 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-04 06:25:32.498 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-04 06:25:35.447 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.AmaDeLlavesId1' was created in shadow state because a conflicting property with the simple name 'AmaDeLlavesId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-04 06:25:35.456 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.HabitacionId1' was created in shadow state because a conflicting property with the simple name 'HabitacionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-04 06:25:35.622 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-04 06:25:41.320 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 8861.8526 ms
+2025-07-04 06:25:51.922 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 1195.7335 ms
+2025-07-04 06:25:51.926 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 1212.6742 ms
+2025-07-04 06:25:51.946 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 1211.6278 ms
+2025-07-04 06:25:55.902 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 277.1041 ms
+2025-07-04 06:26:58.125 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 26.7211 ms
+2025-07-04 06:30:04.621 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-disponibles responded 200 in 815.5322 ms
+2025-07-04 06:34:10.915 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 12.7510 ms
+2025-07-04 06:34:10.998 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 16.8852 ms
+2025-07-04 06:34:11.034 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 29.5005 ms
+2025-07-04 06:46:04.254 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-04 06:46:23.796 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-04 06:46:27.084 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.AmaDeLlavesId1' was created in shadow state because a conflicting property with the simple name 'AmaDeLlavesId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-04 06:46:27.096 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.HabitacionId1' was created in shadow state because a conflicting property with the simple name 'HabitacionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-04 06:46:27.288 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-04 06:46:33.509 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 06:46:33.567 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 06:46:33.926 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 10192.3644 ms
+2025-07-04 06:47:12.863 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 910.7164 ms
+2025-07-04 06:47:12.860 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 875.2773 ms
+2025-07-04 06:47:12.962 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 987.9900 ms
+2025-07-04 06:47:25.724 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 06:47:25.731 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 06:47:25.736 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 412.8409 ms
+2025-07-04 06:52:50.276 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 22.8425 ms
+2025-07-04 06:52:50.313 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 20.4156 ms
+2025-07-04 06:52:50.318 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 24.7297 ms
+2025-07-04 06:53:08.298 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 20.8457 ms
+2025-07-04 06:53:08.322 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 14.2130 ms
+2025-07-04 06:53:08.332 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 29.7482 ms
+2025-07-04 06:53:15.121 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 06:53:15.145 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 06:53:15.146 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 42.7623 ms
+2025-07-04 07:07:04.516 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 2525.7940 ms
+2025-07-04 07:07:04.562 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 2505.7704 ms
+2025-07-04 07:07:04.564 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 2173.3413 ms
+2025-07-04 07:07:21.007 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 16.4006 ms
+2025-07-04 07:07:21.042 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 14.4537 ms
+2025-07-04 07:07:21.049 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 14.3588 ms
+2025-07-04 07:07:27.264 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 07:07:27.268 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 07:07:27.277 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 75.6019 ms
+2025-07-04 07:07:53.435 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 9.3725 ms
+2025-07-04 07:07:57.124 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 12.9370 ms
+2025-07-04 07:08:49.808 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 23.0368 ms
+2025-07-04 07:08:59.816 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 19.0350 ms
+2025-07-04 07:09:02.550 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 12.2292 ms
+2025-07-04 07:09:10.211 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 07:09:10.226 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 07:09:10.231 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 41.3331 ms
+2025-07-04 07:14:24.635 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 2135.4284 ms
+2025-07-04 07:14:24.663 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 1965.5063 ms
+2025-07-04 07:14:24.698 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 1590.0986 ms
+2025-07-04 07:14:47.966 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 6.7532 ms
+2025-07-04 07:14:47.960 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 8.2611 ms
+2025-07-04 07:14:48.033 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 7.7546 ms
+2025-07-04 07:14:59.498 -04:00 [INF] HTTP GET /api/Clientes/1003 responded 200 in 163.3226 ms
+2025-07-04 07:15:03.875 -04:00 [INF] HTTP GET /api/Clientes/1003 responded 200 in 17.9293 ms
+2025-07-04 07:15:05.309 -04:00 [INF] HTTP GET /api/Clientes/1002 responded 200 in 11.6398 ms
+2025-07-04 07:15:06.813 -04:00 [INF] HTTP GET /api/Clientes/1004 responded 200 in 11.3046 ms
+2025-07-04 07:15:51.557 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 24.5091 ms
+2025-07-04 07:16:01.731 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 135.7499 ms
+2025-07-04 07:16:21.251 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 12.7424 ms
+2025-07-04 07:16:24.127 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 9.5440 ms
+2025-07-04 07:16:39.705 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 15.1228 ms
+2025-07-04 07:16:39.712 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 8.0861 ms
+2025-07-04 07:16:39.771 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 11.4401 ms
+2025-07-04 07:17:31.839 -04:00 [INF] HTTP GET /api/AmasDeLlaves/1 responded 200 in 118.6255 ms
+2025-07-04 07:17:47.968 -04:00 [INF] HTTP GET /api/AmasDeLlaves/2 responded 200 in 11.3303 ms
+2025-07-04 07:17:54.793 -04:00 [INF] HTTP GET /api/AmasDeLlaves/1 responded 200 in 13.7547 ms
+2025-07-04 07:17:59.677 -04:00 [INF] HTTP GET /api/AmasDeLlaves/2 responded 200 in 12.4551 ms
+2025-07-04 07:18:08.979 -04:00 [INF] HTTP GET /api/Clientes/1 responded 200 in 6.7166 ms
+2025-07-04 07:18:15.119 -04:00 [INF] HTTP GET /api/Clientes/1003 responded 200 in 9.2790 ms
+2025-07-04 07:18:23.189 -04:00 [INF] HTTP OPTIONS /api/Clientes/1003 responded 204 in 6.7678 ms
+2025-07-04 07:18:24.456 -04:00 [INF] Traza registrada: Modificación en Clientes (ID: 1003)
+2025-07-04 07:18:24.458 -04:00 [INF] HTTP PUT /api/Clientes/1003 responded 200 in 1256.0945 ms
+2025-07-04 07:18:24.493 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 6.5115 ms
+2025-07-04 07:18:36.795 -04:00 [INF] HTTP GET /api/Clientes/1003 responded 200 in 10.2125 ms
+2025-07-04 07:18:45.896 -04:00 [INF] HTTP OPTIONS /api/Clientes/1003 responded 204 in 2.2738 ms
+2025-07-04 07:18:46.027 -04:00 [INF] Traza registrada: Modificación en Clientes (ID: 1003)
+2025-07-04 07:18:46.030 -04:00 [INF] HTTP PUT /api/Clientes/1003 responded 200 in 74.1171 ms
+2025-07-04 07:18:46.191 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 7.9452 ms
+2025-07-04 07:19:04.155 -04:00 [INF] HTTP OPTIONS /api/Clientes/1004 responded 204 in 0.1657 ms
+2025-07-04 07:19:04.349 -04:00 [INF] Traza registrada: Eliminación en Clientes (ID: 1004)
+2025-07-04 07:19:04.352 -04:00 [INF] HTTP DELETE /api/Clientes/1004 responded 204 in 175.4765 ms
+2025-07-04 07:19:04.455 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 9.0666 ms
+2025-07-04 07:19:14.605 -04:00 [INF] HTTP GET /api/AmasDeLlaves/1 responded 200 in 8.0878 ms
+2025-07-04 07:20:12.278 -04:00 [INF] HTTP OPTIONS /api/AmasDeLlaves/1 responded 204 in 0.1212 ms
+2025-07-04 07:20:12.527 -04:00 [INF] Traza registrada: Modificación en AmasDeLlaves (ID: 1)
+2025-07-04 07:20:12.530 -04:00 [INF] HTTP PUT /api/AmasDeLlaves/1 responded 200 in 231.0771 ms
+2025-07-04 07:20:12.652 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 23.4864 ms
+2025-07-04 07:20:29.084 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 11.8507 ms
+2025-07-04 07:20:43.655 -04:00 [INF] HTTP GET /api/Habitaciones/10 responded 200 in 58.8936 ms
+2025-07-04 07:21:05.739 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 34.5987 ms
+2025-07-04 07:21:07.658 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 6.3672 ms
+2025-07-04 07:21:12.830 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 8.6521 ms
+2025-07-04 07:21:18.150 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 14.8764 ms
+2025-07-04 07:21:26.435 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 6.4764 ms
+2025-07-04 07:21:30.198 -04:00 [INF] HTTP GET /api/Habitaciones/7 responded 200 in 11.4969 ms
+2025-07-04 07:21:34.142 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 11.1707 ms
+2025-07-04 07:21:35.977 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 6.4903 ms
+2025-07-04 07:21:39.465 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 12.5690 ms
+2025-07-04 07:21:41.894 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 6.2934 ms
+2025-07-04 07:22:26.547 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 7.1076 ms
+2025-07-04 07:22:30.686 -04:00 [INF] HTTP GET /api/Habitaciones/1 responded 200 in 14.4777 ms
+2025-07-04 07:22:34.506 -04:00 [INF] HTTP GET /api/Habitaciones/1 responded 200 in 7.8690 ms
+2025-07-04 07:22:40.539 -04:00 [INF] HTTP OPTIONS /api/Habitaciones responded 204 in 0.9091 ms
+2025-07-04 07:22:40.637 -04:00 [INF] HTTP POST /api/Habitaciones responded 400 in 88.2153 ms
+2025-07-04 07:22:43.462 -04:00 [INF] HTTP OPTIONS /api/Habitaciones/1 responded 204 in 0.0998 ms
+2025-07-04 07:22:43.641 -04:00 [INF] Traza registrada: Modificación en Habitaciones (ID: 1)
+2025-07-04 07:22:43.642 -04:00 [INF] HTTP PUT /api/Habitaciones/1 responded 200 in 170.4293 ms
+2025-07-04 07:22:43.712 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 12.2885 ms
+2025-07-04 07:22:49.556 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 6.7112 ms
+2025-07-04 07:22:54.072 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 11.8038 ms
+2025-07-04 07:23:08.276 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 10.0182 ms
+2025-07-04 07:23:46.727 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-disponibles responded 200 in 580.0364 ms
+2025-07-04 07:24:03.424 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 07:24:03.428 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 07:24:03.429 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 30.2801 ms
+2025-07-04 07:25:20.761 -04:00 [INF] HTTP OPTIONS /api/Reservas/1/cancelar responded 204 in 0.1734 ms
+2025-07-04 07:25:21.022 -04:00 [INF] HTTP POST /api/Reservas/1/cancelar responded 400 in 217.2362 ms
+2025-07-04 07:26:20.621 -04:00 [INF] HTTP OPTIONS /api/Reservas/3/cambiar-habitacion responded 204 in 9.4930 ms
+2025-07-04 07:26:20.775 -04:00 [INF] HTTP POST /api/Reservas/3/cambiar-habitacion responded 400 in 55.8618 ms
+2025-07-04 07:26:27.068 -04:00 [INF] HTTP OPTIONS /api/Reservas/3/cambiar-habitacion responded 204 in 2.6300 ms
+2025-07-04 07:26:27.082 -04:00 [INF] HTTP POST /api/Reservas/3/cambiar-habitacion responded 400 in 3.1255 ms
+2025-07-04 07:26:36.749 -04:00 [INF] HTTP OPTIONS /api/Reservas/3/cambiar-habitacion responded 204 in 0.0866 ms
+2025-07-04 07:26:36.765 -04:00 [INF] HTTP POST /api/Reservas/3/cambiar-habitacion responded 400 in 3.7850 ms
+2025-07-04 07:27:00.399 -04:00 [INF] HTTP OPTIONS /api/Reservas/4/cambiar-habitacion responded 204 in 0.1649 ms
+2025-07-04 07:27:00.492 -04:00 [INF] HTTP POST /api/Reservas/4/cambiar-habitacion responded 400 in 3.6666 ms
+2025-07-04 07:27:06.143 -04:00 [INF] HTTP POST /api/Reservas/4/registrar-llegada responded 400 in 141.7765 ms
+2025-07-04 07:27:28.533 -04:00 [INF] HTTP OPTIONS /api/Reservas/4/cambiar-habitacion responded 204 in 0.1013 ms
+2025-07-04 07:27:28.552 -04:00 [INF] HTTP POST /api/Reservas/4/cambiar-habitacion responded 400 in 4.0060 ms
+2025-07-04 07:27:31.495 -04:00 [INF] HTTP POST /api/Reservas/4/registrar-llegada responded 400 in 6.5365 ms
+2025-07-04 07:28:18.789 -04:00 [INF] HTTP GET /api/Habitaciones/1 responded 200 in 13.7672 ms
+2025-07-04 07:28:21.812 -04:00 [INF] HTTP GET /api/Habitaciones/11 responded 200 in 10.4791 ms
+2025-07-04 07:28:25.280 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 12.2029 ms
+2025-07-04 07:28:27.360 -04:00 [INF] HTTP GET /api/Habitaciones/2 responded 200 in 7.4590 ms
+2025-07-04 07:28:30.160 -04:00 [INF] HTTP GET /api/Habitaciones/3 responded 200 in 25.6932 ms
+2025-07-04 07:28:32.579 -04:00 [INF] HTTP GET /api/Habitaciones/6 responded 200 in 17.7281 ms
+2025-07-04 07:29:17.853 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/1 responded 200 in 256.8536 ms
+2025-07-04 07:29:36.427 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/1 responded 200 in 23.7149 ms
+2025-07-04 07:29:39.183 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/1 responded 200 in 6.7138 ms
+2025-07-04 07:29:55.116 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/1 responded 200 in 7.8946 ms
+2025-07-04 07:30:03.005 -04:00 [INF] HTTP GET /api/AmasDeLlaves/1 responded 200 in 8.8606 ms
+2025-07-04 07:30:23.117 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/1 responded 200 in 9.1650 ms
+2025-07-04 07:30:52.728 -04:00 [INF] HTTP OPTIONS /api/Reservas/desasignar-habitacion-ama responded 204 in 0.0911 ms
+2025-07-04 07:30:52.826 -04:00 [INF] Desasignando habitación 012 de ama de llaves 1
+2025-07-04 07:30:52.998 -04:00 [INF] Traza registrada: Desasignación en HabitacionesAmasDeLlaves (ID: 2-1)
+2025-07-04 07:30:53.000 -04:00 [INF] HTTP POST /api/Reservas/desasignar-habitacion-ama responded 204 in 256.9857 ms
+2025-07-04 07:30:53.058 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/1 responded 200 in 7.5434 ms
+2025-07-04 07:31:07.609 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/1 responded 200 in 8.5193 ms
+2025-07-04 07:31:31.920 -04:00 [INF] HTTP OPTIONS /api/Reservas/asignar-habitacion-ama responded 204 in 0.1760 ms
+2025-07-04 07:31:32.067 -04:00 [INF] Asignando habitación 012 a ama de llaves 1 en turno Mañana
+2025-07-04 07:31:32.223 -04:00 [INF] Traza registrada: Asignación en HabitacionesAmasDeLlaves (ID: 2-1-Mañana)
+2025-07-04 07:31:32.226 -04:00 [INF] HTTP POST /api/Reservas/asignar-habitacion-ama responded 204 in 270.3778 ms
+2025-07-04 07:31:32.287 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/1 responded 200 in 9.6871 ms
+2025-07-04 07:31:54.661 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 5.7500 ms
+2025-07-04 07:31:56.927 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 7.0353 ms
+2025-07-04 07:32:22.081 -04:00 [INF] HTTP POST /api/Reservas/4/registrar-llegada responded 400 in 13.4059 ms
+2025-07-04 21:19:06.048 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 21:19:06.062 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 21:19:06.064 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 1557.9289 ms
+2025-07-04 21:24:05.791 -04:00 [INF] HTTP GET /api/Habitaciones/1 responded 200 in 13.5295 ms
+2025-07-04 21:24:13.654 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 15.3169 ms
+2025-07-04 21:24:26.930 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 20.6614 ms
+2025-07-04 21:31:31.684 -04:00 [INF] HTTP GET /api/AmasDeLlaves/2 responded 200 in 1376.7839 ms
+2025-07-04 21:31:46.322 -04:00 [INF] HTTP OPTIONS /api/AmasDeLlaves/2 responded 204 in 0.4382 ms
+2025-07-04 21:31:46.383 -04:00 [INF] Traza registrada: Modificación en AmasDeLlaves (ID: 2)
+2025-07-04 21:31:46.385 -04:00 [INF] HTTP PUT /api/AmasDeLlaves/2 responded 200 in 51.3472 ms
+2025-07-04 21:31:46.435 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 12.2721 ms
+2025-07-04 21:32:24.847 -04:00 [INF] HTTP GET /api/AmasDeLlaves/2 responded 200 in 14.6616 ms
+2025-07-04 21:32:37.867 -04:00 [INF] HTTP OPTIONS /api/AmasDeLlaves/2 responded 204 in 0.2426 ms
+2025-07-04 21:32:37.909 -04:00 [INF] Traza registrada: Modificación en AmasDeLlaves (ID: 2)
+2025-07-04 21:32:37.916 -04:00 [INF] HTTP PUT /api/AmasDeLlaves/2 responded 200 in 39.5514 ms
+2025-07-04 21:32:37.943 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 8.5798 ms
+2025-07-04 21:32:42.906 -04:00 [INF] HTTP GET /api/AmasDeLlaves/2 responded 200 in 9.0036 ms
+2025-07-04 21:32:48.837 -04:00 [INF] HTTP OPTIONS /api/AmasDeLlaves/2 responded 204 in 1.4690 ms
+2025-07-04 21:32:48.876 -04:00 [INF] Traza registrada: Modificación en AmasDeLlaves (ID: 2)
+2025-07-04 21:32:48.879 -04:00 [INF] HTTP PUT /api/AmasDeLlaves/2 responded 200 in 35.7704 ms
+2025-07-04 21:32:48.927 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 17.8853 ms
+2025-07-04 21:33:15.085 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/2 responded 200 in 49.8848 ms
+2025-07-04 21:33:16.792 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/2 responded 200 in 9.8470 ms
+2025-07-04 21:33:33.146 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/1 responded 200 in 16.4416 ms
+2025-07-04 21:47:07.390 -04:00 [INF] HTTP OPTIONS /api/Habitaciones responded 204 in 0.1179 ms
+2025-07-04 21:47:07.403 -04:00 [INF] HTTP POST /api/Habitaciones responded 400 in 3.2615 ms
+2025-07-04 21:47:13.360 -04:00 [INF] HTTP OPTIONS /api/Habitaciones responded 204 in 0.1417 ms
+2025-07-04 21:47:13.370 -04:00 [INF] HTTP POST /api/Habitaciones responded 400 in 2.9362 ms
+2025-07-04 21:47:21.127 -04:00 [INF] HTTP OPTIONS /api/Habitaciones responded 204 in 0.0675 ms
+2025-07-04 21:47:21.140 -04:00 [INF] HTTP POST /api/Habitaciones responded 400 in 5.4201 ms
+2025-07-04 21:53:12.436 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 1353.8066 ms
+2025-07-04 21:53:14.745 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 8.0768 ms
+2025-07-04 21:53:30.588 -04:00 [INF] HTTP OPTIONS /api/Habitaciones responded 204 in 0.0779 ms
+2025-07-04 21:53:30.614 -04:00 [INF] HTTP POST /api/Habitaciones responded 400 in 16.4665 ms
+2025-07-04 21:53:33.160 -04:00 [INF] HTTP OPTIONS /api/Habitaciones/1 responded 204 in 0.0695 ms
+2025-07-04 21:53:33.216 -04:00 [INF] Traza registrada: Modificación en Habitaciones (ID: 1)
+2025-07-04 21:53:33.217 -04:00 [INF] HTTP PUT /api/Habitaciones/1 responded 200 in 46.8319 ms
+2025-07-04 21:53:33.250 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 8.6061 ms
+2025-07-04 21:53:53.015 -04:00 [INF] HTTP OPTIONS /api/Habitaciones responded 204 in 0.0776 ms
+2025-07-04 21:53:53.034 -04:00 [INF] HTTP POST /api/Habitaciones responded 400 in 12.1427 ms
+2025-07-04 21:53:59.062 -04:00 [INF] HTTP GET /api/Habitaciones/1 responded 200 in 7.7607 ms
+2025-07-04 21:54:03.697 -04:00 [INF] HTTP GET /api/Habitaciones/1 responded 200 in 9.5554 ms
+2025-07-04 21:54:04.708 -04:00 [INF] HTTP GET /api/Habitaciones/2 responded 200 in 7.9655 ms
+2025-07-04 21:54:05.690 -04:00 [INF] HTTP GET /api/Habitaciones/1 responded 200 in 6.7215 ms
+2025-07-04 21:54:08.388 -04:00 [INF] HTTP OPTIONS /api/Habitaciones/1 responded 204 in 0.0755 ms
+2025-07-04 21:54:08.421 -04:00 [INF] Traza registrada: Modificación en Habitaciones (ID: 1)
+2025-07-04 21:54:08.425 -04:00 [INF] HTTP PUT /api/Habitaciones/1 responded 200 in 30.7970 ms
+2025-07-04 21:54:08.463 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 6.2068 ms
+2025-07-04 21:54:14.086 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 11.8181 ms
+2025-07-04 21:54:22.858 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 6.0756 ms
+2025-07-04 21:54:26.756 -04:00 [INF] HTTP GET /api/Habitaciones/1 responded 200 in 6.9215 ms
+2025-07-04 21:54:35.077 -04:00 [INF] HTTP OPTIONS /api/Habitaciones/1 responded 204 in 0.0814 ms
+2025-07-04 21:54:35.111 -04:00 [INF] Traza registrada: Modificación en Habitaciones (ID: 1)
+2025-07-04 21:54:35.112 -04:00 [INF] HTTP PUT /api/Habitaciones/1 responded 200 in 29.2456 ms
+2025-07-04 21:54:35.144 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 11.3080 ms
+2025-07-04 21:54:40.428 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 7.5768 ms
+2025-07-04 21:54:50.004 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 5.6223 ms
+2025-07-04 21:55:04.863 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 5.2891 ms
+2025-07-04 21:55:06.678 -04:00 [INF] HTTP GET /api/Habitaciones/1 responded 200 in 13.9301 ms
+2025-07-04 21:55:10.287 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 7.2028 ms
+2025-07-04 21:55:16.444 -04:00 [INF] HTTP OPTIONS /api/Habitaciones/1 responded 204 in 0.0795 ms
+2025-07-04 21:55:16.486 -04:00 [INF] Traza registrada: Modificación en Habitaciones (ID: 1)
+2025-07-04 21:55:16.490 -04:00 [INF] HTTP PUT /api/Habitaciones/1 responded 200 in 42.3133 ms
+2025-07-04 21:55:16.546 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 7.4475 ms
+2025-07-04 21:55:23.046 -04:00 [INF] HTTP GET /api/Habitaciones/1 responded 200 in 13.5855 ms
+2025-07-04 21:55:26.169 -04:00 [INF] HTTP OPTIONS /api/Habitaciones/1 responded 204 in 0.0713 ms
+2025-07-04 21:55:26.207 -04:00 [INF] Traza registrada: Modificación en Habitaciones (ID: 1)
+2025-07-04 21:55:26.218 -04:00 [INF] HTTP PUT /api/Habitaciones/1 responded 200 in 43.2489 ms
+2025-07-04 21:55:26.257 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 10.5189 ms
+2025-07-04 21:55:31.009 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 6.9164 ms
+2025-07-04 21:56:46.136 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 11.9720 ms
+2025-07-04 21:56:55.669 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 7.2555 ms
+2025-07-04 21:57:11.547 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 9.2465 ms
+2025-07-04 21:57:22.532 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 10.0511 ms
+2025-07-04 21:57:45.239 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 47.1000 ms
+2025-07-04 21:58:46.572 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 12.5115 ms
+2025-07-04 21:58:51.846 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 11.4420 ms
+2025-07-04 21:59:01.989 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 7.2024 ms
+2025-07-04 22:00:54.119 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 15.5339 ms
+2025-07-04 22:01:36.025 -04:00 [INF] HTTP GET /api/AmasDeLlaves/1 responded 200 in 12.1621 ms
+2025-07-04 22:02:58.452 -04:00 [INF] HTTP OPTIONS /api/AmasDeLlaves responded 204 in 0.0783 ms
+2025-07-04 22:02:58.475 -04:00 [INF] HTTP POST /api/AmasDeLlaves responded 400 in 16.4196 ms
+2025-07-04 22:03:04.491 -04:00 [INF] HTTP OPTIONS /api/AmasDeLlaves responded 204 in 0.0815 ms
+2025-07-04 22:03:04.523 -04:00 [INF] HTTP POST /api/AmasDeLlaves responded 400 in 17.4515 ms
+2025-07-04 22:06:22.444 -04:00 [INF] HTTP OPTIONS /api/AmasDeLlaves responded 204 in 0.1411 ms
+2025-07-04 22:06:22.461 -04:00 [INF] HTTP POST /api/AmasDeLlaves responded 400 in 7.5750 ms
+2025-07-04 22:06:29.698 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 13.5536 ms
+2025-07-04 22:06:37.938 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 102.5907 ms
+2025-07-04 22:06:49.094 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 8.5812 ms
+2025-07-04 22:06:58.306 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 7.6414 ms
+2025-07-04 22:07:14.998 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 9.9931 ms
+2025-07-04 22:07:35.454 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/1 responded 200 in 28.9127 ms
+2025-07-04 22:07:41.708 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/2 responded 200 in 9.0425 ms
+2025-07-04 22:07:58.092 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/1 responded 200 in 12.8603 ms
+2025-07-04 22:08:14.225 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/2 responded 200 in 8.4908 ms
+2025-07-04 22:26:27.849 -04:00 [INF] HTTP GET /api/Clientes/1 responded 200 in 1351.1756 ms
+2025-07-04 22:26:30.677 -04:00 [INF] HTTP GET /api/Clientes/1003 responded 200 in 7.7163 ms
+2025-07-04 22:28:41.054 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/2 responded 200 in 62.0104 ms
+2025-07-04 22:28:52.584 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/2 responded 200 in 8.6516 ms
+2025-07-04 22:29:47.177 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 11.1453 ms
+2025-07-04 22:33:14.782 -04:00 [INF] HTTP GET /api/Habitaciones/11 responded 200 in 1390.2171 ms
+2025-07-04 22:33:27.892 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 12.4192 ms
+2025-07-04 22:33:47.278 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 8.4220 ms
+2025-07-04 22:34:04.947 -04:00 [INF] HTTP GET /api/Habitaciones/1 responded 200 in 7.4851 ms
+2025-07-04 22:58:58.523 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 22:58:58.533 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 22:58:58.535 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 1396.8230 ms
+2025-07-04 22:59:02.731 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 22:59:02.758 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-04 22:59:02.758 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 38.9706 ms
+2025-07-04 22:59:05.488 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 22:59:05.492 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-04 22:59:05.495 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 13.1458 ms
+2025-07-04 22:59:15.037 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 22:59:15.046 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-04 22:59:15.047 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 19.5409 ms
+2025-07-04 22:59:24.927 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 22:59:24.933 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-04 22:59:24.936 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 15.6014 ms
+2025-07-04 22:59:30.063 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 22:59:30.070 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 22:59:30.072 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 15.3111 ms
+2025-07-04 22:59:37.733 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 22:59:37.739 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 22:59:37.742 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 15.5883 ms
+2025-07-04 22:59:46.316 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 22:59:46.321 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-04 22:59:46.324 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 12.6601 ms
+2025-07-04 22:59:53.426 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 22:59:53.464 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-04 22:59:53.471 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 53.2603 ms
+2025-07-04 22:59:55.072 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 22:59:55.081 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-04 22:59:55.082 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 15.9953 ms
+2025-07-04 22:59:56.356 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 22:59:56.360 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-04 22:59:56.361 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 13.6675 ms
+2025-07-04 23:00:03.594 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 23:00:03.610 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-04 23:00:03.611 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 28.1963 ms
+2025-07-04 23:00:05.389 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 23:00:05.396 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-04 23:00:05.397 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 13.8929 ms
+2025-07-04 23:00:17.563 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 23:00:17.571 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-04 23:00:17.572 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 17.0945 ms
+2025-07-04 23:17:04.506 -04:00 [INF] HTTP GET /api/AmasDeLlaves/2 responded 200 in 1335.2709 ms
+2025-07-04 23:17:16.392 -04:00 [INF] HTTP OPTIONS /api/AmasDeLlaves responded 204 in 0.1716 ms
+2025-07-04 23:17:16.420 -04:00 [INF] HTTP POST /api/AmasDeLlaves responded 400 in 15.4953 ms
+2025-07-04 23:18:01.250 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 12.8331 ms
+2025-07-04 23:18:01.272 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 9.4025 ms
+2025-07-04 23:18:01.288 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 15.8945 ms
+2025-07-04 23:33:46.459 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 1573.0402 ms
+2025-07-04 23:33:46.482 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 1586.9054 ms
+2025-07-04 23:33:46.554 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 1624.8828 ms
+2025-07-04 23:38:06.033 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 627.7558 ms
+2025-07-04 23:38:06.077 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 666.9266 ms
+2025-07-04 23:38:06.087 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 673.7797 ms
+2025-07-04 23:49:10.507 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 1344.9506 ms
+2025-07-04 23:49:10.529 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 1354.2526 ms
+2025-07-04 23:49:10.545 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 1365.3378 ms
+2025-07-04 23:49:50.219 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 13.3479 ms
+2025-07-04 23:49:59.846 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 23:49:59.851 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 23:49:59.852 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 57.3090 ms
+2025-07-04 23:51:58.776 -04:00 [INF] HTTP GET /api/Reservas/habitaciones-por-ama-de-llaves/1 responded 200 in 22.0161 ms
+2025-07-04 19:08:46.047 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-04 19:16:50.685 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-04 19:19:47.467 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-04 09:18:24.399 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-04 09:19:48.311 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-04 09:19:51.234 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.AmaDeLlavesId1' was created in shadow state because a conflicting property with the simple name 'AmaDeLlavesId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-04 09:19:51.243 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.HabitacionId1' was created in shadow state because a conflicting property with the simple name 'HabitacionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-04 09:19:51.400 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-04 09:19:56.848 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 09:19:56.921 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 09:19:57.246 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 8989.1680 ms
+2025-07-04 09:20:22.464 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 09:20:22.472 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 09:20:22.477 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 157.6425 ms
+2025-07-04 09:20:33.973 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 09:20:33.981 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 09:20:33.983 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 369.7903 ms
+2025-07-04 09:23:52.310 -04:00 [INF] HTTP GET /api/Habitaciones/11 responded 200 in 215.1290 ms
+2025-07-04 09:34:42.179 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-04 09:35:34.392 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-04 09:35:37.484 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.AmaDeLlavesId1' was created in shadow state because a conflicting property with the simple name 'AmaDeLlavesId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-04 09:35:37.493 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.HabitacionId1' was created in shadow state because a conflicting property with the simple name 'HabitacionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-04 09:35:37.655 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-04 09:35:43.526 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 09:35:43.603 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 09:35:43.947 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 9614.8625 ms
+2025-07-04 10:13:20.743 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-04 10:15:20.259 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-04 10:15:23.280 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.AmaDeLlavesId1' was created in shadow state because a conflicting property with the simple name 'AmaDeLlavesId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-04 10:15:23.290 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.HabitacionId1' was created in shadow state because a conflicting property with the simple name 'HabitacionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-04 10:15:23.473 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-04 10:15:29.470 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 10:15:29.585 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 10:15:29.950 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 9738.0322 ms
+2025-07-04 10:15:42.213 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 10:15:42.234 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 10:15:42.252 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 206.6219 ms
+2025-07-04 10:18:09.795 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-04 10:18:09.815 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-04 10:18:09.827 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 393.1050 ms
+2025-07-04 10:18:14.317 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 10:18:14.336 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 10:18:14.339 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 58.2604 ms
+2025-07-04 10:21:49.508 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-04 10:23:21.430 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-04 10:23:24.913 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.AmaDeLlavesId1' was created in shadow state because a conflicting property with the simple name 'AmaDeLlavesId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-04 10:23:24.926 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.HabitacionId1' was created in shadow state because a conflicting property with the simple name 'HabitacionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-04 10:23:25.176 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-04 10:23:30.882 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 10:23:30.961 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 10:23:31.322 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 9943.4792 ms
+2025-07-04 10:23:43.313 -04:00 [INF] Reservas antes de filtro de fecha: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 10:23:43.321 -04:00 [INF] Reservas mapeadas: 2, Ejemplo: Id=3, EstaElClienteEnHostal=true
+2025-07-04 10:23:43.339 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 170.2733 ms
+2025-07-04 10:23:57.065 -04:00 [INF] Reservas antes de filtro de fecha: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-04 10:23:57.072 -04:00 [INF] Reservas mapeadas: 0, Ejemplo: Id=null, EstaElClienteEnHostal=null
+2025-07-04 10:23:57.073 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 401.7217 ms

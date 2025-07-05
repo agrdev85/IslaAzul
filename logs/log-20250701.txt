@@ -1,0 +1,594 @@
+2025-07-01 20:53:30.223 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-01 20:53:31.107 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-01 21:01:32.337 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-01 21:01:35.192 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-01 21:01:36.793 -04:00 [INF] Executed DbCommand (1,348ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [HostalIslaAzulDb];
+2025-07-01 21:01:37.503 -04:00 [INF] Executed DbCommand (679ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [HostalIslaAzulDb] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2025-07-01 21:01:38.324 -04:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-01 21:01:38.638 -04:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2025-07-01 21:01:38.644 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-01 21:01:38.734 -04:00 [INF] Executed DbCommand (73ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-07-01 21:01:38.801 -04:00 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-07-01 21:01:38.916 -04:00 [INF] Applying migration '20250702005332_Initial'.
+2025-07-01 21:01:39.221 -04:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AmasDeLlaves] (
+    [Id] int NOT NULL IDENTITY,
+    [NombreApellidos] nvarchar(max) NOT NULL,
+    [CI] nvarchar(max) NOT NULL,
+    [NumeroTelefonico] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_AmasDeLlaves] PRIMARY KEY ([Id])
+);
+2025-07-01 21:01:39.231 -04:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Clientes] (
+    [Id] int NOT NULL IDENTITY,
+    [NombreApellidos] nvarchar(max) NOT NULL,
+    [CI] nvarchar(max) NOT NULL,
+    [NumeroTelefonico] nvarchar(max) NOT NULL,
+    [EsVip] bit NOT NULL,
+    CONSTRAINT [PK_Clientes] PRIMARY KEY ([Id])
+);
+2025-07-01 21:01:39.239 -04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Habitaciones] (
+    [Id] int NOT NULL IDENTITY,
+    [Numero] nvarchar(450) NOT NULL,
+    [EstaFueraDeServicio] bit NOT NULL,
+    CONSTRAINT [PK_Habitaciones] PRIMARY KEY ([Id])
+);
+2025-07-01 21:01:39.247 -04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Trazas] (
+    [Id] int NOT NULL IDENTITY,
+    [Operacion] nvarchar(max) NOT NULL,
+    [TablaAfectada] nvarchar(max) NOT NULL,
+    [RegistroId] nvarchar(max) NOT NULL,
+    [Fecha] datetime2 NOT NULL,
+    [Detalles] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Trazas] PRIMARY KEY ([Id])
+);
+2025-07-01 21:01:39.268 -04:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [HabitacionesAmasDeLlaves] (
+    [AmaDeLlavesId] int NOT NULL,
+    [HabitacionNumero] nvarchar(450) NOT NULL,
+    [HabitacionId] int NOT NULL,
+    CONSTRAINT [PK_HabitacionesAmasDeLlaves] PRIMARY KEY ([AmaDeLlavesId], [HabitacionNumero]),
+    CONSTRAINT [FK_HabitacionesAmasDeLlaves_AmasDeLlaves_AmaDeLlavesId] FOREIGN KEY ([AmaDeLlavesId]) REFERENCES [AmasDeLlaves] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HabitacionesAmasDeLlaves_Habitaciones_HabitacionId] FOREIGN KEY ([HabitacionId]) REFERENCES [Habitaciones] ([Id]) ON DELETE CASCADE
+);
+2025-07-01 21:01:39.279 -04:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Reservas] (
+    [Id] int NOT NULL IDENTITY,
+    [FechaReservacion] datetime2 NOT NULL,
+    [FechaEntrada] datetime2 NOT NULL,
+    [FechaSalida] datetime2 NOT NULL,
+    [Importe] decimal(18,2) NOT NULL,
+    [ClienteId] int NOT NULL,
+    [HabitacionNumero] nvarchar(max) NOT NULL,
+    [HabitacionId] int NOT NULL,
+    [EstaElClienteEnHostal] bit NOT NULL,
+    [EstaCancelada] bit NOT NULL,
+    [FechaCancelacion] datetime2 NULL,
+    [MotivoCancelacion] nvarchar(max) NULL,
+    CONSTRAINT [PK_Reservas] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Reservas_Clientes_ClienteId] FOREIGN KEY ([ClienteId]) REFERENCES [Clientes] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Reservas_Habitaciones_HabitacionId] FOREIGN KEY ([HabitacionId]) REFERENCES [Habitaciones] ([Id]) ON DELETE CASCADE
+);
+2025-07-01 21:01:39.296 -04:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Habitaciones_Numero] ON [Habitaciones] ([Numero]);
+2025-07-01 21:01:39.309 -04:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_HabitacionesAmasDeLlaves_HabitacionId] ON [HabitacionesAmasDeLlaves] ([HabitacionId]);
+2025-07-01 21:01:39.315 -04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Reservas_ClienteId] ON [Reservas] ([ClienteId]);
+2025-07-01 21:01:39.323 -04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Reservas_HabitacionId] ON [Reservas] ([HabitacionId]);
+2025-07-01 21:01:39.338 -04:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250702005332_Initial', N'8.0.10');
+2025-07-01 21:02:44.464 -04:00 [INF] Now listening on: http://localhost:5014
+2025-07-01 21:02:44.727 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-01 21:02:44.731 -04:00 [INF] Hosting environment: Development
+2025-07-01 21:02:44.732 -04:00 [INF] Content root path: /home/agr/Documentos/HostalIslaAzul
+2025-07-01 21:02:52.731 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/ - null null
+2025-07-01 21:02:53.008 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-01 21:02:53.034 -04:00 [INF] HTTP GET / responded 404 in 27.2018 ms
+2025-07-01 21:02:53.071 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/ - 404 0 null 348.2949ms
+2025-07-01 21:02:53.124 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5014/, Response status code: 404
+2025-07-01 21:03:07.548 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/swager - null null
+2025-07-01 21:03:07.602 -04:00 [INF] HTTP GET /swager responded 404 in 0.3333 ms
+2025-07-01 21:03:07.605 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/swager - 404 0 null 57.4052ms
+2025-07-01 21:03:07.610 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5014/swager, Response status code: 404
+2025-07-01 21:03:24.716 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/swagger - null null
+2025-07-01 21:03:24.731 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/swagger - 301 0 null 15.0769ms
+2025-07-01 21:03:24.859 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/swagger/index.html - null null
+2025-07-01 21:03:25.292 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/swagger/index.html - 200 null text/html;charset=utf-8 433.1238ms
+2025-07-01 21:03:25.485 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/swagger/swagger-ui.css - null null
+2025-07-01 21:03:25.499 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/swagger/swagger-ui-bundle.js - null null
+2025-07-01 21:03:25.520 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/swagger/swagger-ui-standalone-preset.js - null null
+2025-07-01 21:03:25.667 -04:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-07-01 21:03:25.668 -04:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-07-01 21:03:25.670 -04:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-07-01 21:03:25.694 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 194.5996ms
+2025-07-01 21:03:25.697 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 176.8211ms
+2025-07-01 21:03:25.699 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/swagger/swagger-ui.css - 200 152034 text/css 214.7052ms
+2025-07-01 21:03:26.395 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/swagger/favicon-16x16.png - null null
+2025-07-01 21:03:26.398 -04:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2025-07-01 21:03:26.400 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/swagger/favicon-16x16.png - 200 665 image/png 5.2057ms
+2025-07-01 21:03:26.779 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/swagger/v1/swagger.json - null null
+2025-07-01 21:03:27.500 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 720.7671ms
+2025-07-01 21:04:15.156 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/weatherforecast - null null
+2025-07-01 21:04:15.168 -04:00 [INF] Executing endpoint 'HTTP: GET /weatherforecast'
+2025-07-01 21:04:15.215 -04:00 [INF] Executed endpoint 'HTTP: GET /weatherforecast'
+2025-07-01 21:04:15.217 -04:00 [INF] HTTP GET /weatherforecast responded 200 in 56.1647 ms
+2025-07-01 21:04:15.218 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/weatherforecast - 200 null application/json; charset=utf-8 61.6231ms
+2025-07-01 21:05:46.062 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/api/Clientes?busqueda=pepe&pagina=1&tamanoPagina=10 - null null
+2025-07-01 21:05:46.066 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul)'
+2025-07-01 21:05:46.193 -04:00 [INF] Route matched with {action = "ListarClientes", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListarClientes(System.String, System.String, Int32, Int32) on controller HostalIslaAzul.Controllers.ClientesController (HostalIslaAzul).
+2025-07-01 21:05:46.225 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul) in 10.1273ms
+2025-07-01 21:05:46.228 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul)'
+2025-07-01 21:05:46.230 -04:00 [ERR] HTTP GET /api/Clientes responded 500 in 164.0136 ms
+System.InvalidOperationException: Unable to resolve service for type 'HostalIslaAzul.Application.Services.ClienteService' while attempting to activate 'HostalIslaAzul.Controllers.ClientesController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method11(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-07-01 21:05:46.299 -04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'HostalIslaAzul.Application.Services.ClienteService' while attempting to activate 'HostalIslaAzul.Controllers.ClientesController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method11(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-07-01 21:05:46.327 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/api/Clientes?busqueda=pepe&pagina=1&tamanoPagina=10 - 500 null text/plain; charset=utf-8 264.5728ms
+2025-07-01 21:06:35.903 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5014/api/Clientes - application/json 102
+2025-07-01 21:06:35.909 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ClientesController.CrearCliente (HostalIslaAzul)'
+2025-07-01 21:06:35.945 -04:00 [INF] Route matched with {action = "CrearCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CrearCliente(HostalIslaAzul.Application.Services.ClienteDto) on controller HostalIslaAzul.Controllers.ClientesController (HostalIslaAzul).
+2025-07-01 21:06:35.966 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ClientesController.CrearCliente (HostalIslaAzul) in 1.0612ms
+2025-07-01 21:06:35.968 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ClientesController.CrearCliente (HostalIslaAzul)'
+2025-07-01 21:06:35.970 -04:00 [ERR] HTTP POST /api/Clientes responded 500 in 62.0067 ms
+System.InvalidOperationException: Unable to resolve service for type 'HostalIslaAzul.Application.Services.ClienteService' while attempting to activate 'HostalIslaAzul.Controllers.ClientesController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method19(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-07-01 21:06:35.986 -04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'HostalIslaAzul.Application.Services.ClienteService' while attempting to activate 'HostalIslaAzul.Controllers.ClientesController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method19(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-07-01 21:06:36.002 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5014/api/Clientes - 500 null text/plain; charset=utf-8 98.7606ms
+2025-07-01 21:07:12.522 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/api/Clientes - null null
+2025-07-01 21:07:12.527 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul)'
+2025-07-01 21:07:12.529 -04:00 [INF] Route matched with {action = "ListarClientes", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListarClientes(System.String, System.String, Int32, Int32) on controller HostalIslaAzul.Controllers.ClientesController (HostalIslaAzul).
+2025-07-01 21:07:12.531 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul) in 1.0448ms
+2025-07-01 21:07:12.536 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul)'
+2025-07-01 21:07:12.537 -04:00 [ERR] HTTP GET /api/Clientes responded 500 in 11.0115 ms
+System.InvalidOperationException: Unable to resolve service for type 'HostalIslaAzul.Application.Services.ClienteService' while attempting to activate 'HostalIslaAzul.Controllers.ClientesController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method11(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-07-01 21:07:12.542 -04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'HostalIslaAzul.Application.Services.ClienteService' while attempting to activate 'HostalIslaAzul.Controllers.ClientesController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method11(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-07-01 21:07:12.668 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/api/Clientes - 500 null text/html; charset=utf-8 145.4133ms
+2025-07-01 21:07:13.166 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/favicon.ico - null null
+2025-07-01 21:07:13.167 -04:00 [INF] HTTP GET /favicon.ico responded 404 in 0.0702 ms
+2025-07-01 21:07:13.169 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/favicon.ico - 404 0 null 2.569ms
+2025-07-01 21:07:13.170 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5014/favicon.ico, Response status code: 404
+2025-07-01 21:14:44.959 -04:00 [INF] Application is shutting down...
+2025-07-01 21:15:11.253 -04:00 [INF] Now listening on: http://localhost:5014
+2025-07-01 21:15:11.527 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-01 21:15:11.530 -04:00 [INF] Hosting environment: Development
+2025-07-01 21:15:11.531 -04:00 [INF] Content root path: /home/agr/Documentos/HostalIslaAzul
+2025-07-01 21:15:22.466 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/api/Clientes - null null
+2025-07-01 21:15:22.733 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-01 21:15:22.753 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul)'
+2025-07-01 21:15:22.847 -04:00 [INF] Route matched with {action = "ListarClientes", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListarClientes(System.String, System.String, Int32, Int32) on controller HostalIslaAzul.Controllers.ClientesController (HostalIslaAzul).
+2025-07-01 21:15:26.006 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-01 21:15:30.122 -04:00 [INF] Executed DbCommand (222ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CI], [c].[EsVip], [c].[NombreApellidos], [c].[NumeroTelefonico]
+FROM [Clientes] AS [c]
+ORDER BY [c].[NombreApellidos]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-07-01 21:15:30.326 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HostalIslaAzul.Domain.Entities.Cliente, HostalIslaAzul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-01 21:15:30.492 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul) in 7624.636ms
+2025-07-01 21:15:30.501 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul)'
+2025-07-01 21:15:30.521 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 7788.4185 ms
+2025-07-01 21:15:30.584 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/api/Clientes - 200 null application/json; charset=utf-8 8124.974ms
+2025-07-01 21:15:30.834 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/favicon.ico - null null
+2025-07-01 21:15:30.898 -04:00 [INF] HTTP GET /favicon.ico responded 404 in 0.6765 ms
+2025-07-01 21:15:30.909 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/favicon.ico - 404 0 null 75.0281ms
+2025-07-01 21:15:30.939 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5014/favicon.ico, Response status code: 404
+2025-07-01 21:15:42.926 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5014/api/Clientes - application/json 102
+2025-07-01 21:15:42.940 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ClientesController.CrearCliente (HostalIslaAzul)'
+2025-07-01 21:15:42.988 -04:00 [INF] Route matched with {action = "CrearCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CrearCliente(HostalIslaAzul.Application.Services.ClienteDto) on controller HostalIslaAzul.Controllers.ClientesController (HostalIslaAzul).
+2025-07-01 21:15:43.452 -04:00 [INF] Executed DbCommand (34ms) [Parameters=[@__dto_CI_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Clientes] AS [c]
+        WHERE [c].[CI] = @__dto_CI_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-07-01 21:15:44.391 -04:00 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Clientes] ([CI], [EsVip], [NombreApellidos], [NumeroTelefonico])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2025-07-01 21:15:44.686 -04:00 [INF] Executed DbCommand (14ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Trazas] ([Detalles], [Fecha], [Operacion], [RegistroId], [TablaAfectada])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-07-01 21:15:44.699 -04:00 [INF] Traza registrada: Creación en Clientes (ID: 1)
+2025-07-01 21:15:44.709 -04:00 [INF] Executing CreatedAtActionResult, writing value of type 'HostalIslaAzul.Domain.Entities.Cliente'.
+2025-07-01 21:15:44.799 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ClientesController.CrearCliente (HostalIslaAzul) in 1796.8772ms
+2025-07-01 21:15:44.802 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ClientesController.CrearCliente (HostalIslaAzul)'
+2025-07-01 21:15:44.804 -04:00 [INF] HTTP POST /api/Clientes responded 201 in 1864.3376 ms
+2025-07-01 21:15:44.808 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5014/api/Clientes - 201 null application/json; charset=utf-8 1881.7028ms
+2025-07-01 21:15:58.895 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/api/Clientes - null null
+2025-07-01 21:15:58.899 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul)'
+2025-07-01 21:15:58.901 -04:00 [INF] Route matched with {action = "ListarClientes", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListarClientes(System.String, System.String, Int32, Int32) on controller HostalIslaAzul.Controllers.ClientesController (HostalIslaAzul).
+2025-07-01 21:15:59.258 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CI], [c].[EsVip], [c].[NombreApellidos], [c].[NumeroTelefonico]
+FROM [Clientes] AS [c]
+ORDER BY [c].[NombreApellidos]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-07-01 21:15:59.276 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HostalIslaAzul.Domain.Entities.Cliente, HostalIslaAzul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-01 21:15:59.278 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul) in 362.0813ms
+2025-07-01 21:15:59.279 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul)'
+2025-07-01 21:15:59.280 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 381.9864 ms
+2025-07-01 21:15:59.282 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/api/Clientes - 200 null application/json; charset=utf-8 386.658ms
+2025-07-01 21:17:08.147 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/api/Clientes?busqueda=agr&pagina=1&tamanoPagina=10 - null null
+2025-07-01 21:17:08.149 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul)'
+2025-07-01 21:17:08.150 -04:00 [INF] Route matched with {action = "ListarClientes", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListarClientes(System.String, System.String, Int32, Int32) on controller HostalIslaAzul.Controllers.ClientesController (HostalIslaAzul).
+2025-07-01 21:17:08.443 -04:00 [INF] Executed DbCommand (12ms) [Parameters=[@__busqueda_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CI], [c].[EsVip], [c].[NombreApellidos], [c].[NumeroTelefonico]
+FROM [Clientes] AS [c]
+WHERE LOWER([c].[NombreApellidos]) LIKE @__busqueda_0_contains ESCAPE N'\' OR LOWER([c].[CI]) LIKE @__busqueda_0_contains ESCAPE N'\' OR LOWER([c].[NumeroTelefonico]) LIKE @__busqueda_0_contains ESCAPE N'\'
+ORDER BY [c].[NombreApellidos]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2025-07-01 21:17:08.446 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HostalIslaAzul.Domain.Entities.Cliente, HostalIslaAzul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-01 21:17:08.448 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul) in 296.992ms
+2025-07-01 21:17:08.449 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul)'
+2025-07-01 21:17:08.451 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 302.3085 ms
+2025-07-01 21:17:08.458 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/api/Clientes?busqueda=agr&pagina=1&tamanoPagina=10 - 200 null application/json; charset=utf-8 310.1657ms
+2025-07-01 21:17:52.436 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/api/Clientes?busqueda=agr&pagina=1&tamanoPagina=10 - null null
+2025-07-01 21:17:52.456 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul)'
+2025-07-01 21:17:52.460 -04:00 [INF] Route matched with {action = "ListarClientes", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListarClientes(System.String, System.String, Int32, Int32) on controller HostalIslaAzul.Controllers.ClientesController (HostalIslaAzul).
+2025-07-01 21:17:52.500 -04:00 [INF] Executed DbCommand (8ms) [Parameters=[@__busqueda_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CI], [c].[EsVip], [c].[NombreApellidos], [c].[NumeroTelefonico]
+FROM [Clientes] AS [c]
+WHERE LOWER([c].[NombreApellidos]) LIKE @__busqueda_0_contains ESCAPE N'\' OR LOWER([c].[CI]) LIKE @__busqueda_0_contains ESCAPE N'\' OR LOWER([c].[NumeroTelefonico]) LIKE @__busqueda_0_contains ESCAPE N'\'
+ORDER BY [c].[NombreApellidos]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2025-07-01 21:17:52.530 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HostalIslaAzul.Domain.Entities.Cliente, HostalIslaAzul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-01 21:17:52.539 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul) in 74.6112ms
+2025-07-01 21:17:52.543 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul)'
+2025-07-01 21:17:52.546 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 90.2911 ms
+2025-07-01 21:17:52.553 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/api/Clientes?busqueda=agr&pagina=1&tamanoPagina=10 - 200 null application/json; charset=utf-8 117.4315ms
+2025-07-01 21:19:39.427 -04:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5014/api/Clientes/1 - application/json 104
+2025-07-01 21:19:39.432 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ClientesController.ModificarCliente (HostalIslaAzul)'
+2025-07-01 21:19:39.463 -04:00 [INF] Route matched with {action = "ModificarCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ModificarCliente(Int32, HostalIslaAzul.Application.Services.ClienteDto) on controller HostalIslaAzul.Controllers.ClientesController (HostalIslaAzul).
+2025-07-01 21:19:39.719 -04:00 [INF] Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CI], [c].[EsVip], [c].[NombreApellidos], [c].[NumeroTelefonico]
+FROM [Clientes] AS [c]
+WHERE [c].[Id] = @__p_0
+2025-07-01 21:19:39.762 -04:00 [INF] Executed DbCommand (25ms) [Parameters=[@__dto_CI_0='?' (Size = 4000), @__id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Clientes] AS [c]
+        WHERE [c].[CI] = @__dto_CI_0 AND [c].[Id] <> @__id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-07-01 21:19:39.811 -04:00 [INF] Executed DbCommand (12ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Clientes] SET [CI] = @p0, [EsVip] = @p1, [NombreApellidos] = @p2, [NumeroTelefonico] = @p3
+OUTPUT 1
+WHERE [Id] = @p4;
+2025-07-01 21:19:39.834 -04:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Trazas] ([Detalles], [Fecha], [Operacion], [RegistroId], [TablaAfectada])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-07-01 21:19:39.837 -04:00 [INF] Traza registrada: Modificación en Clientes (ID: 1)
+2025-07-01 21:19:39.839 -04:00 [INF] Executing OkObjectResult, writing value of type 'HostalIslaAzul.Domain.Entities.Cliente'.
+2025-07-01 21:19:39.841 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ClientesController.ModificarCliente (HostalIslaAzul) in 376.3641ms
+2025-07-01 21:19:39.842 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ClientesController.ModificarCliente (HostalIslaAzul)'
+2025-07-01 21:19:39.844 -04:00 [INF] HTTP PUT /api/Clientes/1 responded 200 in 412.0083 ms
+2025-07-01 21:19:39.846 -04:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5014/api/Clientes/1 - 200 null application/json; charset=utf-8 418.9954ms
+2025-07-01 21:20:15.007 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/api/Clientes/1 - null null
+2025-07-01 21:20:15.010 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ClientesController.ObtenerCliente (HostalIslaAzul)'
+2025-07-01 21:20:15.033 -04:00 [INF] Route matched with {action = "ObtenerCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObtenerCliente(Int32) on controller HostalIslaAzul.Controllers.ClientesController (HostalIslaAzul).
+2025-07-01 21:20:15.121 -04:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CI], [c].[EsVip], [c].[NombreApellidos], [c].[NumeroTelefonico]
+FROM [Clientes] AS [c]
+WHERE [c].[Id] = @__p_0
+2025-07-01 21:20:15.125 -04:00 [INF] Executing OkObjectResult, writing value of type 'HostalIslaAzul.Domain.Entities.Cliente'.
+2025-07-01 21:20:15.126 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ClientesController.ObtenerCliente (HostalIslaAzul) in 91.7672ms
+2025-07-01 21:20:15.128 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ClientesController.ObtenerCliente (HostalIslaAzul)'
+2025-07-01 21:20:15.129 -04:00 [INF] HTTP GET /api/Clientes/1 responded 200 in 119.3424 ms
+2025-07-01 21:20:15.142 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/api/Clientes/1 - 200 null application/json; charset=utf-8 128.0178ms
+2025-07-01 21:26:21.168 -04:00 [INF] Application is shutting down...
+2025-07-01 21:26:48.748 -04:00 [INF] Now listening on: http://localhost:5014
+2025-07-01 21:26:49.087 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-01 21:26:49.090 -04:00 [INF] Hosting environment: Development
+2025-07-01 21:26:49.092 -04:00 [INF] Content root path: /home/agr/Documentos/HostalIslaAzul
+2025-07-01 21:26:56.154 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/api/Clientes/1 - null null
+2025-07-01 21:26:56.371 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-01 21:26:56.388 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ClientesController.ObtenerCliente (HostalIslaAzul)'
+2025-07-01 21:26:56.467 -04:00 [INF] Route matched with {action = "ObtenerCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObtenerCliente(Int32) on controller HostalIslaAzul.Controllers.ClientesController (HostalIslaAzul).
+2025-07-01 21:26:59.331 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-01 21:27:02.894 -04:00 [INF] Executed DbCommand (218ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CI], [c].[EsVip], [c].[NombreApellidos], [c].[NumeroTelefonico]
+FROM [Clientes] AS [c]
+WHERE [c].[Id] = @__p_0
+2025-07-01 21:27:03.247 -04:00 [INF] Executing OkObjectResult, writing value of type 'HostalIslaAzul.Domain.Entities.Cliente'.
+2025-07-01 21:27:03.374 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ClientesController.ObtenerCliente (HostalIslaAzul) in 6892.5607ms
+2025-07-01 21:27:03.386 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ClientesController.ObtenerCliente (HostalIslaAzul)'
+2025-07-01 21:27:03.400 -04:00 [INF] HTTP GET /api/Clientes/1 responded 200 in 7034.1761 ms
+2025-07-01 21:27:03.452 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/api/Clientes/1 - 200 null application/json; charset=utf-8 7302.5292ms
+2025-07-01 21:27:27.222 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/api/Clientes/1 - null null
+2025-07-01 21:27:27.243 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ClientesController.ObtenerCliente (HostalIslaAzul)'
+2025-07-01 21:27:27.244 -04:00 [INF] Route matched with {action = "ObtenerCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObtenerCliente(Int32) on controller HostalIslaAzul.Controllers.ClientesController (HostalIslaAzul).
+2025-07-01 21:27:27.413 -04:00 [INF] Executed DbCommand (32ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CI], [c].[EsVip], [c].[NombreApellidos], [c].[NumeroTelefonico]
+FROM [Clientes] AS [c]
+WHERE [c].[Id] = @__p_0
+2025-07-01 21:27:27.422 -04:00 [INF] Executing OkObjectResult, writing value of type 'HostalIslaAzul.Domain.Entities.Cliente'.
+2025-07-01 21:27:27.426 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ClientesController.ObtenerCliente (HostalIslaAzul) in 180.4068ms
+2025-07-01 21:27:27.427 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ClientesController.ObtenerCliente (HostalIslaAzul)'
+2025-07-01 21:27:27.428 -04:00 [INF] HTTP GET /api/Clientes/1 responded 200 in 186.3722 ms
+2025-07-01 21:27:27.432 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/api/Clientes/1 - 200 null application/json; charset=utf-8 209.7468ms
+2025-07-01 21:28:01.710 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/api/Clientes?busqueda=850215&pagina=1&tamanoPagina=10 - null null
+2025-07-01 21:28:01.724 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul)'
+2025-07-01 21:28:01.749 -04:00 [INF] Route matched with {action = "ListarClientes", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListarClientes(System.String, System.String, Int32, Int32) on controller HostalIslaAzul.Controllers.ClientesController (HostalIslaAzul).
+2025-07-01 21:28:02.266 -04:00 [INF] Executed DbCommand (5ms) [Parameters=[@__busqueda_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CI], [c].[EsVip], [c].[NombreApellidos], [c].[NumeroTelefonico]
+FROM [Clientes] AS [c]
+WHERE LOWER([c].[NombreApellidos]) LIKE @__busqueda_0_contains ESCAPE N'\' OR LOWER([c].[CI]) LIKE @__busqueda_0_contains ESCAPE N'\' OR LOWER([c].[NumeroTelefonico]) LIKE @__busqueda_0_contains ESCAPE N'\'
+ORDER BY [c].[NombreApellidos]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2025-07-01 21:28:02.275 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HostalIslaAzul.Domain.Entities.Cliente, HostalIslaAzul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-01 21:28:02.280 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul) in 529.9722ms
+2025-07-01 21:28:02.281 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul)'
+2025-07-01 21:28:02.282 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 557.9676 ms
+2025-07-01 21:28:02.285 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/api/Clientes?busqueda=850215&pagina=1&tamanoPagina=10 - 200 null application/json; charset=utf-8 575.44ms
+2025-07-01 21:28:24.363 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/api/Clientes?busqueda=85&pagina=1&tamanoPagina=10 - null null
+2025-07-01 21:28:24.365 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul)'
+2025-07-01 21:28:24.366 -04:00 [INF] Route matched with {action = "ListarClientes", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListarClientes(System.String, System.String, Int32, Int32) on controller HostalIslaAzul.Controllers.ClientesController (HostalIslaAzul).
+2025-07-01 21:28:24.384 -04:00 [INF] Executed DbCommand (5ms) [Parameters=[@__busqueda_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CI], [c].[EsVip], [c].[NombreApellidos], [c].[NumeroTelefonico]
+FROM [Clientes] AS [c]
+WHERE LOWER([c].[NombreApellidos]) LIKE @__busqueda_0_contains ESCAPE N'\' OR LOWER([c].[CI]) LIKE @__busqueda_0_contains ESCAPE N'\' OR LOWER([c].[NumeroTelefonico]) LIKE @__busqueda_0_contains ESCAPE N'\'
+ORDER BY [c].[NombreApellidos]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2025-07-01 21:28:24.400 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HostalIslaAzul.Domain.Entities.Cliente, HostalIslaAzul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-01 21:28:24.403 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul) in 35.1277ms
+2025-07-01 21:28:24.408 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul)'
+2025-07-01 21:28:24.413 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 47.7180 ms
+2025-07-01 21:28:24.417 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/api/Clientes?busqueda=85&pagina=1&tamanoPagina=10 - 200 null application/json; charset=utf-8 53.498ms
+2025-07-01 21:30:56.330 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5014/api/Clientes - application/json 118
+2025-07-01 21:30:56.337 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ClientesController.CrearCliente (HostalIslaAzul)'
+2025-07-01 21:30:56.359 -04:00 [INF] Route matched with {action = "CrearCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CrearCliente(HostalIslaAzul.Application.Services.ClienteDto) on controller HostalIslaAzul.Controllers.ClientesController (HostalIslaAzul).
+2025-07-01 21:30:56.527 -04:00 [INF] Executed DbCommand (9ms) [Parameters=[@__dto_CI_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Clientes] AS [c]
+        WHERE [c].[CI] = @__dto_CI_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-07-01 21:30:57.065 -04:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Clientes] ([CI], [EsVip], [NombreApellidos], [NumeroTelefonico])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2025-07-01 21:30:57.280 -04:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Trazas] ([Detalles], [Fecha], [Operacion], [RegistroId], [TablaAfectada])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-07-01 21:30:57.295 -04:00 [INF] Traza registrada: Creación en Clientes (ID: 2)
+2025-07-01 21:30:57.306 -04:00 [INF] Executing CreatedAtActionResult, writing value of type 'HostalIslaAzul.Domain.Entities.Cliente'.
+2025-07-01 21:30:57.382 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ClientesController.CrearCliente (HostalIslaAzul) in 1021.7351ms
+2025-07-01 21:30:57.383 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ClientesController.CrearCliente (HostalIslaAzul)'
+2025-07-01 21:30:57.383 -04:00 [INF] HTTP POST /api/Clientes responded 201 in 1047.0431 ms
+2025-07-01 21:30:57.386 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5014/api/Clientes - 201 null application/json; charset=utf-8 1055.7095ms
+2025-07-01 21:31:10.878 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/api/Clientes/ - null null
+2025-07-01 21:31:10.882 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul)'
+2025-07-01 21:31:10.893 -04:00 [INF] Route matched with {action = "ListarClientes", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListarClientes(System.String, System.String, Int32, Int32) on controller HostalIslaAzul.Controllers.ClientesController (HostalIslaAzul).
+2025-07-01 21:31:10.925 -04:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CI], [c].[EsVip], [c].[NombreApellidos], [c].[NumeroTelefonico]
+FROM [Clientes] AS [c]
+ORDER BY [c].[NombreApellidos]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-07-01 21:31:10.928 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HostalIslaAzul.Domain.Entities.Cliente, HostalIslaAzul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-01 21:31:10.930 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul) in 35.9063ms
+2025-07-01 21:31:10.931 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul)'
+2025-07-01 21:31:10.932 -04:00 [INF] HTTP GET /api/Clientes/ responded 200 in 49.6240 ms
+2025-07-01 21:31:10.954 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/api/Clientes/ - 200 null application/json; charset=utf-8 75.5213ms
+2025-07-01 21:33:23.683 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/api/Clientes/2 - null null
+2025-07-01 21:33:23.690 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ClientesController.ObtenerCliente (HostalIslaAzul)'
+2025-07-01 21:33:23.694 -04:00 [INF] Route matched with {action = "ObtenerCliente", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObtenerCliente(Int32) on controller HostalIslaAzul.Controllers.ClientesController (HostalIslaAzul).
+2025-07-01 21:33:23.707 -04:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CI], [c].[EsVip], [c].[NombreApellidos], [c].[NumeroTelefonico]
+FROM [Clientes] AS [c]
+WHERE [c].[Id] = @__p_0
+2025-07-01 21:33:23.711 -04:00 [INF] Executing OkObjectResult, writing value of type 'HostalIslaAzul.Domain.Entities.Cliente'.
+2025-07-01 21:33:23.717 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ClientesController.ObtenerCliente (HostalIslaAzul) in 19.4951ms
+2025-07-01 21:33:23.722 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ClientesController.ObtenerCliente (HostalIslaAzul)'
+2025-07-01 21:33:23.723 -04:00 [INF] HTTP GET /api/Clientes/2 responded 200 in 32.6523 ms
+2025-07-01 21:33:23.729 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/api/Clientes/2 - 200 null application/json; charset=utf-8 45.0884ms
+2025-07-01 21:33:45.045 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/api/Clientes?pagina=1&tamanoPagina=10 - null null
+2025-07-01 21:33:45.047 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul)'
+2025-07-01 21:33:45.048 -04:00 [INF] Route matched with {action = "ListarClientes", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListarClientes(System.String, System.String, Int32, Int32) on controller HostalIslaAzul.Controllers.ClientesController (HostalIslaAzul).
+2025-07-01 21:33:45.057 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CI], [c].[EsVip], [c].[NombreApellidos], [c].[NumeroTelefonico]
+FROM [Clientes] AS [c]
+ORDER BY [c].[NombreApellidos]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-07-01 21:33:45.060 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HostalIslaAzul.Domain.Entities.Cliente, HostalIslaAzul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-01 21:33:45.061 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul) in 12.6151ms
+2025-07-01 21:33:45.062 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul)'
+2025-07-01 21:33:45.065 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 17.7556 ms
+2025-07-01 21:33:45.067 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/api/Clientes?pagina=1&tamanoPagina=10 - 200 null application/json; charset=utf-8 20.4817ms
+2025-07-01 21:35:25.015 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/api/Clientes?busqueda=90&pagina=1&tamanoPagina=10 - null null
+2025-07-01 21:35:25.016 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul)'
+2025-07-01 21:35:25.017 -04:00 [INF] Route matched with {action = "ListarClientes", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListarClientes(System.String, System.String, Int32, Int32) on controller HostalIslaAzul.Controllers.ClientesController (HostalIslaAzul).
+2025-07-01 21:35:25.027 -04:00 [INF] Executed DbCommand (4ms) [Parameters=[@__busqueda_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CI], [c].[EsVip], [c].[NombreApellidos], [c].[NumeroTelefonico]
+FROM [Clientes] AS [c]
+WHERE LOWER([c].[NombreApellidos]) LIKE @__busqueda_0_contains ESCAPE N'\' OR LOWER([c].[CI]) LIKE @__busqueda_0_contains ESCAPE N'\' OR LOWER([c].[NumeroTelefonico]) LIKE @__busqueda_0_contains ESCAPE N'\'
+ORDER BY [c].[NombreApellidos]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2025-07-01 21:35:25.029 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HostalIslaAzul.Domain.Entities.Cliente, HostalIslaAzul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-01 21:35:25.033 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul) in 14.8031ms
+2025-07-01 21:35:25.034 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul)'
+2025-07-01 21:35:25.035 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 18.5580 ms
+2025-07-01 21:35:25.037 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/api/Clientes?busqueda=90&pagina=1&tamanoPagina=10 - 200 null application/json; charset=utf-8 21.8541ms
+2025-07-01 21:35:37.663 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5014/api/Clientes?busqueda=85&pagina=1&tamanoPagina=10 - null null
+2025-07-01 21:35:37.668 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul)'
+2025-07-01 21:35:37.675 -04:00 [INF] Route matched with {action = "ListarClientes", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListarClientes(System.String, System.String, Int32, Int32) on controller HostalIslaAzul.Controllers.ClientesController (HostalIslaAzul).
+2025-07-01 21:35:37.688 -04:00 [INF] Executed DbCommand (4ms) [Parameters=[@__busqueda_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CI], [c].[EsVip], [c].[NombreApellidos], [c].[NumeroTelefonico]
+FROM [Clientes] AS [c]
+WHERE LOWER([c].[NombreApellidos]) LIKE @__busqueda_0_contains ESCAPE N'\' OR LOWER([c].[CI]) LIKE @__busqueda_0_contains ESCAPE N'\' OR LOWER([c].[NumeroTelefonico]) LIKE @__busqueda_0_contains ESCAPE N'\'
+ORDER BY [c].[NombreApellidos]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2025-07-01 21:35:37.691 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HostalIslaAzul.Domain.Entities.Cliente, HostalIslaAzul, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-01 21:35:37.693 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul) in 16.8241ms
+2025-07-01 21:35:37.695 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ClientesController.ListarClientes (HostalIslaAzul)'
+2025-07-01 21:35:37.696 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 28.2772 ms
+2025-07-01 21:35:37.699 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5014/api/Clientes?busqueda=85&pagina=1&tamanoPagina=10 - 200 null application/json; charset=utf-8 35.8624ms
+2025-07-01 21:38:03.089 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5014/api/Reservas - application/json 140
+2025-07-01 21:38:03.091 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ReservasController.CrearReserva (HostalIslaAzul)'
+2025-07-01 21:38:03.113 -04:00 [INF] Route matched with {action = "CrearReserva", controller = "Reservas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CrearReserva(HostalIslaAzul.Application.Services.ReservaDto) on controller HostalIslaAzul.Controllers.ReservasController (HostalIslaAzul).
+2025-07-01 21:38:03.167 -04:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-07-01 21:38:03.172 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ReservasController.CrearReserva (HostalIslaAzul) in 58.8691ms
+2025-07-01 21:38:03.173 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ReservasController.CrearReserva (HostalIslaAzul)'
+2025-07-01 21:38:03.173 -04:00 [INF] HTTP POST /api/Reservas responded 400 in 82.6388 ms
+2025-07-01 21:38:03.177 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5014/api/Reservas - 400 null text/plain; charset=utf-8 87.5194ms
+2025-07-01 21:43:14.587 -04:00 [INF] Application is shutting down...
+2025-07-01 22:14:10.839 -04:00 [INF] Now listening on: http://localhost:5014
+2025-07-01 22:14:11.088 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-01 22:14:11.090 -04:00 [INF] Hosting environment: Development
+2025-07-01 22:14:11.091 -04:00 [INF] Content root path: /home/agr/Documentos/HostalIslaAzul
+2025-07-01 22:15:12.458 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5014/api/Reservas - application/json 140
+2025-07-01 22:15:12.661 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-01 22:15:12.689 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ReservasController.CrearReserva (HostalIslaAzul)'
+2025-07-01 22:15:12.794 -04:00 [INF] Route matched with {action = "CrearReserva", controller = "Reservas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CrearReserva(HostalIslaAzul.Application.Services.ReservaDto) on controller HostalIslaAzul.Controllers.ReservasController (HostalIslaAzul).
+2025-07-01 22:15:15.674 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-01 22:15:16.208 -04:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-07-01 22:15:16.241 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ReservasController.CrearReserva (HostalIslaAzul) in 3416.4025ms
+2025-07-01 22:15:16.260 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ReservasController.CrearReserva (HostalIslaAzul)'
+2025-07-01 22:15:16.272 -04:00 [INF] HTTP POST /api/Reservas responded 400 in 3612.6096 ms
+2025-07-01 22:15:16.334 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5014/api/Reservas - 400 null text/plain; charset=utf-8 3878.4943ms
+2025-07-01 22:15:35.468 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5014/api/Reservas - application/json 140
+2025-07-01 22:15:35.484 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ReservasController.CrearReserva (HostalIslaAzul)'
+2025-07-01 22:15:35.489 -04:00 [INF] Route matched with {action = "CrearReserva", controller = "Reservas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CrearReserva(HostalIslaAzul.Application.Services.ReservaDto) on controller HostalIslaAzul.Controllers.ReservasController (HostalIslaAzul).
+2025-07-01 22:15:35.570 -04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-07-01 22:15:35.728 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ReservasController.CrearReserva (HostalIslaAzul) in 228.5397ms
+2025-07-01 22:15:35.729 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ReservasController.CrearReserva (HostalIslaAzul)'
+2025-07-01 22:15:35.730 -04:00 [INF] HTTP POST /api/Reservas responded 400 in 246.0773 ms
+2025-07-01 22:15:35.733 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5014/api/Reservas - 400 null application/problem+json; charset=utf-8 264.2467ms
+2025-07-01 22:16:20.270 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5014/api/Reservas - application/json 140
+2025-07-01 22:16:20.288 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ReservasController.CrearReserva (HostalIslaAzul)'
+2025-07-01 22:16:20.292 -04:00 [INF] Route matched with {action = "CrearReserva", controller = "Reservas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CrearReserva(HostalIslaAzul.Application.Services.ReservaDto) on controller HostalIslaAzul.Controllers.ReservasController (HostalIslaAzul).
+2025-07-01 22:16:20.321 -04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-07-01 22:16:20.343 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ReservasController.CrearReserva (HostalIslaAzul) in 45.5812ms
+2025-07-01 22:16:20.353 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ReservasController.CrearReserva (HostalIslaAzul)'
+2025-07-01 22:16:20.357 -04:00 [INF] HTTP POST /api/Reservas responded 400 in 69.2439 ms
+2025-07-01 22:16:20.362 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5014/api/Reservas - 400 null application/problem+json; charset=utf-8 91.9009ms
+2025-07-01 22:17:37.696 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5014/api/Reservas - application/json 143
+2025-07-01 22:17:37.699 -04:00 [INF] Executing endpoint 'HostalIslaAzul.Controllers.ReservasController.CrearReserva (HostalIslaAzul)'
+2025-07-01 22:17:37.700 -04:00 [INF] Route matched with {action = "CrearReserva", controller = "Reservas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CrearReserva(HostalIslaAzul.Application.Services.ReservaDto) on controller HostalIslaAzul.Controllers.ReservasController (HostalIslaAzul).
+2025-07-01 22:17:37.841 -04:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-07-01 22:17:37.844 -04:00 [INF] Executed action HostalIslaAzul.Controllers.ReservasController.CrearReserva (HostalIslaAzul) in 142.4899ms
+2025-07-01 22:17:37.845 -04:00 [INF] Executed endpoint 'HostalIslaAzul.Controllers.ReservasController.CrearReserva (HostalIslaAzul)'
+2025-07-01 22:17:37.846 -04:00 [INF] HTTP POST /api/Reservas responded 400 in 147.5196 ms
+2025-07-01 22:17:37.848 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5014/api/Reservas - 400 null text/plain; charset=utf-8 151.8704ms

@@ -1,0 +1,6 @@
+@HostalIslaAzul_HostAddress = http://localhost:5014
+
+GET {{HostalIslaAzul_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
