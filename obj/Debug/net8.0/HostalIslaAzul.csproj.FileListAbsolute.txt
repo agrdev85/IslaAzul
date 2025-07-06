@@ -175,3 +175,4 @@
 /home/agr/Documentos/HostalIslaAzul/bin/Debug/net8.0/frontend-hotel-reservations/jsconfig.json
 /home/agr/Documentos/HostalIslaAzul/bin/Debug/net8.0/frontend-hotel-reservations/package-lock.json
 /home/agr/Documentos/HostalIslaAzul/bin/Debug/net8.0/frontend-hotel-reservations/package.json
+/home/agr/Documentos/HostalIslaAzul/obj/Debug/net8.0/HostalIslaAzul.sourcelink.json

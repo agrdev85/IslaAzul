@@ -129,7 +129,7 @@ namespace HostalIslaAzul.Application.Services
             if (!turnosValidos.Contains(turno, StringComparer.OrdinalIgnoreCase))
                 throw new ArgumentException($"El turno '{turno}' no es válido. Turnos permitidos: {string.Join(", ", turnosValidos)}.");
 
-            Log.Information("Asignando habitación {HabitacionNumero} a ama de llaves {AmaDeLlavesId} en turno {Turno}",
+            Log.Information("Asignando habitación {HabitacionNumero} a ama de llaves {AmaDeLlavesId} en turno de la {Turno}",
                 habitacionNumero, amaDeLlavesId, turno);
 
             var habitacion = await _context.Habitaciones
@@ -153,7 +153,7 @@ namespace HostalIslaAzul.Application.Services
                 .AnyAsync(h => h.HabitacionId == habitacion.Id && h.AmaDeLlavesId == amaDeLlavesId && h.Turno == turno);
 
             if (asignacionExistente)
-                throw new InvalidOperationException($"La habitación {habitacionNumero} ya está asignada a la ama de llaves {amaDeLlavesId} en el turno {turno}.");
+                throw new InvalidOperationException($"La habitación {habitacionNumero} ya está asignada a la ama de llaves {amaDeLlaves.NombreApellidos} en el turno de la {turno}.");
 
             var asignacion = new HabitacionAmaDeLlaves
             {
