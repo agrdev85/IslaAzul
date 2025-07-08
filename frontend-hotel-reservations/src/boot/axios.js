@@ -1,24 +1,73 @@
-import { defineBoot } from '#q-app/wrappers'
-import axios from 'axios'
+import { boot } from "quasar/wrappers"
+import axios from "axios"
+import { Notify } from "quasar"
 
-// Be careful when using SSR for cross-request state pollution
-// due to creating a Singleton instance here;
-// If any client changes this (global) instance, it might be a
-// good idea to move this instance creation inside of the
-// "export default () => {}" function below (which runs individually
-// for each client)
-const api = axios.create({ baseURL: 'https://api.example.com' })
+// Configuración base de la API
+const api = axios.create({
+  baseURL: process.env.VUE_APP_API_URL || "https://localhost:5014/api",
+  timeout: 10000,
+  headers: {
+    "Content-Type": "application/json",
+    Accept: "application/json",
+  },
+})
 
-export default defineBoot(({ app }) => {
-  // for use inside Vue files (Options API) through this.$axios and this.$api
+// Interceptor para requests
+api.interceptors.request.use(
+  (config) => {
+    // Aquí puedes agregar tokens de autenticación si los necesitas
+    // const token = localStorage.getItem('token')
+    // if (token) {
+    //   config.headers.Authorization = `Bearer ${token}`
+    // }
 
+    console.log(`🚀 ${config.method?.toUpperCase()} ${config.url}`)
+    return config
+  },
+  (error) => {
+    console.error("❌ Request Error:", error)
+    return Promise.reject(error)
+  },
+)
+
+// Interceptor para responses
+api.interceptors.response.use(
+  (response) => {
+    console.log(`✅ ${response.config.method?.toUpperCase()} ${response.config.url} - ${response.status}`)
+    return response
+  },
+  (error) => {
+    console.error("❌ Response Error:", error)
+
+    // Manejo centralizado de errores
+    const message =
+      error.response?.data?.message ||
+      error.response?.data?.title ||
+      error.message ||
+      "Error de conexión con el servidor"
+
+    Notify.create({
+      type: "negative",
+      message: message,
+      position: "top",
+      timeout: 5000,
+      actions: [
+        {
+          icon: "close",
+          color: "white",
+          round: true,
+          handler: () => {},
+        },
+      ],
+    })
+
+    return Promise.reject(error)
+  },
+)
+
+export default boot(({ app }) => {
   app.config.globalProperties.$axios = axios
-  // ^ ^ ^ this will allow you to use this.$axios (for Vue Options API form)
-  //       so you won't necessarily have to import axios in each vue file
-
   app.config.globalProperties.$api = api
-  // ^ ^ ^ this will allow you to use this.$api (for Vue Options API form)
-  //       so you can easily perform requests against your app's API
 })
 
 export { api }

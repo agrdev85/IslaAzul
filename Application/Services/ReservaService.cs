@@ -44,6 +44,40 @@ namespace HostalIslaAzul.Application.Services
             }).ToList();
         }
 
+        public async Task<ReservaActivaDto> ObtenerReservaPorIdAsync(int id)
+        {
+            var reserva = await _context.Reservas
+                .Include(r => r.Cliente)
+                .Include(r => r.Habitacion)
+                .FirstOrDefaultAsync(r => r.Id == id);
+
+            if (reserva == null)
+            {
+                Log.Warning("Reserva con ID {Id} no encontrada", id);
+                throw new ArgumentException("Reserva no encontrada.");
+            }
+
+            Log.Information("Reserva encontrada: Id={Id}, Cliente={ClienteNombre}, Habitacion={HabitacionNumero}",
+                reserva.Id, reserva.Cliente?.NombreApellidos ?? "Desconocido", reserva.HabitacionNumero);
+
+            return new ReservaActivaDto
+            {
+                Id = reserva.Id,
+                FechaReservacion = reserva.FechaReservacion,
+                FechaEntrada = reserva.FechaEntrada,
+                FechaSalida = reserva.FechaSalida,
+                Importe = reserva.Importe,
+                ClienteNombre = reserva.Cliente?.NombreApellidos ?? "Desconocido",
+                ClienteId = reserva.ClienteId,
+                HabitacionNumero = reserva.HabitacionNumero ?? "N/A",
+                EstaElClienteEnHostal = reserva.EstaElClienteEnHostal,
+                EstaCancelada = reserva.EstaCancelada,
+                FechaCancelacion = reserva.FechaCancelacion,
+                MotivoCancelacion = reserva.MotivoCancelacion
+            };
+        }
+
+       
         public async Task<Reserva> CrearReservaAsync(ReservaDto dto)
         {
             // Validaciones
@@ -65,25 +99,23 @@ namespace HostalIslaAzul.Application.Services
             if (habitacion == null || habitacion.EstaFueraDeServicio)
                 throw new ArgumentException("La habitación no está disponible.");
 
-            // Validar conflictos de reservas (considerar EstaElClienteEnHostal)
+            // Validar conflictos de reservas
             var conflicto = await _context.Reservas.AnyAsync(r =>
                 r.HabitacionId == habitacion.Id &&
                 !r.EstaCancelada &&
-                r.EstaElClienteEnHostal && // Solo si el cliente está en el hostal
                 r.FechaEntrada <= dto.FechaSalida &&
                 r.FechaSalida >= dto.FechaEntrada);
             if (conflicto)
-                throw new ArgumentException("La habitación ya está reservada en este período por un cliente presente.");
+                throw new ArgumentException("La habitación ya está reservada en el período solicitado.");
 
             // Validar que el cliente no tenga otra reserva en el mismo período
             var conflictoCliente = await _context.Reservas.AnyAsync(r =>
                 r.ClienteId == dto.ClienteId &&
                 !r.EstaCancelada &&
-                r.EstaElClienteEnHostal &&
                 r.FechaEntrada <= dto.FechaSalida &&
                 r.FechaSalida >= dto.FechaEntrada);
             if (conflictoCliente)
-                throw new ArgumentException("El cliente ya tiene una reserva activa en este período.");
+                throw new ArgumentException("El cliente ya tiene una reserva activa en el período solicitado.");
 
             // Calcular importe
             var cliente = await _context.Clientes.FindAsync(dto.ClienteId);
@@ -148,22 +180,20 @@ namespace HostalIslaAzul.Application.Services
                 r.HabitacionId == habitacion.Id &&
                 r.Id != id &&
                 !r.EstaCancelada &&
-                r.EstaElClienteEnHostal &&
                 r.FechaEntrada <= dto.FechaSalida &&
                 r.FechaSalida >= dto.FechaEntrada);
             if (conflicto)
-                throw new ArgumentException("La habitación ya está reservada en este período por un cliente presente.");
+                throw new ArgumentException("La habitación ya está reservada en el período solicitado.");
 
             // Validar que el cliente no tenga otra reserva
             var conflictoCliente = await _context.Reservas.AnyAsync(r =>
                 r.ClienteId == dto.ClienteId &&
                 r.Id != id &&
                 !r.EstaCancelada &&
-                r.EstaElClienteEnHostal &&
                 r.FechaEntrada <= dto.FechaSalida &&
                 r.FechaSalida >= dto.FechaEntrada);
             if (conflictoCliente)
-                throw new ArgumentException("El cliente ya tiene una reserva activa en este período.");
+                throw new ArgumentException("El cliente ya tiene una reserva activa en el período solicitado.");
 
             // Actualizar campos
             var cliente = await _context.Clientes.FindAsync(dto.ClienteId);
@@ -208,8 +238,6 @@ namespace HostalIslaAzul.Application.Services
 
             await RegistrarTrazaAsync("Cancelación", "Reservas", reserva.Id.ToString(), $"Reserva cancelada para cliente {reserva.Cliente.NombreApellidos}. Motivo: {motivoCancelacion}");
         }
-
-        
 
         public async Task CambiarHabitacionAsync(int reservaId, string nuevoNumeroHabitacion)
         {
@@ -276,8 +304,7 @@ namespace HostalIslaAzul.Application.Services
                 $"Cliente {reserva.Cliente.NombreApellidos} registrado en el hostal.");
         }
 
-        
-       public async Task<List<ReservaActivaDto>> ObtenerReservasActivasAsync(DateTime? fecha = null)
+        public async Task<List<ReservaActivaDto>> ObtenerReservasActivasAsync(DateTime? fecha = null)
         {
             IQueryable<Reserva> query = _context.Reservas
                 .Include(r => r.Cliente)
@@ -345,7 +372,6 @@ namespace HostalIslaAzul.Application.Services
             }
         }
 
-        
         private async Task RegistrarTrazaAsync(string operacion, string tabla, string registroId, string detalles)
         {
             var traza = new Traza
@@ -378,6 +404,7 @@ namespace HostalIslaAzul.Application.Services
         public DateTime FechaSalida { get; set; }
         public decimal Importe { get; set; }
         public string? ClienteNombre { get; set; }
+        public int ClienteId { get; set; }
         public string? HabitacionNumero { get; set; }
         public bool EstaElClienteEnHostal { get; set; }
         public bool EstaCancelada { get; set; }

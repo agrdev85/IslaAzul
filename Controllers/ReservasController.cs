@@ -19,9 +19,33 @@ namespace HostalIslaAzul.Controllers
             _amaDeLlavesService = amaDeLlavesService ?? throw new ArgumentNullException(nameof(amaDeLlavesService));
         }
 
-    
+        /// <summary>
+        /// Obtiene una reserva específica por su ID.
+        /// </summary>
+        [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> GetById(int id)
+        {
+            try
+            {
+                var reserva = await _reservaService.ObtenerReservaPorIdAsync(id);
+                return Ok(new { success = true, data = reserva });
+            }
+            catch (ArgumentException ex)
+            {
+                return NotFound(new { success = false, message = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { success = false, message = "Error al obtener la reserva", error = ex.Message });
+            }
+        }
+
+        /// <summary>
         /// Obtiene todas las reservas.
-        
+        /// </summary>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -38,9 +62,9 @@ namespace HostalIslaAzul.Controllers
             }
         }
 
-        
+        /// <summary>
         /// Obtiene las reservas activas, opcionalmente filtradas por fecha.
-        
+        /// </summary>
         [HttpGet("activas")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -57,9 +81,9 @@ namespace HostalIslaAzul.Controllers
             }
         }
 
-        
+        /// <summary>
         /// Crea una nueva reserva.
-        
+        /// </summary>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -82,13 +106,14 @@ namespace HostalIslaAzul.Controllers
                     FechaSalida = reserva.FechaSalida,
                     Importe = reserva.Importe,
                     ClienteNombre = reserva.Cliente?.NombreApellidos ?? "Desconocido",
+                    ClienteId = reserva.ClienteId,
                     HabitacionNumero = reserva.HabitacionNumero ?? "N/A",
                     EstaElClienteEnHostal = reserva.EstaElClienteEnHostal,
                     EstaCancelada = reserva.EstaCancelada,
                     FechaCancelacion = reserva.FechaCancelacion,
                     MotivoCancelacion = reserva.MotivoCancelacion
                 };
-                return CreatedAtAction(nameof(GetAll), new { id = reserva.Id }, new { success = true, data = reservaDto });
+                return CreatedAtAction(nameof(GetById), new { id = reserva.Id }, new { success = true, data = reservaDto });
             }
             catch (ArgumentException ex)
             {
@@ -100,9 +125,9 @@ namespace HostalIslaAzul.Controllers
             }
         }
 
-    
+        /// <summary>
         /// Modifica una reserva existente.
-        
+        /// </summary>
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -147,8 +172,9 @@ namespace HostalIslaAzul.Controllers
             }
         }
 
+        /// <summary>
         /// Cancela una reserva existente.
-
+        /// </summary>
         [HttpPut("{id}/cancelar")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -179,9 +205,9 @@ namespace HostalIslaAzul.Controllers
             }
         }
 
-    
+        /// <summary>
         /// Cambia la habitación de una reserva.
-        
+        /// </summary>
         [HttpPut("{id}/cambiar-habitacion")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -208,8 +234,9 @@ namespace HostalIslaAzul.Controllers
             }
         }
 
+        /// <summary>
         /// Registra la llegada de un cliente al hostal.
-        
+        /// </summary>
         [HttpPut("{id}/registrar-llegada")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -235,8 +262,9 @@ namespace HostalIslaAzul.Controllers
             }
         }
 
+        /// <summary>
         /// Actualiza las reservas expiradas manualmente.
-        
+        /// </summary>
         [HttpPost("actualizar-expiradas")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]

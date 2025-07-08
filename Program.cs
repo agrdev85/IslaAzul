@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
 using Serilog;
 using HostalIslaAzul.Infrastructure;
 using HostalIslaAzul.Application.Services;
@@ -19,11 +20,10 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Host.UseSerilog(); // Usar Serilog como proveedor de logging
 
-
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
-        options.JsonSerializerOptions.PropertyNamingPolicy = null; 
+        options.JsonSerializerOptions.PropertyNamingPolicy = null;
         options.JsonSerializerOptions.WriteIndented = true; 
     });
 
