@@ -77,17 +77,18 @@
             }
             catch (ArgumentException ex)
             {
-                return BadRequest(ex.Message);
+                return NotFound(new { message = ex.Message });
             }
             catch (InvalidOperationException ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest(new { message = ex.Message });
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ex.Message);
+                return StatusCode(500, new { message = $"Error interno: {ex.Message}" });
             }
         }
+
 
         [HttpGet]
         public async Task<IActionResult> ListarClientes([FromQuery] string? busqueda, [FromQuery] string? ciFiltro, [FromQuery] int pagina = 1, [FromQuery] int tamanoPagina = 10)

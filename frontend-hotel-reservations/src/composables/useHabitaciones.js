@@ -173,7 +173,7 @@ export function useHabitaciones() {
     }
   }
 
-  const deleteHabitacion = async (id) => {
+    const deleteHabitacion = async (id) => {
     loading.value = true
     try {
       await $q.dialog({
@@ -183,11 +183,7 @@ export function useHabitaciones() {
         persistent: true,
       }).onOk(async () => {
         console.log("Attempting to delete habitacion:", { id })
-        const response = await axios.delete(`${apiUrl}/Habitaciones/${id}`)
-        console.log("Delete habitacion response:", {
-          status: response.status,
-          data: response.data
-        })
+        await axios.delete(`${apiUrl}/Habitaciones/${id}`)
         showNotification("Habitación eliminada exitosamente")
         await fetchHabitaciones()
       })
@@ -199,16 +195,18 @@ export function useHabitaciones() {
       })
       let errorMessage = "Error al eliminar habitación";
       if (error.response?.status === 400) {
-        errorMessage = error.response?.data?.message || "No se puede eliminar la habitación porque tiene reservas asociadas";
+        errorMessage = error.response?.data?.message || "No se puede eliminar la habitación porque tiene reservas o asignaciones asociadas";
       } else if (error.response?.status === 404) {
         errorMessage = "La habitación no existe";
+      } else {
+        errorMessage = error.response?.data?.message || error.message;
       }
       showNotification(errorMessage, "negative")
     } finally {
       loading.value = false
     }
   }
-
+   
   const selectHabitacion = async (id) => {
     try {
       const response = await axios.get(`${apiUrl}/Habitaciones/${id}`)

@@ -68,13 +68,18 @@ namespace HostalIslaAzul.Controllers
             }
             catch (ArgumentException ex)
             {
-                return BadRequest(ex.Message);
+                return NotFound(new { message = ex.Message });
             }
             catch (InvalidOperationException ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest(new { message = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = $"Error interno: {ex.Message}" });
             }
         }
+
 
         [HttpPost("{id}/fuera-de-servicio")]
         public async Task<IActionResult> PonerFueraDeServicio(int id)

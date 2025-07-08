@@ -100,22 +100,38 @@ export function useClientes() {
     }
   }
 
-  const deleteCliente = async (id) => {
+  
+    const deleteCliente = async (id) => {
+    loading.value = true
     try {
       await $q.dialog({
         title: "Confirmar eliminación",
         message: "¿Está seguro de que desea eliminar este cliente?",
         cancel: true,
         persistent: true,
+      }).onOk(async () => {
+        console.log("Attempting to delete cliente:", { id })
+        await axios.delete(`${apiUrl}/Clientes/${id}`)
+        showNotification("Cliente eliminado exitosamente")
+        await fetchClientes()
       })
-
-      await axios.delete(`${apiUrl}/Clientes/${id}`)
-      showNotification("Cliente eliminado exitosamente")
-      await fetchClientes()
     } catch (error) {
-      if (error !== undefined) {
-        showNotification(error.response?.data?.message || "Error al eliminar cliente", "negative")
+      console.error("Error deleting cliente:", {
+        message: error.message,
+        status: error.response?.status,
+        data: error.response?.data
+      })
+      let errorMessage = "Error al eliminar cliente";
+      if (error.response?.status === 400) {
+        errorMessage = error.response?.data?.message || "No se puede eliminar el cliente porque tiene reservas asociadas";
+      } else if (error.response?.status === 404) {
+        errorMessage = "El cliente no existe";
+      } else {
+        errorMessage = error.response?.data?.message || error.message;
       }
+      showNotification(errorMessage, "negative")
+    } finally {
+      loading.value = false
     }
   }
 

@@ -136,24 +136,40 @@ export function useAmas() {
     }
   }
 
-  const deleteAma = async (id) => {
-    try {
-      await $q.dialog({
-        title: "Confirmar eliminación",
-        message: "¿Está seguro de que desea eliminar esta ama de llaves?",
-        cancel: true,
-        persistent: true,
-      })
-
-      await axios.delete(`${apiUrl}/AmasDeLlaves/${id}`)
-      showNotification("Ama de llaves eliminada exitosamente")
-      await fetchAmas()
-    } catch (error) {
-      if (error !== undefined) {
-        showNotification(error.response?.data?.message || "Error al eliminar ama de llaves", "negative")
+  
+    const deleteAma = async (id) => {
+      loading.value = true
+      try {
+        await $q.dialog({
+          title: "Confirmar eliminación",
+          message: "¿Está seguro de que desea eliminar esta ama de llaves?",
+          cancel: true,
+          persistent: true,
+        }).onOk(async () => {
+          console.log("Attempting to delete ama de llaves:", { id })
+          await axios.delete(`${apiUrl}/AmasDeLlaves/${id}`)
+          showNotification("Ama de llaves eliminada exitosamente")
+          await fetchAmas()
+        })
+      } catch (error) {
+        console.error("Error deleting ama de llaves:", {
+          message: error.message,
+          status: error.response?.status,
+          data: error.response?.data
+        })
+        let errorMessage = "Error al eliminar ama de llaves";
+        if (error.response?.status === 400) {
+          errorMessage = error.response?.data?.message || "No se puede eliminar la ama de llaves porque tiene asignaciones asociadas";
+        } else if (error.response?.status === 404) {
+          errorMessage = "La ama de llaves no existe";
+        } else {
+          errorMessage = error.response?.data?.message || error.message;
+        }
+        showNotification(errorMessage, "negative")
+      } finally {
+        loading.value = false
       }
     }
-  }
 
   const selectAma = async (id) => {
     try {
