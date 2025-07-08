@@ -49,19 +49,45 @@ namespace HostalIslaAzul.Controllers
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] DateTime? fechaInicio, [FromQuery] DateTime? fechaFin, [FromQuery] string? estado)
         {
             try
             {
                 var reservas = await _reservaService.ObtenerTodasReservasAsync();
-                return Ok(new { success = true, data = reservas });
+                var query = reservas.AsQueryable();
+
+                // Filtro por rango de fechas
+                if (fechaInicio.HasValue)
+                    query = query.Where(r => r.FechaReservacion >= fechaInicio.Value);
+                if (fechaFin.HasValue)
+                    query = query.Where(r => r.FechaReservacion <= fechaFin.Value);
+
+                // Filtro por estado
+                if (!string.IsNullOrWhiteSpace(estado))
+                {
+                    switch (estado.ToLower())
+                    {
+                        case "confirmada":
+                            query = query.Where(r => !r.EstaCancelada && !r.EstaElClienteEnHostal);
+                            break;
+                        case "en hostal":
+                            query = query.Where(r => !r.EstaCancelada && r.EstaElClienteEnHostal);
+                            break;
+                        case "cancelada":
+                            query = query.Where(r => r.EstaCancelada);
+                            break;
+                        default:
+                            return BadRequest(new { success = false, message = "Estado inválido. Use: Confirmada, En Hostal, Cancelada." });
+                    }
+                }
+
+                return Ok(new { success = true, data = query.ToList() });
             }
             catch (Exception ex)
             {
                 return StatusCode(500, new { success = false, message = "Error al obtener las reservas", error = ex.Message });
             }
         }
-
         /// <summary>
         /// Obtiene las reservas activas, opcionalmente filtradas por fecha.
         /// </summary>

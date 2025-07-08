@@ -131,7 +131,77 @@
       </q-card>
     </div>
 
-    <!-- Filtros de Búsqueda y Acciones -->
+      <q-card class="shadow-2 q-mb-md">
+        <q-card-section class="bg-blue-1">
+          <div class="col-12 col-lg-6 text-h6 text-blue-10 flex items-center">
+            <q-icon name="settings" class="q-mr-sm" />
+            Acciones de Reservas
+          </div>
+        </q-card-section>
+
+        <q-card-section class="q-gutter-md">
+          <q-select
+            v-model="selectedReservaAccion"
+            filled
+            label="Seleccionar Reserva para Acciones"
+            color="blue-7"
+            :options="reservaOptions"
+            option-label="label"
+            option-value="value"
+            clearable
+            :loading="loading"
+          >
+            <template v-slot:prepend>
+              <q-icon name="event_note" color="blue-7" />
+            </template>
+          </q-select>
+
+          <div class="row q-col-gutter-sm">
+            <div class="col-6">
+              <q-btn
+                label="Registrar Llegada"
+                color="green-10"
+                icon="check_in"
+                @click="registrarLlegada"
+                :disable="!selectedReservaAccion || !canRegisterArrival"
+                class="full-width"
+              />
+            </div>
+            <div class="col-6">
+              <q-btn
+                label="Cambiar Habitación"
+                color="blue-10"
+                icon="swap_horiz"
+                @click="showCambiarHabitacion = true"
+                :disable="!selectedReservaAccion || !canChangeRoom"
+                class="full-width"
+              />
+            </div>
+          </div>
+
+          <q-input
+            v-model="motivoCancelacion"
+            filled
+            label="Motivo de Cancelación"
+            color="blue-7"
+            type="textarea"
+            rows="2"
+            :disable="!selectedReservaAccion || !canCancelReserva"
+            :rules="[validationRules.required]"
+          />
+
+          <q-btn
+            label="Cancelar Reserva"
+            color="red-10"
+            icon="cancel"
+            @click="cancelarReserva"
+            :disable="!selectedReservaAccion || !motivoCancelacion || !canCancelReserva"
+            class="full-width"
+          />
+        </q-card-section>
+      </q-card>
+
+      <!-- Filtros de Búsqueda y Acciones -->
     <div class="col-12 col-lg-6">
       <q-card class="shadow-2 q-mb-md">
         <q-card-section class="bg-orange-1">
@@ -203,77 +273,7 @@
           />
         </q-card-section>
       </q-card>
-
-      <q-card class="shadow-2 q-mb-md">
-        <q-card-section class="bg-blue-1">
-          <div class="text-h6 text-blue-10 flex items-center">
-            <q-icon name="settings" class="q-mr-sm" />
-            Acciones de Reservas
-          </div>
-        </q-card-section>
-
-        <q-card-section class="q-gutter-md">
-          <q-select
-            v-model="selectedReservaAccion"
-            filled
-            label="Seleccionar Reserva para Acciones"
-            color="blue-7"
-            :options="reservaOptions"
-            option-label="label"
-            option-value="value"
-            clearable
-            :loading="loading"
-          >
-            <template v-slot:prepend>
-              <q-icon name="event_note" color="blue-7" />
-            </template>
-          </q-select>
-
-          <div class="row q-col-gutter-sm">
-            <div class="col-6">
-              <q-btn
-                label="Registrar Llegada"
-                color="green-10"
-                icon="check_in"
-                @click="registrarLlegada"
-                :disable="!selectedReservaAccion || !canRegisterArrival"
-                class="full-width"
-              />
-            </div>
-            <div class="col-6">
-              <q-btn
-                label="Cambiar Habitación"
-                color="blue-10"
-                icon="swap_horiz"
-                @click="showCambiarHabitacion = true"
-                :disable="!selectedReservaAccion || !canChangeRoom"
-                class="full-width"
-              />
-            </div>
-          </div>
-
-          <q-input
-            v-model="motivoCancelacion"
-            filled
-            label="Motivo de Cancelación"
-            color="blue-7"
-            type="textarea"
-            rows="2"
-            :disable="!selectedReservaAccion || !canCancelReserva"
-            :rules="[validationRules.required]"
-          />
-
-          <q-btn
-            label="Cancelar Reserva"
-            color="red-10"
-            icon="cancel"
-            @click="cancelarReserva"
-            :disable="!selectedReservaAccion || !motivoCancelacion || !canCancelReserva"
-            class="full-width"
-          />
-        </q-card-section>
-      </q-card>
-
+       
       <!-- Lista de Reservas -->
       <q-card class="shadow-2">
         <q-card-section class="bg-orange-1">
