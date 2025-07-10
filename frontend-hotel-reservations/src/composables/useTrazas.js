@@ -3,7 +3,7 @@ import { useQuasar } from "quasar"
 import { DateTime } from "luxon"
 import axios from "axios"
 
-const apiUrl = "http://localhost:5014/api"
+const apiUrl = "http://localhost:5014/api";
 
 export function useTrazas() {
   const $q = useQuasar()

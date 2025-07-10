@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HostalIslaAzul")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a00484da5d18d61c85cfc50e46726f8921da7c8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b414cb3a67e0d4b6e34da219379bfdd92420660")]
 [assembly: System.Reflection.AssemblyProductAttribute("HostalIslaAzul")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HostalIslaAzul")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

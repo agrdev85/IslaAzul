@@ -2,7 +2,7 @@ import { ref, computed } from "vue"
 import { useQuasar } from "quasar"
 import axios from "axios"
 
-const apiUrl = "http://localhost:5014/api"
+const apiUrl = "http://localhost:5014/api";
 
 export function useAmas() {
   const $q = useQuasar()

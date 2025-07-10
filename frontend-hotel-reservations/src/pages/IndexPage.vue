@@ -112,28 +112,18 @@
 
           <!-- Contenido de las pestañas -->
           <q-tab-panels v-model="tab" animated class="bg-grey-1">
-            
-            <!-- Pestaña Clientes -->
             <q-tab-panel name="clientes" class="q-pa-md">
               <ClientesTab />
             </q-tab-panel>
-
-            <!-- Pestaña Reservas -->
             <q-tab-panel name="reservas" class="q-pa-md">
               <ReservasTab />
             </q-tab-panel>
-
-            <!-- Pestaña Habitaciones -->
             <q-tab-panel name="habitaciones" class="q-pa-md">
               <HabitacionesTab />
             </q-tab-panel>
-
-            <!-- Pestaña Amas de Llaves -->
             <q-tab-panel name="amas" class="q-pa-md">
               <AmasTab />
             </q-tab-panel>
-
-            <!-- Pestaña Trazas -->
             <q-tab-panel name="trazas" class="q-pa-md">
               <TrazasTab />
             </q-tab-panel>
@@ -161,7 +151,6 @@ const globalLoading = ref(false)
 
 const { stats, loadStats } = useStats()
 
-// Cargar estadísticas iniciales
 onMounted(async () => {
   globalLoading.value = true
   try {

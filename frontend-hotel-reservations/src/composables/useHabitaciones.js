@@ -19,7 +19,7 @@ export function useHabitaciones() {
 
   const filtros = ref({
     busqueda: "",
-    estado: null, // Aseguramos que sea null para mostrar todas las habitaciones por defecto
+    estado: null, 
     fechaInicio: "",
     fechaFin: "",
   })
@@ -96,7 +96,7 @@ export function useHabitaciones() {
     }
   }
 
-  const buscarHabitacionesDisponibles = async (fechaInicio, fechaFin) => {
+    const buscarHabitacionesDisponibles = async (fechaInicio, fechaFin) => {
     if (!fechaInicio || !fechaFin) {
       showNotification("Debe seleccionar ambas fechas", "negative")
       return []
@@ -104,16 +104,27 @@ export function useHabitaciones() {
 
     loading.value = true
     try {
+      console.log("Parámetros enviados:", { fechaInicio, fechaFin })
       const response = await axios.get(`${apiUrl}/Habitaciones/habitaciones-disponibles`, {
         params: {
           fechaInicio,
           fechaFin,
         },
       })
-      habitacionesDisponibles.value = Array.isArray(response.data) ? response.data.map(h => ({
-        Numero: h.Numero || "N/A",
-        EstaFueraDeServicio: h.EstaFueraDeServicio || false
-      })) : []
+      console.log("Respuesta de la API:", response.data)
+
+      if (!Array.isArray(response.data)) {
+        showNotification("No se encontraron habitaciones disponibles", "negative")
+        habitacionesDisponibles.value = []
+        return []
+      }
+
+      // Mapea las cadenas directamente como objetos con la propiedad Numero
+      habitacionesDisponibles.value = response.data.map(numero => ({
+        Numero: numero || "N/A",
+        EstaFueraDeServicio: false // Valor por defecto, ya que el backend no lo proporciona
+      }))
+
       console.log("Habitaciones disponibles:", {
         count: habitacionesDisponibles.value.length,
         habitaciones: habitacionesDisponibles.value
@@ -121,7 +132,7 @@ export function useHabitaciones() {
       showNotification(`${habitacionesDisponibles.value.length} habitaciones disponibles encontradas`)
       return habitacionesDisponibles.value
     } catch (error) {
-      console.error("Error searching available rooms:", {
+      console.error("Error buscando habitaciones:", {
         message: error.message,
         status: error.response?.status,
         data: error.response?.data

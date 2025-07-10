@@ -512,3 +512,42 @@
 2025-07-08 08:06:53.151 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 6.9293 ms
 2025-07-08 08:07:25.203 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 9.8624 ms
 2025-07-08 08:07:37.155 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 18.0591 ms
+2025-07-08 08:56:16.834 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 2301.7747 ms
+2025-07-08 08:56:24.468 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 22.2250 ms
+2025-07-08 08:56:40.642 -04:00 [INF] HTTP GET /api/clientes responded 200 in 11.1723 ms
+2025-07-08 08:56:40.699 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 52.4601 ms
+2025-07-08 08:56:40.755 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-08 08:56:40.759 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-08 08:56:40.761 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 111.5832 ms
+2025-07-08 08:57:20.311 -04:00 [INF] Reserva encontrada: Id=1044, Cliente=Alex Frometa, Habitacion=015
+2025-07-08 08:57:20.322 -04:00 [INF] HTTP GET /api/Reservas/1044 responded 200 in 142.1666 ms
+2025-07-08 08:57:20.406 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 50.5416 ms
+2025-07-08 08:57:20.420 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 58.1537 ms
+2025-07-08 08:57:44.513 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 10.1887 ms
+2025-07-08 08:58:03.489 -04:00 [INF] HTTP GET /api/Trazas responded 404 in 0.0879 ms
+2025-07-08 08:58:19.386 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 7.0036 ms
+2025-07-08 08:58:22.147 -04:00 [INF] HTTP GET /api/Trazas responded 404 in 0.0466 ms
+2025-07-08 08:58:31.305 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 6.6702 ms
+2025-07-08 09:01:37.421 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 15.8049 ms
+2025-07-08 09:24:52.012 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 1874.3709 ms
+2025-07-08 09:27:04.820 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 12.4432 ms
+2025-07-08 09:27:04.831 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 7.0446 ms
+2025-07-08 09:27:04.855 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 27.9323 ms
+2025-07-08 09:27:04.926 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-08 09:27:04.934 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-08 09:27:04.943 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 90.7720 ms
+2025-07-08 09:27:18.176 -04:00 [INF] HTTP GET /api/Clientes/1003 responded 200 in 20.7054 ms
+2025-07-08 09:27:22.912 -04:00 [INF] HTTP GET /api/clientes responded 200 in 6.4226 ms
+2025-07-08 09:27:22.947 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 33.0181 ms
+2025-07-08 09:27:22.957 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-08 09:27:22.964 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-08 09:27:22.966 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 27.3670 ms
+2025-07-08 09:27:26.727 -04:00 [INF] Reserva encontrada: Id=1037, Cliente=Gretel Perez Gonzalez, Habitacion=011
+2025-07-08 09:27:26.734 -04:00 [INF] HTTP GET /api/Reservas/1037 responded 200 in 26.5311 ms
+2025-07-08 09:27:26.802 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 34.5702 ms
+2025-07-08 09:27:26.812 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 12.6546 ms
+2025-07-08 09:27:43.791 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 9.8000 ms
+2025-07-08 09:27:48.167 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 17.6550 ms
+2025-07-08 09:27:51.507 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 9.6770 ms
+2025-07-08 09:27:54.313 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 5.8682 ms
+2025-07-08 09:28:09.667 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 10.7541 ms

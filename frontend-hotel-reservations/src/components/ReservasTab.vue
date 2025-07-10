@@ -146,7 +146,7 @@
               <q-input
                 v-model="fechaInicioFiltro"
                 filled
-                label="Fecha de Reservación (Inicio)"
+                label="Fecha de Entrada (Inicio)"
                 type="date"
                 color="orange-7"
               >
@@ -159,7 +159,7 @@
               <q-input
                 v-model="fechaFinFiltro"
                 filled
-                label="Fecha de Reservación (Fin)"
+                label="Fecha de Salida (Fin)"
                 type="date"
                 color="orange-7"
               >
@@ -203,7 +203,7 @@
           />
         </q-card-section>
       </q-card>
-       
+
       <!-- Lista de Reservas -->
       <q-card class="shadow-2">
         <q-card-section class="bg-orange-1">
@@ -251,6 +251,17 @@
                 >
                   <q-tooltip>Editar Reserva</q-tooltip>
                 </q-btn>
+                <q-btn
+                  flat
+                  round
+                  color="warning"
+                  icon="undo"
+                  size="sm"
+                  @click.stop="revertirCheckIn(props.row.Id)"
+                  v-if="props.row.EstaElClienteEnHostal && !props.row.EstaCancelada"
+                >
+                  <q-tooltip>Revertir Check-in</q-tooltip>
+                </q-btn>
               </q-td>
             </template>
           </q-table>
@@ -261,56 +272,79 @@
         </q-card-section>
       </q-card>
     </div>
-  </div>
-   
-  <q-card class="shadow-2 q-mb-md">
-        <q-card-section class="bg-blue-1">
-          <div class="col-12 col-lg-6 text-h6 text-blue-10 flex items-center">
-            <q-icon name="settings" class="q-mr-sm" />
-            Acciones de Reservas
-          </div>
-        </q-card-section>
 
-        <q-card-section class="q-gutter-md">
+    <q-card class="shadow-2 q-mb-md" style="max-width: 100%; width: 100%;">
+    <q-card-section class="bg-blue-1">
+      <div class="text-h6 text-blue-10 flex items-center justify-between">
+        <div class="flex items-center">
+          <q-icon name="settings" class="q-mr-sm" />
+          Acciones de Reservas
+        </div>
+        <q-btn
+          flat
+          round
+          icon="refresh"
+          color="blue-10"
+          @click="fetchReservasActivas"
+          :loading="loading"
+        />
+      </div>
+    </q-card-section>
+
+    <q-card-section class="q-gutter-md q-pa-lg">
+      <div class="row items-start q-col-gutter-md" style="min-width: 0;">
+        <div class="col-12 col-md-4" style="min-width: 300px;">
           <q-select
             v-model="selectedReservaAccion"
             filled
-            label="Seleccionar Reserva para Acciones"
+            label="Seleccionar Reserva"
             color="blue-7"
             :options="reservaOptions"
             option-label="label"
             option-value="value"
             clearable
             :loading="loading"
+            standout
+            class="full-width"
+            style="max-width: 100%;"
           >
             <template v-slot:prepend>
               <q-icon name="event_note" color="blue-7" />
             </template>
           </q-select>
+        </div>
 
+        <div class="col-12 col-md-4" style="min-width: 300px;">
           <div class="row q-col-gutter-sm">
-            <div class="col-6">
+            <div class="col-12">
               <q-btn
                 label="Registrar Llegada"
                 color="green-10"
                 icon="check_in"
                 @click="registrarLlegada"
                 :disable="!selectedReservaAccion || !canRegisterArrival"
-                class="full-width"
+                unelevated
+                rounded
+                size="md"
+                class="full-width q-mb-sm"
               />
             </div>
-            <div class="col-6">
+            <div class="col-12">
               <q-btn
                 label="Cambiar Habitación"
                 color="blue-10"
                 icon="swap_horiz"
                 @click="showCambiarHabitacion = true"
                 :disable="!selectedReservaAccion || !canChangeRoom"
+                unelevated
+                rounded
+                size="md"
                 class="full-width"
               />
             </div>
           </div>
-
+        </div>
+        <div class="col-12 col-md-4" style="min-width: 300px;">
           <q-input
             v-model="motivoCancelacion"
             filled
@@ -320,59 +354,79 @@
             rows="2"
             :disable="!selectedReservaAccion || !canCancelReserva"
             :rules="[validationRules.required]"
+            standout
+            class="full-width q-mb-sm"
           />
-
           <q-btn
             label="Cancelar Reserva"
             color="red-10"
             icon="cancel"
             @click="cancelarReserva"
             :disable="!selectedReservaAccion || !motivoCancelacion || !canCancelReserva"
-            class="full-width"
-          />
+            unelevated
+            rounded
+            size="md"
+            class="full-width q-mb-sm"/>
+          <q-btn
+            label="Actualizar Expiradas"
+            color="blue-10"
+            icon="refresh"
+            @click="actualizarExpiradas"
+            unelevated
+            rounded
+            size="md"
+            class="full-width"/>
+        </div>
+      </div>
+    </q-card-section>
+  </q-card>
+
+    <!-- Diálogo Cambiar Habitación -->
+    <q-dialog v-model="showCambiarHabitacion" persistent>
+      <q-card style="min-width: 350px">
+        <q-card-section class="bg-blue-1">
+          <div class="text-h6 text-blue-10">Cambiar Habitación de Reserva</div>
         </q-card-section>
+
+        <q-card-section class="q-gutter-md">
+          <q-input
+            v-model="nuevaHabitacion"
+            filled
+            label="Nueva Habitación (0XY)"
+            color="blue-7"
+            :rules="[validationRules.habitacion]"
+            hint="Formato: 0XY donde X es el piso (1-3) y Y es la habitación (1-5)"
+            :disable="loading"
+          >
+            <template v-slot:prepend>
+              <q-icon name="hotel" color="blue-7" />
+            </template>
+          </q-input>
+        </q-card-section>
+
+        <q-card-actions align="right">
+          <q-btn
+            flat
+            label="Cancelar"
+            color="grey"
+            @click="showCambiarHabitacion = false; nuevaHabitacion = ''"
+          />
+          <q-btn
+            label="Cambiar Habitación"
+            color="blue-10"
+            @click="cambiarHabitacion"
+            :disable="!nuevaHabitacion || !validationRules.habitacion(nuevaHabitacion)"
+          />
+        </q-card-actions>
       </q-card>
-
-  <!-- Diálogo Cambiar Habitación -->
-  <q-dialog v-model="showCambiarHabitacion" persistent>
-    <q-card style="min-width: 350px">
-      <q-card-section class="bg-blue-1">
-        <div class="text-h6 text-blue-10">Cambiar Habitación de Reserva</div>
-      </q-card-section>
-
-      <q-card-section class="q-gutter-md">
-        <q-input
-          v-model="nuevaHabitacion"
-          filled
-          label="Nueva Habitación (0XY)"
-          color="blue-7"
-          :rules="[validationRules.habitacion]"
-          hint="Formato: 0XY donde X es el piso (1-3) y Y es la habitación (1-5)"
-          :disable="loading"
-        >
-          <template v-slot:prepend>
-            <q-icon name="hotel" color="blue-7" />
-          </template>
-        </q-input>
-      </q-card-section>
-
-      <q-card-actions align="right">
-        <q-btn flat label="Cancelar" color="grey" @click="showCambiarHabitacion = false; nuevaHabitacion = ''" />
-        <q-btn
-          label="Cambiar Habitación"
-          color="blue-10"
-          @click="cambiarHabitacion"
-          :disable="!nuevaHabitacion || !validationRules.habitacion(nuevaHabitacion)"
-        />
-      </q-card-actions>
-    </q-card>
-  </q-dialog>
+    </q-dialog>
+  </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue"
-import { useReservas } from "src/composables/useReservas"
-import { validationRules } from "src/utils/validators"
+import { ref, onMounted } from "vue";
+import { useReservas } from "src/composables/useReservas";
+import { validationRules } from "src/utils/validators";
 
 const {
   reservas,
@@ -411,9 +465,11 @@ const {
   resetForm,
   getReservaChipColor,
   getReservaStatus,
-} = useReservas()
+  revertirCheckIn,
+  actualizarExpiradas,
+} = useReservas();
 
-const showCambiarHabitacion = ref(false)
+const showCambiarHabitacion = ref(false);
 
 const columns = [
   { name: "FechaReservacion", label: "Fecha de Reservación", field: "FechaReservacion", align: "center", sortable: true },
@@ -424,13 +480,13 @@ const columns = [
   { name: "Importe", label: "Importe", field: "Importe", align: "center", format: (val) => `$${val}`, sortable: true },
   { name: "Estado", label: "Estado", field: (row) => getReservaStatus(row), align: "center", sortable: true },
   { name: "actions", label: "Acciones", field: "actions", align: "center" },
-]
+];
 
 const onRowClick = (evt, row) => {
-  selectReservaFromList(row)
-}
+  selectReservaFromList(row);
+};
 
 onMounted(async () => {
-  await Promise.all([fetchClientes(), fetchReservas(), fetchReservasActivas()])
-})
+  await Promise.all([fetchClientes(), fetchReservas(), fetchReservasActivas()]);
+});
 </script>

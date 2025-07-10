@@ -2,7 +2,7 @@ import { ref, computed } from "vue"
 import { useQuasar } from "quasar"
 import axios from "axios"
 
-const apiUrl = "http://localhost:5014/api"
+const apiUrl = "http://localhost:5014/api";
 
 export function useClientes() {
   const $q = useQuasar()
@@ -100,9 +100,9 @@ export function useClientes() {
     }
   }
 
-  
     const deleteCliente = async (id) => {
     loading.value = true
+    console.log('$q:', $q) // Verificar si $q está disponible
     try {
       await $q.dialog({
         title: "Confirmar eliminación",
@@ -111,7 +111,7 @@ export function useClientes() {
         persistent: true,
       }).onOk(async () => {
         console.log("Attempting to delete cliente:", { id })
-        await axios.delete(`${apiUrl}/Clientes/${id}`)
+        const response = await axios.delete(`${apiUrl}/Clientes/${id}`)
         showNotification("Cliente eliminado exitosamente")
         await fetchClientes()
       })
@@ -121,13 +121,13 @@ export function useClientes() {
         status: error.response?.status,
         data: error.response?.data
       })
-      let errorMessage = "Error al eliminar cliente";
+      let errorMessage = "Error al eliminar cliente"
       if (error.response?.status === 400) {
-        errorMessage = error.response?.data?.message || "No se puede eliminar el cliente porque tiene reservas asociadas";
+        errorMessage = error.response.data?.message || "No se puede eliminar el cliente debido a restricciones."
       } else if (error.response?.status === 404) {
-        errorMessage = "El cliente no existe";
+        errorMessage = "El cliente no existe"
       } else {
-        errorMessage = error.response?.data?.message || error.message;
+        errorMessage = error.response?.data?.message || error.message
       }
       showNotification(errorMessage, "negative")
     } finally {

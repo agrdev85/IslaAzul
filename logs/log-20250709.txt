@@ -1,0 +1,628 @@
+2025-07-09 01:26:12.306 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-09 01:26:43.897 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-09 01:26:47.458 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.AmaDeLlavesId1' was created in shadow state because a conflicting property with the simple name 'AmaDeLlavesId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-09 01:26:47.471 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.HabitacionId1' was created in shadow state because a conflicting property with the simple name 'HabitacionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-09 01:26:47.611 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-09 01:26:53.962 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 01:26:54.052 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 01:26:54.606 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 10749.2281 ms
+2025-07-09 01:26:54.606 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 10749.3898 ms
+2025-07-09 01:26:54.606 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 10749.3018 ms
+2025-07-09 01:26:54.605 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 10749.3076 ms
+2025-07-09 01:27:08.123 -04:00 [INF] HTTP GET /api/clientes responded 200 in 353.8701 ms
+2025-07-09 01:27:08.127 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 01:27:08.139 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 01:27:08.176 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 407.4853 ms
+2025-07-09 01:27:08.301 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 532.1413 ms
+2025-07-09 01:28:40.338 -04:00 [INF] Reserva encontrada: Id=1044, Cliente=Alex Frometa, Habitacion=015
+2025-07-09 01:28:40.370 -04:00 [INF] HTTP GET /api/Reservas/1044 responded 200 in 230.8116 ms
+2025-07-09 01:28:40.875 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 460.0173 ms
+2025-07-09 01:28:40.888 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 467.0459 ms
+2025-07-09 01:28:59.257 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 21.4695 ms
+2025-07-09 01:29:16.061 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 13.8115 ms
+2025-07-09 01:29:24.934 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 16.7303 ms
+2025-07-09 01:29:31.407 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 31.8564 ms
+2025-07-09 01:29:40.745 -04:00 [INF] HTTP OPTIONS /api/Reservas/1044 responded 204 in 8.6726 ms
+2025-07-09 01:29:42.419 -04:00 [INF] Traza registrada: Modificación en Reservas (ID: 1044)
+2025-07-09 01:29:42.458 -04:00 [INF] HTTP PUT /api/Reservas/1044 responded 200 in 1675.2586 ms
+2025-07-09 01:29:42.566 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 01:29:42.570 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 23.2260 ms
+2025-07-09 01:29:42.577 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 01:29:42.581 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 31.6184 ms
+2025-07-09 01:29:58.285 -04:00 [INF] Reserva encontrada: Id=1044, Cliente=Alex Frometa, Habitacion=015
+2025-07-09 01:29:58.288 -04:00 [INF] HTTP GET /api/Reservas/1044 responded 200 in 18.5569 ms
+2025-07-09 01:29:58.331 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 13.9375 ms
+2025-07-09 01:29:58.363 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 29.3625 ms
+2025-07-09 01:30:23.414 -04:00 [INF] Reserva encontrada: Id=1044, Cliente=Alex Frometa, Habitacion=015
+2025-07-09 01:30:23.417 -04:00 [INF] HTTP GET /api/Reservas/1044 responded 200 in 14.0584 ms
+2025-07-09 01:30:23.538 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 16.9537 ms
+2025-07-09 01:30:23.541 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 43.7371 ms
+2025-07-09 01:30:28.919 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 20.0580 ms
+2025-07-09 01:30:32.111 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 20.8233 ms
+2025-07-09 01:30:35.620 -04:00 [INF] HTTP OPTIONS /api/Reservas/1044 responded 204 in 0.8001 ms
+2025-07-09 01:30:35.713 -04:00 [INF] Traza registrada: Modificación en Reservas (ID: 1044)
+2025-07-09 01:30:35.717 -04:00 [INF] HTTP PUT /api/Reservas/1044 responded 200 in 80.6907 ms
+2025-07-09 01:30:35.864 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 25.2154 ms
+2025-07-09 01:30:35.875 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 01:30:35.894 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 01:30:35.902 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 37.7589 ms
+2025-07-09 01:30:57.686 -04:00 [INF] Reserva encontrada: Id=1044, Cliente=Alex Frometa, Habitacion=015
+2025-07-09 01:30:57.687 -04:00 [INF] HTTP GET /api/Reservas/1044 responded 200 in 12.0692 ms
+2025-07-09 01:30:57.799 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 16.9752 ms
+2025-07-09 01:30:57.822 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 14.1408 ms
+2025-07-09 01:31:11.538 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 18.5410 ms
+2025-07-09 01:31:27.580 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 21.5688 ms
+2025-07-09 01:32:45.867 -04:00 [INF] HTTP OPTIONS /api/Habitaciones/5 responded 204 in 0.1337 ms
+2025-07-09 01:32:45.975 -04:00 [INF] HTTP DELETE /api/Habitaciones/5 responded 400 in 100.8590 ms
+2025-07-09 01:32:56.183 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 11.1432 ms
+2025-07-09 01:33:15.985 -04:00 [INF] HTTP OPTIONS /api/Habitaciones/2 responded 204 in 0.4302 ms
+2025-07-09 01:33:16.011 -04:00 [INF] HTTP DELETE /api/Habitaciones/2 responded 400 in 17.7341 ms
+2025-07-09 01:33:23.440 -04:00 [INF] HTTP OPTIONS /api/Habitaciones/3 responded 204 in 0.1982 ms
+2025-07-09 01:33:23.460 -04:00 [INF] HTTP DELETE /api/Habitaciones/3 responded 400 in 12.8958 ms
+2025-07-09 01:33:28.036 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 13.9109 ms
+2025-07-09 01:33:34.540 -04:00 [INF] HTTP OPTIONS /api/Habitaciones/1 responded 204 in 0.2558 ms
+2025-07-09 01:33:34.559 -04:00 [INF] HTTP DELETE /api/Habitaciones/1 responded 400 in 12.5427 ms
+2025-07-09 01:33:36.728 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 7.0666 ms
+2025-07-09 01:33:42.329 -04:00 [INF] HTTP OPTIONS /api/Habitaciones/4 responded 204 in 0.1069 ms
+2025-07-09 01:33:42.351 -04:00 [INF] HTTP DELETE /api/Habitaciones/4 responded 400 in 16.0593 ms
+2025-07-09 01:33:48.009 -04:00 [INF] HTTP OPTIONS /api/Habitaciones/16 responded 204 in 0.1112 ms
+2025-07-09 01:33:48.145 -04:00 [INF] Traza registrada: Eliminación en Habitaciones (ID: 16)
+2025-07-09 01:33:48.146 -04:00 [INF] HTTP DELETE /api/Habitaciones/16 responded 204 in 132.2462 ms
+2025-07-09 01:33:48.202 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 10.4646 ms
+2025-07-09 01:33:55.975 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 11.3142 ms
+2025-07-09 01:34:12.066 -04:00 [INF] HTTP GET /api/clientes responded 200 in 9.6989 ms
+2025-07-09 01:34:12.069 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 8.0144 ms
+2025-07-09 01:34:12.079 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 01:34:12.085 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 01:34:12.087 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 17.1010 ms
+2025-07-09 01:34:19.682 -04:00 [INF] Reserva encontrada: Id=1034, Cliente=EDR, Habitacion=012
+2025-07-09 01:34:19.683 -04:00 [INF] HTTP GET /api/Reservas/1034 responded 200 in 9.7299 ms
+2025-07-09 01:34:19.728 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 16.5818 ms
+2025-07-09 01:34:19.744 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 12.4702 ms
+2025-07-09 01:34:52.392 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 7.5064 ms
+2025-07-09 01:35:02.547 -04:00 [INF] HTTP OPTIONS /api/Habitaciones responded 204 in 0.1707 ms
+2025-07-09 01:35:02.752 -04:00 [INF] Traza registrada: Creación en Habitaciones (ID: 1020)
+2025-07-09 01:35:02.850 -04:00 [INF] HTTP POST /api/Habitaciones responded 201 in 285.0900 ms
+2025-07-09 01:35:03.244 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 7.5661 ms
+2025-07-09 01:35:13.145 -04:00 [INF] HTTP GET /api/Trazas responded 404 in 0.2672 ms
+2025-07-09 01:35:14.802 -04:00 [INF] HTTP GET /api/Trazas responded 404 in 0.2781 ms
+2025-07-09 01:35:19.991 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 12.3538 ms
+2025-07-09 01:35:24.142 -04:00 [INF] HTTP GET /api/clientes responded 200 in 8.4085 ms
+2025-07-09 01:35:24.158 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 01:35:24.157 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 10.6931 ms
+2025-07-09 01:35:24.164 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 01:35:24.166 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 18.9417 ms
+2025-07-09 01:35:33.647 -04:00 [INF] Reserva encontrada: Id=1036, Cliente=Grisel OHalloran, Habitacion=013
+2025-07-09 01:35:33.650 -04:00 [INF] HTTP GET /api/Reservas/1036 responded 200 in 11.7143 ms
+2025-07-09 01:35:33.698 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 9.1361 ms
+2025-07-09 01:35:33.710 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 9.9347 ms
+2025-07-09 01:35:48.971 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 7.0503 ms
+2025-07-09 02:15:47.679 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 1758.6420 ms
+2025-07-09 02:15:55.499 -04:00 [INF] HTTP GET /api/AmasDeLlaves/habitaciones-por-ama-de-llaves/1 responded 200 in 229.1919 ms
+2025-07-09 02:16:00.278 -04:00 [INF] HTTP GET /api/AmasDeLlaves/2 responded 200 in 61.6174 ms
+2025-07-09 02:16:33.887 -04:00 [INF] HTTP GET /api/AmasDeLlaves/habitaciones-por-ama-de-llaves/2 responded 200 in 9.1160 ms
+2025-07-09 02:16:36.574 -04:00 [INF] HTTP GET /api/AmasDeLlaves/habitaciones-por-ama-de-llaves/1 responded 200 in 6.4797 ms
+2025-07-09 02:17:22.888 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 14.5623 ms
+2025-07-09 02:17:42.929 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 5.5115 ms
+2025-07-09 08:19:42.583 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 08:19:42.592 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 08:19:42.594 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 1470.5708 ms
+2025-07-09 08:20:03.560 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 08:20:03.568 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 08:20:03.593 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 40.8381 ms
+2025-07-09 08:20:03.932 -04:00 [INF] HTTP GET /favicon.ico responded 404 in 0.7545 ms
+2025-07-09 08:30:10.899 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 1675.9605 ms
+2025-07-09 08:30:37.200 -04:00 [INF] HTTP GET /api/Habitaciones/5 responded 200 in 36.0485 ms
+2025-07-09 08:34:24.953 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 77.2747 ms
+2025-07-09 08:35:58.139 -04:00 [INF] HTTP GET /api/clientes responded 200 in 14.8184 ms
+2025-07-09 08:35:58.160 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 21.1625 ms
+2025-07-09 08:35:58.918 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 08:35:58.923 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 08:35:58.927 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 783.2844 ms
+2025-07-09 08:36:14.936 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 9.4096 ms
+2025-07-09 08:36:26.930 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 7.0361 ms
+2025-07-09 08:36:43.670 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 12.4276 ms
+2025-07-09 08:36:47.546 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 5.3418 ms
+2025-07-09 08:36:55.484 -04:00 [INF] HTTP GET /api/Clientes/1 responded 200 in 64.4131 ms
+2025-07-09 08:37:04.348 -04:00 [INF] HTTP OPTIONS /api/Clientes/1 responded 204 in 0.3155 ms
+2025-07-09 08:37:04.413 -04:00 [INF] HTTP DELETE /api/Clientes/1 responded 400 in 55.7756 ms
+2025-07-09 08:37:13.219 -04:00 [INF] HTTP OPTIONS /api/Clientes/1006 responded 204 in 0.1272 ms
+2025-07-09 08:37:13.238 -04:00 [INF] HTTP DELETE /api/Clientes/1006 responded 400 in 12.5811 ms
+2025-07-09 08:37:19.382 -04:00 [INF] HTTP OPTIONS /api/Clientes/2007 responded 204 in 0.8246 ms
+2025-07-09 08:37:19.407 -04:00 [INF] HTTP DELETE /api/Clientes/2007 responded 400 in 14.3028 ms
+2025-07-09 08:37:27.613 -04:00 [INF] HTTP OPTIONS /api/Clientes/1002 responded 204 in 0.2449 ms
+2025-07-09 08:37:27.677 -04:00 [INF] Traza registrada: Eliminación en Clientes (ID: 1002)
+2025-07-09 08:37:27.679 -04:00 [INF] HTTP DELETE /api/Clientes/1002 responded 204 in 53.8385 ms
+2025-07-09 08:37:27.717 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 8.5343 ms
+2025-07-09 08:37:40.132 -04:00 [INF] HTTP OPTIONS /api/Clientes/3006 responded 204 in 0.8919 ms
+2025-07-09 08:37:40.148 -04:00 [INF] HTTP DELETE /api/Clientes/3006 responded 400 in 9.3096 ms
+2025-07-09 08:37:58.257 -04:00 [INF] HTTP OPTIONS /api/Clientes/3006 responded 204 in 0.1335 ms
+2025-07-09 08:37:58.277 -04:00 [INF] HTTP DELETE /api/Clientes/3006 responded 400 in 10.3956 ms
+2025-07-09 08:38:59.597 -04:00 [INF] HTTP OPTIONS /api/Clientes/3006 responded 204 in 0.0833 ms
+2025-07-09 08:38:59.623 -04:00 [INF] HTTP DELETE /api/Clientes/3006 responded 400 in 16.2002 ms
+2025-07-09 08:41:35.651 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 12.3537 ms
+2025-07-09 08:41:57.973 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 5.6336 ms
+2025-07-09 08:41:57.996 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 08:41:58.002 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 08:41:58.002 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 20.5155 ms
+2025-07-09 08:41:58.011 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 7.0697 ms
+2025-07-09 08:41:58.016 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 13.0265 ms
+2025-07-09 08:42:10.479 -04:00 [INF] HTTP OPTIONS /api/Clientes/3006 responded 204 in 0.0755 ms
+2025-07-09 08:42:10.494 -04:00 [INF] HTTP DELETE /api/Clientes/3006 responded 400 in 9.4119 ms
+2025-07-09 08:42:17.949 -04:00 [INF] HTTP OPTIONS /api/Clientes/3006 responded 204 in 0.0964 ms
+2025-07-09 08:42:17.967 -04:00 [INF] HTTP DELETE /api/Clientes/3006 responded 400 in 11.9987 ms
+2025-07-09 08:42:25.590 -04:00 [INF] HTTP OPTIONS /api/Clientes/1003 responded 204 in 0.1626 ms
+2025-07-09 08:42:25.610 -04:00 [INF] HTTP DELETE /api/Clientes/1003 responded 400 in 10.4646 ms
+2025-07-09 08:44:56.834 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 8.0392 ms
+2025-07-09 08:45:15.134 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 8.8444 ms
+2025-07-09 08:45:15.144 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 9.9166 ms
+2025-07-09 08:45:15.155 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 7.4625 ms
+2025-07-09 08:45:15.160 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 08:45:15.175 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 08:45:15.180 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 36.7910 ms
+2025-07-09 08:45:23.014 -04:00 [INF] HTTP OPTIONS /api/Clientes/1003 responded 204 in 0.0707 ms
+2025-07-09 08:45:23.030 -04:00 [INF] HTTP DELETE /api/Clientes/1003 responded 400 in 11.6429 ms
+2025-07-09 08:45:29.850 -04:00 [INF] HTTP OPTIONS /api/Clientes/3006 responded 204 in 0.5207 ms
+2025-07-09 08:45:29.872 -04:00 [INF] HTTP DELETE /api/Clientes/3006 responded 400 in 14.4248 ms
+2025-07-09 08:45:37.584 -04:00 [INF] HTTP OPTIONS /api/Clientes/2007 responded 204 in 1.6635 ms
+2025-07-09 08:45:37.613 -04:00 [INF] HTTP DELETE /api/Clientes/2007 responded 400 in 10.7629 ms
+2025-07-09 08:45:39.937 -04:00 [INF] HTTP GET /api/Clientes/2007 responded 200 in 5.9968 ms
+2025-07-09 08:48:52.608 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 15.4891 ms
+2025-07-09 08:48:58.145 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 11.8628 ms
+2025-07-09 08:49:15.035 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 6.7410 ms
+2025-07-09 08:49:15.075 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 08:49:15.104 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 48.4015 ms
+2025-07-09 08:49:15.133 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 08:49:15.133 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 69.9826 ms
+2025-07-09 08:49:16.278 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 1205.6670 ms
+2025-07-09 08:49:26.561 -04:00 [INF] HTTP OPTIONS /api/Clientes/1003 responded 204 in 0.1595 ms
+2025-07-09 08:49:26.591 -04:00 [INF] HTTP DELETE /api/Clientes/1003 responded 400 in 18.4772 ms
+2025-07-09 08:50:01.517 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 6.2070 ms
+2025-07-09 08:50:19.371 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 5.4878 ms
+2025-07-09 08:50:19.372 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 9.4833 ms
+2025-07-09 08:50:19.380 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 08:50:19.391 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 08:50:19.392 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 19.2812 ms
+2025-07-09 08:50:19.408 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 8.0734 ms
+2025-07-09 08:50:30.196 -04:00 [INF] HTTP OPTIONS /api/Clientes/1003 responded 204 in 0.1573 ms
+2025-07-09 08:50:30.211 -04:00 [INF] HTTP DELETE /api/Clientes/1003 responded 400 in 8.4192 ms
+2025-07-09 08:51:22.001 -04:00 [INF] HTTP OPTIONS /api/Clientes/1003 responded 204 in 0.0792 ms
+2025-07-09 08:51:22.036 -04:00 [INF] HTTP DELETE /api/Clientes/1003 responded 400 in 14.3749 ms
+2025-07-09 10:29:43.235 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 1616.4609 ms
+2025-07-09 10:30:36.614 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 18.6560 ms
+2025-07-09 10:30:36.652 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 7.3156 ms
+2025-07-09 10:30:36.711 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 10:30:36.722 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 10:30:36.724 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 73.0715 ms
+2025-07-09 10:30:36.769 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 116.1792 ms
+2025-07-09 10:30:49.847 -04:00 [INF] HTTP OPTIONS /api/Clientes/1003 responded 204 in 0.0754 ms
+2025-07-09 10:30:49.893 -04:00 [INF] HTTP DELETE /api/Clientes/1003 responded 400 in 32.8082 ms
+2025-07-09 10:30:56.379 -04:00 [INF] HTTP OPTIONS /api/Clientes/1003 responded 204 in 0.8588 ms
+2025-07-09 10:30:56.402 -04:00 [INF] HTTP DELETE /api/Clientes/1003 responded 400 in 8.5437 ms
+2025-07-09 10:32:11.336 -04:00 [INF] HTTP OPTIONS /api/Clientes/1003 responded 204 in 0.0767 ms
+2025-07-09 10:32:11.522 -04:00 [INF] HTTP DELETE /api/Clientes/1003 responded 400 in 12.2242 ms
+2025-07-09 10:35:39.548 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 10.9709 ms
+2025-07-09 10:36:15.061 -04:00 [INF] HTTP GET /api/AmasDeLlaves/habitaciones-por-ama-de-llaves/2 responded 200 in 34.2219 ms
+2025-07-09 10:36:29.802 -04:00 [INF] HTTP GET /api/AmasDeLlaves/2 responded 200 in 9.6429 ms
+2025-07-09 10:36:48.559 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 9.2610 ms
+2025-07-09 10:36:53.673 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 10:36:53.699 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 27.2761 ms
+2025-07-09 10:36:54.575 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 10:36:54.578 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 929.7156 ms
+2025-07-09 10:36:54.576 -04:00 [INF] HTTP GET /api/clientes responded 200 in 917.4746 ms
+2025-07-09 10:37:28.268 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 84.3697 ms
+2025-07-09 10:37:41.136 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 31.1768 ms
+2025-07-09 10:37:53.742 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 26.1440 ms
+2025-07-09 10:49:03.575 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-09 10:49:27.628 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-09 10:49:30.917 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.AmaDeLlavesId1' was created in shadow state because a conflicting property with the simple name 'AmaDeLlavesId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-09 10:49:30.928 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.HabitacionId1' was created in shadow state because a conflicting property with the simple name 'HabitacionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-09 10:49:31.057 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-09 10:49:36.333 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 10:49:36.480 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 10:49:36.855 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 9248.0116 ms
+2025-07-09 10:49:36.857 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 9248.4640 ms
+2025-07-09 10:49:36.857 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 9248.3003 ms
+2025-07-09 10:49:36.855 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 9248.0806 ms
+2025-07-09 10:49:51.206 -04:00 [INF] HTTP GET /api/clientes responded 200 in 415.1319 ms
+2025-07-09 10:49:51.232 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 10:49:51.248 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 10:49:51.262 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 454.1433 ms
+2025-07-09 10:49:51.459 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 663.2151 ms
+2025-07-09 10:51:08.354 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 83.1750 ms
+2025-07-09 10:51:35.276 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 26.3321 ms
+2025-07-09 10:52:11.103 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 46.6918 ms
+2025-07-09 10:52:19.269 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 23.3659 ms
+2025-07-09 10:52:23.671 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 45.5763 ms
+2025-07-09 10:55:47.778 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 15.5109 ms
+2025-07-09 10:55:47.799 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 12.7659 ms
+2025-07-09 10:55:47.829 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 10:55:47.839 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 10:55:47.841 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 20.9762 ms
+2025-07-09 10:55:47.940 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 14.3642 ms
+2025-07-09 10:55:51.819 -04:00 [INF] HTTP GET /api/clientes responded 200 in 11.4617 ms
+2025-07-09 10:55:51.844 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 8.3571 ms
+2025-07-09 10:55:51.870 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 10:55:51.878 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 10:55:51.881 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 22.7982 ms
+2025-07-09 10:56:11.326 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 26.1897 ms
+2025-07-09 10:56:40.253 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 16.1445 ms
+2025-07-09 10:56:45.917 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 19.1034 ms
+2025-07-09 10:58:01.824 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 17.4576 ms
+2025-07-09 10:58:21.333 -04:00 [INF] Reserva encontrada: Id=1033, Cliente=EDR, Habitacion=011
+2025-07-09 10:58:21.355 -04:00 [INF] HTTP GET /api/Reservas/1033 responded 200 in 232.6200 ms
+2025-07-09 10:58:22.178 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 596.7152 ms
+2025-07-09 10:58:22.809 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 1147.7578 ms
+2025-07-09 10:58:42.246 -04:00 [INF] HTTP OPTIONS /api/Reservas/1033 responded 204 in 7.3288 ms
+2025-07-09 10:58:42.714 -04:00 [INF] HTTP PUT /api/Reservas/1033 responded 400 in 360.1857 ms
+2025-07-09 10:58:51.882 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 15.8834 ms
+2025-07-09 10:59:00.341 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 28.6264 ms
+2025-07-09 10:59:07.390 -04:00 [INF] HTTP OPTIONS /api/Reservas/1033 responded 204 in 0.5689 ms
+2025-07-09 10:59:07.675 -04:00 [INF] HTTP PUT /api/Reservas/1033 responded 400 in 17.4220 ms
+2025-07-09 10:59:21.498 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 19.9139 ms
+2025-07-09 10:59:26.817 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 25.0710 ms
+2025-07-09 10:59:31.764 -04:00 [INF] HTTP OPTIONS /api/Reservas/1033 responded 204 in 0.4409 ms
+2025-07-09 10:59:31.812 -04:00 [INF] HTTP PUT /api/Reservas/1033 responded 400 in 22.8338 ms
+2025-07-09 11:00:06.082 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 23.8117 ms
+2025-07-09 11:00:09.831 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 13.8756 ms
+2025-07-09 11:00:11.840 -04:00 [INF] HTTP OPTIONS /api/Reservas/1033 responded 204 in 0.2236 ms
+2025-07-09 11:00:11.943 -04:00 [INF] HTTP PUT /api/Reservas/1033 responded 400 in 29.7310 ms
+2025-07-09 11:00:45.940 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 26.3232 ms
+2025-07-09 11:02:25.844 -04:00 [INF] Reserva encontrada: Id=1036, Cliente=Grisel OHalloran, Habitacion=013
+2025-07-09 11:02:25.846 -04:00 [INF] HTTP GET /api/Reservas/1036 responded 200 in 8.7871 ms
+2025-07-09 11:02:26.098 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 25.1579 ms
+2025-07-09 11:02:26.245 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 12.4940 ms
+2025-07-09 11:02:34.503 -04:00 [INF] HTTP OPTIONS /api/Reservas/1036 responded 204 in 1.1673 ms
+2025-07-09 11:02:34.578 -04:00 [INF] HTTP PUT /api/Reservas/1036 responded 400 in 55.9538 ms
+2025-07-09 11:03:06.354 -04:00 [INF] Reserva encontrada: Id=1044, Cliente=Alex Frometa, Habitacion=015
+2025-07-09 11:03:06.356 -04:00 [INF] HTTP GET /api/Reservas/1044 responded 200 in 16.5009 ms
+2025-07-09 11:03:06.754 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 13.2844 ms
+2025-07-09 11:03:06.823 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 11.3892 ms
+2025-07-09 11:36:08.617 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 1443.4321 ms
+2025-07-09 11:36:08.646 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 1463.1279 ms
+2025-07-09 11:36:08.749 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 11:36:08.756 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 11:36:08.758 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 1565.9852 ms
+2025-07-09 11:36:08.778 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 1576.2056 ms
+2025-07-09 11:36:22.304 -04:00 [INF] HTTP GET /api/clientes responded 200 in 8.4399 ms
+2025-07-09 11:36:22.330 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 26.7293 ms
+2025-07-09 11:36:22.330 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 11:36:22.341 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 11:36:22.342 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 26.3422 ms
+2025-07-09 11:53:20.916 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 1648.6382 ms
+2025-07-09 11:53:20.954 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 1682.3094 ms
+2025-07-09 11:53:21.022 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 1743.8238 ms
+2025-07-09 11:53:21.039 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 11:53:21.050 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 11:53:21.053 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 1768.2165 ms
+2025-07-09 11:53:37.440 -04:00 [INF] HTTP OPTIONS /api/Clientes/1003 responded 204 in 0.2311 ms
+2025-07-09 11:53:37.777 -04:00 [INF] HTTP DELETE /api/Clientes/1003 responded 400 in 324.3446 ms
+2025-07-09 11:53:46.910 -04:00 [INF] HTTP GET /api/clientes responded 200 in 6.1163 ms
+2025-07-09 11:53:46.930 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 18.0479 ms
+2025-07-09 11:53:46.951 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 11:53:46.956 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 11:53:46.960 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 17.1158 ms
+2025-07-09 11:54:16.677 -04:00 [INF] Reserva encontrada: Id=1044, Cliente=Alex Frometa, Habitacion=015
+2025-07-09 11:54:16.685 -04:00 [INF] HTTP GET /api/Reservas/1044 responded 200 in 36.4871 ms
+2025-07-09 11:54:16.756 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 40.7532 ms
+2025-07-09 11:54:16.793 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 25.4018 ms
+2025-07-09 11:54:48.265 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 10.1736 ms
+2025-07-09 11:54:50.342 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 13.9270 ms
+2025-07-09 11:55:03.218 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 9.7105 ms
+2025-07-09 11:55:09.456 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 9.1802 ms
+2025-07-09 11:55:37.922 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 10.4305 ms
+2025-07-09 13:10:58.932 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 2182.6315 ms
+2025-07-09 13:10:58.934 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 2170.8147 ms
+2025-07-09 13:10:59.055 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 2289.1214 ms
+2025-07-09 13:10:59.091 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 13:10:59.096 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 13:10:59.097 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 2330.9829 ms
+2025-07-09 13:30:32.691 -04:00 [INF] HTTP GET /api/clientes responded 200 in 1496.8348 ms
+2025-07-09 13:30:32.805 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 1602.2977 ms
+2025-07-09 13:30:32.823 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 13:30:32.889 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 13:30:32.894 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 1681.7721 ms
+2025-07-09 13:31:21.582 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 7.0097 ms
+2025-07-09 13:34:36.836 -04:00 [INF] HTTP GET /api/clientes responded 200 in 789.6772 ms
+2025-07-09 13:34:36.896 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 836.9329 ms
+2025-07-09 13:34:36.915 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 13:34:36.922 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 13:34:36.924 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 854.8536 ms
+2025-07-09 13:34:48.034 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 11.3351 ms
+2025-07-09 13:35:08.531 -04:00 [INF] HTTP GET /api/clientes responded 200 in 13.8281 ms
+2025-07-09 13:35:08.540 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 9.2382 ms
+2025-07-09 13:35:08.548 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 13:35:08.552 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 13:35:08.554 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 21.5435 ms
+2025-07-09 16:02:28.610 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-09 16:12:55.734 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-09 16:12:59.730 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.AmaDeLlavesId1' was created in shadow state because a conflicting property with the simple name 'AmaDeLlavesId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-09 16:12:59.743 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.HabitacionId1' was created in shadow state because a conflicting property with the simple name 'HabitacionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-09 16:13:00.060 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-09 16:13:09.082 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 16:13:09.201 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 16:13:09.852 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 14150.1602 ms
+2025-07-09 16:13:09.853 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 14150.4575 ms
+2025-07-09 16:13:09.854 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 14150.2096 ms
+2025-07-09 16:13:09.848 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 14150.0825 ms
+2025-07-09 16:42:22.171 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 2639.3688 ms
+2025-07-09 16:42:22.195 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 2680.0658 ms
+2025-07-09 16:42:22.231 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 2711.9258 ms
+2025-07-09 16:42:22.296 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 16:42:22.302 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 16:42:22.320 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 76.8419 ms
+2025-07-09 16:42:36.221 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 27.8180 ms
+2025-07-09 16:42:36.222 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 20.9046 ms
+2025-07-09 16:42:36.232 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 26.7163 ms
+2025-07-09 16:42:36.656 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 16:42:36.669 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 16:42:36.679 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 44.9970 ms
+2025-07-09 16:42:57.043 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 8.6390 ms
+2025-07-09 16:42:57.055 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 18.6825 ms
+2025-07-09 16:42:57.064 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 27.0201 ms
+2025-07-09 16:42:57.422 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 16:42:57.428 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 16:42:57.429 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 18.3599 ms
+2025-07-09 16:43:27.106 -04:00 [INF] HTTP OPTIONS /api/Clientes/1003 responded 204 in 3.2561 ms
+2025-07-09 16:43:27.465 -04:00 [INF] HTTP DELETE /api/Clientes/1003 responded 400 in 352.7785 ms
+2025-07-09 16:43:30.517 -04:00 [INF] HTTP GET /api/Clientes/1003 responded 200 in 46.9527 ms
+2025-07-09 16:43:41.701 -04:00 [INF] HTTP OPTIONS /api/Clientes/1003 responded 204 in 1.1877 ms
+2025-07-09 16:43:41.731 -04:00 [INF] HTTP DELETE /api/Clientes/1003 responded 400 in 20.5232 ms
+2025-07-09 16:44:17.927 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 11.0456 ms
+2025-07-09 16:44:17.931 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 15.3470 ms
+2025-07-09 16:44:17.954 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 25.0010 ms
+2025-07-09 16:44:18.276 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 16:44:18.288 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 16:44:18.289 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 22.6376 ms
+2025-07-09 16:47:09.993 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 12.0582 ms
+2025-07-09 16:47:10.006 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 24.4141 ms
+2025-07-09 16:47:10.019 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 10.7059 ms
+2025-07-09 16:47:10.384 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 16:47:10.389 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 16:47:10.391 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 14.7606 ms
+2025-07-09 16:47:39.615 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 9.4072 ms
+2025-07-09 16:47:39.656 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 14.8352 ms
+2025-07-09 16:47:39.656 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 14.0278 ms
+2025-07-09 16:47:40.101 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 16:47:40.107 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 16:47:40.114 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 19.9697 ms
+2025-07-09 16:47:46.049 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 11.0950 ms
+2025-07-09 16:47:51.900 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 119.7407 ms
+2025-07-09 16:47:58.452 -04:00 [INF] HTTP GET /api/AmasDeLlaves/habitaciones-por-ama-de-llaves/2 responded 200 in 241.1426 ms
+2025-07-09 16:48:01.053 -04:00 [INF] HTTP GET /api/Trazas responded 404 in 0.4632 ms
+2025-07-09 16:48:08.594 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 9.9376 ms
+2025-07-09 16:48:12.968 -04:00 [INF] HTTP GET /api/Clientes/1 responded 200 in 19.2684 ms
+2025-07-09 16:48:16.442 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 6.9650 ms
+2025-07-09 16:48:38.696 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 420.3948 ms
+2025-07-09 16:55:48.277 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 1992.4272 ms
+2025-07-09 16:55:48.311 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 2014.7995 ms
+2025-07-09 16:55:48.368 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 2057.5660 ms
+2025-07-09 16:55:48.375 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 2040.3768 ms
+2025-07-09 16:55:48.379 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 2027.8972 ms
+2025-07-09 16:55:48.379 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 2031.0318 ms
+2025-07-09 16:55:48.895 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 16:55:48.908 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 16:55:48.913 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 51.0312 ms
+2025-07-09 16:55:49.070 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 16:55:49.077 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 16:55:49.080 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 19.3273 ms
+2025-07-09 16:57:05.528 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 8.9010 ms
+2025-07-09 16:57:05.609 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 8.2310 ms
+2025-07-09 16:57:05.655 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 48.2360 ms
+2025-07-09 16:57:07.120 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 16:57:07.152 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 16:57:07.162 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 51.6476 ms
+2025-07-09 16:57:17.039 -04:00 [INF] HTTP GET /api/Clientes/1006 responded 200 in 12.1249 ms
+2025-07-09 16:57:20.348 -04:00 [INF] HTTP OPTIONS /api/Clientes/1006 responded 204 in 0.1326 ms
+2025-07-09 16:57:20.386 -04:00 [INF] HTTP DELETE /api/Clientes/1006 responded 400 in 24.9926 ms
+2025-07-09 16:57:38.733 -04:00 [INF] HTTP GET /api/clientes responded 200 in 10.4130 ms
+2025-07-09 16:57:38.746 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 16:57:38.751 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 16:57:38.753 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 19.8887 ms
+2025-07-09 16:57:38.922 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 203.5772 ms
+2025-07-09 16:58:15.352 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 14.2475 ms
+2025-07-09 17:00:45.077 -04:00 [INF] Reserva encontrada: Id=1044, Cliente=Alex Frometa, Habitacion=015
+2025-07-09 17:00:45.173 -04:00 [INF] HTTP GET /api/Reservas/1044 responded 200 in 310.6379 ms
+2025-07-09 17:00:45.593 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 40.4011 ms
+2025-07-09 17:00:45.625 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 8.9788 ms
+2025-07-09 17:01:26.909 -04:00 [INF] HTTP OPTIONS /api/Reservas/1044 responded 204 in 0.3268 ms
+2025-07-09 17:01:29.105 -04:00 [INF] Traza registrada: Modificación en Reservas (ID: 1044)
+2025-07-09 17:01:29.138 -04:00 [INF] HTTP PUT /api/Reservas/1044 responded 200 in 2206.9619 ms
+2025-07-09 17:01:29.236 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 18.9883 ms
+2025-07-09 17:01:30.990 -04:00 [INF] Reservas antes de filtro de fecha: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:01:30.996 -04:00 [INF] Reservas mapeadas: 4, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:01:30.999 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 1769.7385 ms
+2025-07-09 17:01:45.943 -04:00 [INF] HTTP OPTIONS /api/Reservas/1044/registrar-llegada responded 204 in 0.7413 ms
+2025-07-09 17:01:46.128 -04:00 [INF] Traza registrada: Registro de llegada en Reservas (ID: 1044)
+2025-07-09 17:01:46.136 -04:00 [INF] HTTP PUT /api/Reservas/1044/registrar-llegada responded 204 in 179.8250 ms
+2025-07-09 17:01:46.516 -04:00 [INF] Reservas antes de filtro de fecha: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:01:46.511 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 25.3558 ms
+2025-07-09 17:01:46.541 -04:00 [INF] Reservas mapeadas: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:01:46.544 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 42.5104 ms
+2025-07-09 17:02:03.333 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 8.2896 ms
+2025-07-09 17:02:08.672 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 7.1826 ms
+2025-07-09 17:02:08.676 -04:00 [INF] HTTP GET /api/clientes responded 200 in 19.3009 ms
+2025-07-09 17:02:08.694 -04:00 [INF] Reservas antes de filtro de fecha: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:02:08.718 -04:00 [INF] Reservas mapeadas: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:02:08.720 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 49.2066 ms
+2025-07-09 17:02:21.900 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 5.8773 ms
+2025-07-09 17:02:21.910 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 25.3607 ms
+2025-07-09 17:02:21.929 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 32.1028 ms
+2025-07-09 17:02:22.455 -04:00 [INF] Reservas antes de filtro de fecha: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:02:22.466 -04:00 [INF] Reservas mapeadas: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:02:22.467 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 25.5835 ms
+2025-07-09 17:02:31.600 -04:00 [INF] HTTP GET /api/Clientes/1003 responded 200 in 7.2807 ms
+2025-07-09 17:05:33.565 -04:00 [INF] HTTP GET /api/clientes responded 200 in 24.9208 ms
+2025-07-09 17:05:33.568 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 22.9834 ms
+2025-07-09 17:05:33.588 -04:00 [INF] Reservas antes de filtro de fecha: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:05:33.608 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 14.6193 ms
+2025-07-09 17:05:33.611 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 41.4299 ms
+2025-07-09 17:05:33.625 -04:00 [INF] Reservas mapeadas: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:05:33.630 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 47.5924 ms
+2025-07-09 17:05:34.406 -04:00 [INF] Reservas antes de filtro de fecha: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:05:34.421 -04:00 [INF] Reservas mapeadas: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:05:34.422 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 25.9694 ms
+2025-07-09 17:05:48.827 -04:00 [INF] HTTP GET /api/clientes responded 200 in 7.0529 ms
+2025-07-09 17:05:48.851 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 6.2267 ms
+2025-07-09 17:05:48.871 -04:00 [INF] Reservas antes de filtro de fecha: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:05:48.878 -04:00 [INF] Reservas mapeadas: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:05:48.879 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 16.1035 ms
+2025-07-09 17:05:48.893 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 4.7715 ms
+2025-07-09 17:05:48.904 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 9.5599 ms
+2025-07-09 17:05:49.464 -04:00 [INF] Reservas antes de filtro de fecha: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:05:49.473 -04:00 [INF] Reservas mapeadas: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:05:49.477 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 20.9505 ms
+2025-07-09 17:05:58.149 -04:00 [INF] HTTP GET /api/clientes responded 200 in 7.4905 ms
+2025-07-09 17:05:58.163 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 9.8925 ms
+2025-07-09 17:05:58.193 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 17.6918 ms
+2025-07-09 17:05:58.193 -04:00 [INF] Reservas antes de filtro de fecha: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:05:58.213 -04:00 [INF] Reservas mapeadas: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:05:58.214 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 46.7119 ms
+2025-07-09 17:05:58.263 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 88.1738 ms
+2025-07-09 17:05:58.769 -04:00 [INF] Reservas antes de filtro de fecha: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:05:58.775 -04:00 [INF] Reservas mapeadas: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:05:58.781 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 21.4948 ms
+2025-07-09 17:06:06.806 -04:00 [INF] HTTP GET /api/clientes responded 200 in 14.9145 ms
+2025-07-09 17:06:06.830 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 6.9179 ms
+2025-07-09 17:06:06.861 -04:00 [INF] Reservas antes de filtro de fecha: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:06:06.877 -04:00 [INF] Reservas mapeadas: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:06:06.879 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 25.6671 ms
+2025-07-09 17:06:06.886 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 9.1767 ms
+2025-07-09 17:06:06.889 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 13.3720 ms
+2025-07-09 17:06:07.434 -04:00 [INF] Reservas antes de filtro de fecha: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:06:07.439 -04:00 [INF] Reservas mapeadas: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:06:07.441 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 15.3195 ms
+2025-07-09 17:06:18.825 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 8.5190 ms
+2025-07-09 17:06:25.503 -04:00 [INF] HTTP GET /api/clientes responded 200 in 6.1953 ms
+2025-07-09 17:06:25.510 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 6.5376 ms
+2025-07-09 17:06:25.545 -04:00 [INF] Reservas antes de filtro de fecha: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:06:25.559 -04:00 [INF] Reservas mapeadas: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:06:25.560 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 28.8122 ms
+2025-07-09 17:06:33.052 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 18.1725 ms
+2025-07-09 17:06:36.119 -04:00 [INF] HTTP GET /api/clientes responded 200 in 5.8404 ms
+2025-07-09 17:06:36.128 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 7.5179 ms
+2025-07-09 17:06:36.139 -04:00 [INF] Reservas antes de filtro de fecha: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:06:36.143 -04:00 [INF] Reservas mapeadas: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:06:36.144 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 14.5225 ms
+2025-07-09 17:07:07.158 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 59.1016 ms
+2025-07-09 17:07:22.896 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 17.3999 ms
+2025-07-09 17:07:27.539 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 35.9966 ms
+2025-07-09 17:07:50.287 -04:00 [INF] Reserva encontrada: Id=1044, Cliente=Alex Frometa, Habitacion=021
+2025-07-09 17:07:50.301 -04:00 [INF] HTTP GET /api/Reservas/1044 responded 200 in 25.2497 ms
+2025-07-09 17:07:50.373 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 11.3915 ms
+2025-07-09 17:07:50.377 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 23.5220 ms
+2025-07-09 17:18:41.570 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 1314.0817 ms
+2025-07-09 17:18:53.226 -04:00 [INF] HTTP GET /api/AmasDeLlaves/habitaciones-por-ama-de-llaves/2 responded 200 in 52.7371 ms
+2025-07-09 17:18:55.682 -04:00 [INF] HTTP GET /api/AmasDeLlaves/habitaciones-por-ama-de-llaves/1 responded 200 in 7.0097 ms
+2025-07-09 17:19:44.698 -04:00 [INF] HTTP GET /api/Trazas responded 404 in 0.3268 ms
+2025-07-09 17:20:31.029 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 11.6946 ms
+2025-07-09 17:20:31.091 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 72.7278 ms
+2025-07-09 17:20:31.101 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 80.3367 ms
+2025-07-09 17:20:45.693 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 5.1259 ms
+2025-07-09 17:20:45.709 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 9.5874 ms
+2025-07-09 17:20:45.718 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 12.2276 ms
+2025-07-09 17:22:10.840 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 10.3196 ms
+2025-07-09 17:22:10.844 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 5.0443 ms
+2025-07-09 17:22:10.868 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 12.4301 ms
+2025-07-09 17:30:48.773 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 1843.8334 ms
+2025-07-09 17:30:48.773 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 1865.3015 ms
+2025-07-09 17:30:48.879 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 1945.4361 ms
+2025-07-09 17:34:57.758 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 940.6368 ms
+2025-07-09 17:34:57.778 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 893.2685 ms
+2025-07-09 17:34:57.858 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 482.1108 ms
+2025-07-09 17:35:35.843 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 8.8466 ms
+2025-07-09 17:35:35.850 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 24.2748 ms
+2025-07-09 17:35:35.860 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 30.0193 ms
+2025-07-09 17:36:34.821 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 10.2907 ms
+2025-07-09 17:36:34.821 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 10.8035 ms
+2025-07-09 17:36:34.832 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 6.5664 ms
+2025-07-09 17:36:38.310 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 6.2073 ms
+2025-07-09 17:36:38.353 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 5.9332 ms
+2025-07-09 17:36:38.375 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 6.4031 ms
+2025-07-09 17:40:34.453 -04:00 [INF] Reservas antes de filtro de fecha: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:40:34.457 -04:00 [INF] Reservas mapeadas: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:40:34.458 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 1765.1722 ms
+2025-07-09 17:43:14.491 -04:00 [INF] Reservas antes de filtro de fecha: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:43:14.501 -04:00 [INF] Reservas mapeadas: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 17:43:14.507 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 25.7835 ms
+2025-07-09 17:43:40.034 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 8.5896 ms
+2025-07-09 17:43:40.079 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 11.0107 ms
+2025-07-09 17:43:47.202 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 5.5275 ms
+2025-07-09 17:44:32.345 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 7.5929 ms
+2025-07-09 17:44:32.354 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 8.2525 ms
+2025-07-09 17:44:32.377 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 9.1660 ms
+2025-07-09 17:45:25.900 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 18.9826 ms
+2025-07-09 17:45:25.915 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 20.6644 ms
+2025-07-09 17:45:25.946 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 43.1460 ms
+2025-07-09 17:47:40.108 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 5.6172 ms
+2025-07-09 17:47:40.120 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 5.4987 ms
+2025-07-09 17:47:40.166 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 5.0600 ms
+2025-07-09 17:50:17.120 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 22.6521 ms
+2025-07-09 17:50:17.339 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 10.4654 ms
+2025-07-09 17:50:17.370 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 5.0822 ms
+2025-07-09 17:50:54.345 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 5.2723 ms
+2025-07-09 17:50:54.381 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 5.0139 ms
+2025-07-09 17:50:54.412 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 5.4865 ms
+2025-07-09 17:51:05.314 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 6.2702 ms
+2025-07-09 17:51:37.886 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 11.3666 ms
+2025-07-09 17:51:37.918 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 10.0193 ms
+2025-07-09 17:51:37.961 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 6.8674 ms
+2025-07-09 17:56:58.012 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 1567.2080 ms
+2025-07-09 17:56:58.029 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 1546.1087 ms
+2025-07-09 17:56:58.091 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 1386.5663 ms
+2025-07-09 17:57:52.449 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 7.5146 ms
+2025-07-09 18:04:26.796 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 1259.9654 ms
+2025-07-09 18:04:27.098 -04:00 [INF] HTTP GET /favicon.ico responded 404 in 0.0639 ms
+2025-07-09 18:08:41.278 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 11.3617 ms
+2025-07-09 18:08:59.687 -04:00 [INF] Reservas antes de filtro de fecha: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 18:08:59.692 -04:00 [INF] Reservas mapeadas: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 18:08:59.696 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 58.5113 ms
+2025-07-09 18:39:40.046 -04:00 [INF] Iniciando la aplicación HostalIslaAzul...
+2025-07-09 19:02:59.689 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-07-09 19:03:05.227 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.AmaDeLlavesId1' was created in shadow state because a conflicting property with the simple name 'AmaDeLlavesId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-09 19:03:05.239 -04:00 [WRN] The foreign key property 'HabitacionAmaDeLlaves.HabitacionId1' was created in shadow state because a conflicting property with the simple name 'HabitacionId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-07-09 19:03:05.437 -04:00 [WRN] No store type was specified for the decimal property 'Importe' on entity type 'Reserva'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-07-09 19:03:14.789 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 15145.9841 ms
+2025-07-09 19:03:50.272 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 1043.8771 ms
+2025-07-09 19:03:53.630 -04:00 [INF] Reservas antes de filtro de fecha: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 19:03:53.669 -04:00 [INF] Reservas mapeadas: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 19:03:53.870 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 3934.7203 ms
+2025-07-09 19:04:24.317 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 52.5433 ms
+2025-07-09 19:04:24.329 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 77.6198 ms
+2025-07-09 19:04:24.850 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 321.7568 ms
+2025-07-09 19:04:26.202 -04:00 [INF] Reservas antes de filtro de fecha: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 19:04:26.212 -04:00 [INF] Reservas mapeadas: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 19:04:26.218 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 79.9133 ms
+2025-07-09 19:04:31.777 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 12.5567 ms
+2025-07-09 19:08:32.931 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 10.1465 ms
+2025-07-09 19:08:32.970 -04:00 [INF] HTTP GET /api/Clientes responded 200 in 33.4609 ms
+2025-07-09 19:08:34.577 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 1633.8028 ms
+2025-07-09 19:08:34.686 -04:00 [INF] Reservas antes de filtro de fecha: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 19:08:34.692 -04:00 [INF] Reservas mapeadas: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 19:08:34.693 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 55.0858 ms
+2025-07-09 19:09:00.228 -04:00 [INF] HTTP GET /api/clientes responded 200 in 16.5202 ms
+2025-07-09 19:09:00.248 -04:00 [INF] Reservas antes de filtro de fecha: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 19:09:00.254 -04:00 [INF] Reservas mapeadas: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 19:09:00.256 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 25.7917 ms
+2025-07-09 19:09:00.401 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 183.8242 ms
+2025-07-09 19:11:11.805 -04:00 [INF] HTTP GET /api/Habitaciones responded 200 in 19.0450 ms
+2025-07-09 19:15:40.161 -04:00 [INF] HTTP GET /api/AmasDeLlaves responded 200 in 175.1668 ms
+2025-07-09 19:16:04.916 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 24.9835 ms
+2025-07-09 19:16:04.952 -04:00 [INF] Reservas antes de filtro de fecha: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 19:16:04.958 -04:00 [INF] Reservas mapeadas: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 19:16:04.960 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 45.0381 ms
+2025-07-09 19:16:06.027 -04:00 [INF] HTTP GET /api/clientes responded 200 in 1129.9559 ms
+2025-07-09 19:17:27.263 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 409.2674 ms
+2025-07-09 19:17:47.555 -04:00 [INF] HTTP OPTIONS /api/Reservas responded 204 in 11.5642 ms
+2025-07-09 19:17:48.249 -04:00 [INF] HTTP POST /api/Reservas responded 400 in 652.9000 ms
+2025-07-09 19:18:18.647 -04:00 [INF] HTTP OPTIONS /api/Reservas responded 204 in 0.3626 ms
+2025-07-09 19:18:18.707 -04:00 [INF] HTTP POST /api/Reservas responded 400 in 49.7085 ms
+2025-07-09 19:18:37.869 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 23.9680 ms
+2025-07-09 19:18:46.347 -04:00 [INF] HTTP GET /api/Habitaciones/habitaciones-disponibles responded 200 in 20.0816 ms
+2025-07-09 19:18:50.504 -04:00 [INF] HTTP OPTIONS /api/Reservas responded 204 in 0.6274 ms
+2025-07-09 19:18:52.024 -04:00 [INF] Traza registrada: Creación en Reservas (ID: 1045)
+2025-07-09 19:18:52.138 -04:00 [INF] HTTP POST /api/Reservas responded 201 in 1611.5557 ms
+2025-07-09 19:18:52.184 -04:00 [INF] HTTP GET /api/Reservas responded 200 in 14.9956 ms
+2025-07-09 19:18:52.197 -04:00 [INF] Reservas antes de filtro de fecha: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 19:18:52.220 -04:00 [INF] Reservas mapeadas: 5, Ejemplo: Id=1034, EstaElClienteEnHostal=true
+2025-07-09 19:18:52.223 -04:00 [INF] HTTP GET /api/Reservas/activas responded 200 in 33.8391 ms

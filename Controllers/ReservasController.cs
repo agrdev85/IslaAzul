@@ -58,9 +58,9 @@ namespace HostalIslaAzul.Controllers
 
                 // Filtro por rango de fechas
                 if (fechaInicio.HasValue)
-                    query = query.Where(r => r.FechaReservacion >= fechaInicio.Value);
+                    query = query.Where(r => r.FechaEntrada >= fechaInicio.Value);
                 if (fechaFin.HasValue)
-                    query = query.Where(r => r.FechaReservacion <= fechaFin.Value);
+                    query = query.Where(r => r.FechaSalida <= fechaFin.Value);
 
                 // Filtro por estado
                 if (!string.IsNullOrWhiteSpace(estado))
@@ -285,6 +285,31 @@ namespace HostalIslaAzul.Controllers
             catch (Exception ex)
             {
                 return StatusCode(500, new { success = false, message = "Error al registrar la llegada", error = ex.Message });
+            }
+        }
+
+        [HttpPut("{id}/revertir-checkin")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> RevertirCheckIn(int id)
+        {
+            try
+            {
+                await _reservaService.RevertirCheckInAsync(id);
+                return NoContent();
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(new { success = false, message = ex.Message });
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { success = false, message = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { success = false, message = "Error al revertir el check-in", error = ex.Message });
             }
         }
 

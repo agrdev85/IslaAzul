@@ -143,6 +143,32 @@ namespace HostalIslaAzul.Application.Services
             return reserva;
         }
 
+        public async Task RevertirCheckInAsync(int reservaId)
+        {
+            var reserva = await _context.Reservas
+                .Include(r => r.Cliente)
+                .FirstOrDefaultAsync(r => r.Id == reservaId);
+            if (reserva == null)
+                throw new ArgumentException("Reserva no encontrada.");
+
+            // Validaciones
+            if (!reserva.EstaElClienteEnHostal)
+                throw new InvalidOperationException("El cliente no está registrado como presente, no se puede revertir.");
+            if (reserva.EstaCancelada)
+                throw new InvalidOperationException("No se puede revertir el check-in de una reserva cancelada.");
+            if (DateTime.Today > reserva.FechaSalida)
+                throw new InvalidOperationException("No se puede revertir el check-in después de la fecha de salida.");
+
+            // Revertir el estado
+            reserva.EstaElClienteEnHostal = false;
+
+            _context.Reservas.Update(reserva);
+            await _context.SaveChangesAsync();
+
+            await RegistrarTrazaAsync("Reversión de llegada", "Reservas", reserva.Id.ToString(),
+                $"Cliente {reserva.Cliente?.NombreApellidos ?? "Desconocido"} revertido del check-in.");
+        }
+
         public async Task<Reserva> ModificarReservaAsync(int id, ReservaDto dto)
         {
             var reserva = await _context.Reservas
