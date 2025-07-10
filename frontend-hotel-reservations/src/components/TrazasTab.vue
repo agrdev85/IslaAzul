@@ -11,11 +11,11 @@
         </q-chip>
       </div>
     </q-card-section>
-    
+
     <q-card-section>
       <!-- Filtros -->
       <div class="row q-col-gutter-md q-mb-md">
-        <div class="col-12 col-sm-6">
+        <div class="col-12 col-sm-4">
           <q-input
             v-model="filtros.busqueda"
             filled
@@ -28,16 +28,30 @@
               <q-icon name="search" />
             </template>
             <template v-slot:append>
-              <q-icon 
-                name="clear" 
-                @click="filtros.busqueda = ''; fetchTrazas()" 
+              <q-icon
+                name="clear"
+                @click="filtros.busqueda = ''; fetchTrazas()"
                 class="cursor-pointer"
                 v-if="filtros.busqueda"
               />
             </template>
           </q-input>
         </div>
-        <div class="col-12 col-sm-6">
+        <div class="col-12 col-sm-4">
+          <q-select
+            v-model="filtros.tablaAfectada"
+            :options="tablaOptions"
+            label="Filtrar por tabla"
+            filled
+            color="deep-purple-7"
+            @update:model-value="fetchTrazas"
+          >
+            <template v-slot:prepend>
+              <q-icon name="filter_list" />
+            </template>
+          </q-select>
+        </div>
+        <div class="col-12 col-sm-4">
           <q-btn
             label="Actualizar Registro de Trazas"
             color="deep-purple-10"
@@ -48,51 +62,70 @@
           />
         </div>
       </div>
-      
+
+      <!-- Mensaje cuando no hay trazas -->
+      <div v-if="!loading && trazas.length === 0" class="q-pa-md text-center text-grey-7">
+        No se encontraron trazas para los filtros seleccionados.
+      </div>
+
       <!-- Tabla de trazas -->
       <q-table
+        v-else
         :rows="trazas"
         :columns="TABLE_COLUMNS.trazas"
         row-key="Id"
         :loading="loading"
         :pagination="pagination"
-        @request="fetchTrazas"
+        @request="onRequest"
         class="shadow-1"
+        :no-data-label="'No hay trazas disponibles'"
       >
+        <template v-slot:loading>
+          <q-inner-loading showing>
+            <q-spinner color="deep-purple-7" size="50px" />
+          </q-inner-loading>
+        </template>
+
         <template v-slot:body-cell-Operacion="props">
           <q-td :props="props">
-            <q-chip 
-              :color="getOperacionColor(props.value)" 
+            <q-chip
+              :color="getOperacionColor(props.value)"
               text-color="white"
               size="sm"
             >
-              {{ props.value }}
+              {{ props.value || 'N/A' }}
             </q-chip>
           </q-td>
         </template>
-        
+
         <template v-slot:body-cell-TablaAfectada="props">
           <q-td :props="props">
-            <q-chip 
-              color="grey-6" 
+            <q-chip
+              color="grey-6"
               text-color="white"
               size="sm"
             >
-              {{ props.value }}
+              {{ props.value || 'N/A' }}
             </q-chip>
           </q-td>
         </template>
-        
+
+        <template v-slot:body-cell-RegistroId="props">
+          <q-td :props="props">
+            <div class="text-caption">{{ props.value || 'N/A' }}</div>
+          </q-td>
+        </template>
+
         <template v-slot:body-cell-Fecha="props">
           <q-td :props="props">
             <div class="text-caption">{{ formatFecha(props.value) }}</div>
           </q-td>
         </template>
-        
+
         <template v-slot:body-cell-Detalles="props">
           <q-td :props="props">
             <div class="text-caption" style="max-width: 200px; overflow: hidden; text-overflow: ellipsis;">
-              {{ props.value }}
+              {{ props.value || 'N/A' }}
             </div>
             <q-tooltip v-if="props.value && props.value.length > 50">
               {{ props.value }}
@@ -106,8 +139,26 @@
 
 <script setup>
 import { useTrazas } from 'src/composables/useTrazas'
-import { TABLE_COLUMNS } from 'src/utils/constants'
 import { onMounted } from 'vue'
+
+const TABLE_COLUMNS = {
+  trazas: [
+    { name: 'Id', label: 'ID', field: 'Id', sortable: true, align: 'left' },
+    { name: 'Operacion', label: 'Operación', field: 'Operacion', sortable: true, align: 'left' },
+    { name: 'TablaAfectada', label: 'Tabla Afectada', field: 'TablaAfectada', sortable: true, align: 'left' },
+    { name: 'RegistroId', label: 'ID Registro', field: 'RegistroId', sortable: true, align: 'left' },
+    { name: 'Fecha', label: 'Fecha', field: 'Fecha', sortable: true, align: 'left' },
+    { name: 'Detalles', label: 'Detalles', field: 'Detalles', sortable: true, align: 'left' }
+  ]
+}
+
+const tablaOptions = [
+  { label: 'Todas', value: '' },
+  { label: 'Cliente', value: 'Cliente' },
+  { label: 'Habitación', value: 'Habitacion' },
+  { label: 'Reserva', value: 'Reserva' },
+  { label: 'Ama', value: 'Ama' }
+]
 
 const {
   trazas,
@@ -119,7 +170,23 @@ const {
   formatFecha
 } = useTrazas()
 
+const onRequest = (props) => {
+  pagination.value = {
+    ...props.pagination,
+    sortBy: props.pagination.sortBy || 'Id',
+    descending: props.pagination.descending ?? true
+  }
+  fetchTrazas()
+}
+
 onMounted(() => {
+  console.log('Componente TrazasTab montado')
   fetchTrazas()
 })
 </script>
+
+<style scoped>
+.q-table {
+  min-height: 300px;
+}
+</style>

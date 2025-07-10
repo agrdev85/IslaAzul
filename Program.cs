@@ -41,6 +41,7 @@ builder.Services.AddScoped<ReservaService>();
 builder.Services.AddScoped<HabitacionService>();
 builder.Services.AddScoped<AmaDeLlavesService>();
 builder.Services.AddScoped<ReservaHostedService>();
+builder.Services.AddScoped<ITrazaService, TrazaService>();
 
 // Configurar CORS
 builder.Services.AddCors(options =>

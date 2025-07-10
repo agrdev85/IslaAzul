@@ -3,7 +3,7 @@ import { useQuasar } from "quasar"
 import { DateTime } from "luxon"
 import axios from "axios"
 
-const apiUrl = "http://localhost:5014/api";
+const apiUrl = "http://localhost:5014/api"
 
 export function useTrazas() {
   const $q = useQuasar()
@@ -13,6 +13,7 @@ export function useTrazas() {
 
   const filtros = ref({
     busqueda: "",
+    tablaAfectada: ""
   })
 
   const pagination = ref({
@@ -38,7 +39,8 @@ export function useTrazas() {
     try {
       const response = await axios.get(`${apiUrl}/Trazas`, {
         params: {
-          busqueda: filtros.value.busqueda,
+          busqueda: filtros.value.busqueda || undefined,
+          tablaAfectada: filtros.value.tablaAfectada || undefined,
           pagina: pagination.value.page,
           tamanoPagina: pagination.value.rowsPerPage,
           ordenarPor: pagination.value.sortBy,
@@ -46,16 +48,20 @@ export function useTrazas() {
         },
       })
 
-      trazas.value =
-        response.data.data?.map((t) => ({
-          ...t,
-          Fecha: t.Fecha,
-        })) || []
+      console.log("Respuesta de la API:", response.data)
 
+      trazas.value = response.data.data || []
       pagination.value.rowsNumber = response.data.total || 0
+      console.log("Trazas mapeadas:", trazas.value)
       showNotification(`${trazas.value.length} trazas cargadas`)
     } catch (error) {
-      showNotification("Error al cargar trazas", "negative")
+      console.error("Error al cargar trazas:", {
+        message: error.message,
+        status: error.response?.status,
+        data: error.response?.data
+      })
+      showNotification(`Error al cargar trazas: ${error.response?.data?.message || error.message}`, "negative")
+      trazas.value = []
     } finally {
       loading.value = false
     }
